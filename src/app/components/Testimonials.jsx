@@ -58,7 +58,9 @@ export default function Testimonials() {
             <div className="rounded-full bg-gray-400 p-2">
               <BiSolidMessageRounded className="h-4 w-4 text-white" />
             </div>
-            <span className="text-gray-700 font-medium">Testimonials</span>
+            <span className="text-gray-700 font-semibold text-sm">
+              Testimonials
+            </span>
           </div>
         </div>
 

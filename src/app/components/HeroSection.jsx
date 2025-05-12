@@ -264,16 +264,20 @@ export default function HeroSection() {
         borderRadius: useTransform(scrollYProgress, [0, 0.7], ["0rem", "5rem"]),
       }}
       // Use h-screen to ensure full viewport height and full width
-      className="relative h-[150vh] w-full overflow-hidden"
+      className="relative h-screen w-full overflow-hidden"
+      // h-[150vh]
     >
       {/* Full-size background image */}
       <div className="absolute inset-0 w-full h-full">
-        <Image
+        {/* <Image
           src="/images/1.jpg"
           alt="Background Image"
           fill
           className="object-fill"
-        />
+        /> */}
+        <video autoPlay loop muted className="object-fill w-full h-full">
+          <source src="/images/1.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* Content container */}

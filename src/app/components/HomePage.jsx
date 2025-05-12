@@ -53,7 +53,7 @@ function HomePage() {
     //   <ContactSection />
     // </main>
     <main className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       {/* <Hero /> */}
       <HeroSection />
       <StatsSection />
@@ -64,7 +64,7 @@ function HomePage() {
       <PropertyListings properties={properties} />
       <Testimonials />
       <Faqs />
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

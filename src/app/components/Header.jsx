@@ -4,10 +4,12 @@ import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const isHomePage = pathname === "/";
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -20,7 +22,7 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || !isHomePage
           ? "bg-white shadow-md py-3"
           : "bg-transparent py-5 text-white"
       }`}
@@ -40,28 +42,34 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#"
+            href="/"
             className="text-lg font-medium hover:text-black transition-colors"
           >
             Home
           </a>
           <a
-            href="#"
+            href="/about"
             className="text-lg font-medium hover:text-black transition-colors"
           >
             About
           </a>
           <a
-            href="#"
+            href="/services"
             className="text-lg font-medium hover:text-black transition-colors"
           >
             Services
           </a>
           <a
-            href="#"
+            href="/projects"
             className="text-lg font-medium hover:text-black transition-colors"
           >
             Projects
+          </a>
+          <a
+            href="/gallery"
+            className="text-lg font-medium hover:text-black transition-colors"
+          >
+            Gallery
           </a>
         </nav>
 

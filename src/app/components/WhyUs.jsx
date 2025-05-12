@@ -14,7 +14,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 export default function WhyUs() {
   return (
     <section className="w-full py-10 md:p-10 lg:p-16">
-      <div className="w-full mx-auto">
+      <div className="w-full container px-4 mx-auto">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="relative">
             <div className="bg-blue-50 rounded-3xl overflow-hidden">
@@ -55,7 +55,9 @@ export default function WhyUs() {
                 <Search className="h-3 w-3 text-white" />
               </div>
 
-              <span className="text-gray-700 font-medium">Why us?</span>
+              <span className="text-gray-700 font-semibold text-sm">
+                Why us?
+              </span>
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

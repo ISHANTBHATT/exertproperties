@@ -104,7 +104,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { BiSolidMessageRounded } from "react-icons/bi";
-
+import { cn } from "@/lib/utils";
 const faqs = [
   {
     id: 1,
@@ -132,7 +132,7 @@ const faqs = [
   },
 ];
 
-export function Faqs() {
+export function Faqs({ className }) {
   const [openId, setOpenId] = useState(null);
 
   const toggleFaq = (id) => {
@@ -141,29 +141,30 @@ export function Faqs() {
 
   return (
     <section className="w-full py-20 px-4 md:px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex justify-center mb-6">
-          <div className="bg-[#EEEFF1] rounded-full p-2 flex items-center gap-2">
-            <div className="rounded-full bg-gray-400 p-2">
-              <BiSolidMessageRounded className="h-4 w-4 text-white" />
+      <div className={cn("max-w-6xl mx-auto ", className)}>
+        <div>
+          <div className="flex justify-center mb-6">
+            <div className="bg-[#EEEFF1] rounded-full p-2 flex items-center gap-2 ">
+              <div className="rounded-full bg-gray-400 p-2">
+                <BiSolidMessageRounded className="h-4 w-4 text-white" />
+              </div>
+              <span className="text-gray-700 text-sm font-semibold">FAQs</span>
             </div>
-            <span className="text-gray-700 text-sm font-semibold">FAQs</span>
-          </div>
-          {/* <div className="inline-flex items-center p-2 gap-2 bg-[#EEEFF1]  text-gray-700 rounded-full font-semibold text-sm">
+            {/* <div className="inline-flex items-center p-2 gap-2 bg-[#EEEFF1]  text-gray-700 rounded-full font-semibold text-sm">
              <div className="rounded-full bg-gray-400 p-2">
                <BiSolidMessageRounded className="h-3 w-3 text-white" />
              </div>
              FAQs
            </div> */}
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+            Frequently asked questions
+          </h2>
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
+            Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam
+            ultrices augue convallis nunc ultrices amet consequat adipiscing.
+          </p>
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-          Frequently asked questions
-        </h2>
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-          Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam
-          ultrices augue convallis nunc ultrices amet consequat adipiscing.
-        </p>
-
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-10">
           {faqs.map((faq) => (
             <div key={faq.id} className="py-6 ">
