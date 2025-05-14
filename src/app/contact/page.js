@@ -204,7 +204,10 @@ export default function ContactForm() {
                     <Phone className="h-6 w-6" />
                     <div>
                       <p className="text-sm text-gray-400">Phone number</p>
-                      <p className="font-medium">(414) 325 - 427</p>
+                      <p className="font-medium">
+                        +2347025012424, +2348180000567, +12549520712,
+                        +16465049826
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -274,18 +277,21 @@ export default function ContactForm() {
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-white text-3xl font-bold mb-2">
-                  San Francisco, CA
-                </h3>
+                <h3 className="text-white text-3xl font-bold mb-2">Nigeria</h3>
                 <p className="text-white/80 mb-6">
                   Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
                   imperdiet faucibus elementum.
                 </p>
-                <div className="flex items-center gap-2 text-white">
+                <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>
-                    58 Middle Point Rd, San Francisco, California (CA), 94124
+                    287B Akin Olugbade Street Victoria Island, Lagos Lagos State
+                    Nigeria
                   </span>
+                </div>
+                <div className="flex items-center gap-2 text-white">
+                  <Phone className="h-5 w-5" />
+                  <span>+2347025012424, +2348180000567</span>
                 </div>
               </div>
             </div>
@@ -300,17 +306,21 @@ export default function ContactForm() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-white text-3xl font-bold mb-2">
-                  San Francisco, CA
+                  United States
                 </h3>
                 <p className="text-white/80 mb-6">
                   Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
                   imperdiet faucibus elementum.
                 </p>
-                <div className="flex items-center gap-2 text-white">
+                <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>
-                    58 Middle Point Rd, San Francisco, California (CA), 94124
+                    3403 Pistoia Trail, Temple Texas 776502 United States
                   </span>
+                </div>
+                <div className="flex items-center gap-2 text-white">
+                  <Phone className="h-5 w-5" />
+                  <span>+12549520712, +16465049826</span>
                 </div>
               </div>
             </div>

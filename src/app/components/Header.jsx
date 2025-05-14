@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const pathname = usePathname();
@@ -74,17 +75,28 @@ const Header = () => {
         </nav>
 
         {/* <Button>Start exploring</Button> */}
-        <div className="flex items-center  bg-black rounded-full w-48 transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-900">
+        {/* <div className=" inline-flex items-center p-2 bg-black rounded-full transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-900">
           <Button
             size="lg"
             className="rounded-full p-6 bg-black group group-hover:bg-neutral-900"
           >
-            Start exploring
+            Contact
           </Button>
           <div className="rounded-full bg-white p-2 group">
             <IoMdArrowRoundForward className="h-4 w-4 text-black" />
           </div>
-        </div>
+        </div> */}
+
+        <Link href="/contact">
+          <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+            <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
+              Contact
+            </button>
+            <div className="rounded-full bg-white p-2 group">
+              <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+            </div>
+          </div>
+        </Link>
       </div>
     </header>
   );

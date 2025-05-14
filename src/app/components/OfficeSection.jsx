@@ -44,10 +44,10 @@ function OfficeSection() {
               </div>
 
               <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-semibold">San Francisco, CA</h3>
+                <h3 className="text-2xl font-semibold">Nigeria</h3>
                 <p className="text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
-                  imperdiet faucibus elementum.
+                  287B Akin Olugbade Street Victoria Island, Lagos Lagos State
+                  Nigeria
                 </p>
 
                 <div className="space-y-4">
@@ -102,10 +102,9 @@ function OfficeSection() {
               </div>
 
               <div className="p-8 space-y-6">
-                <h3 className="text-2xl font-semibold">Los Angeles, CA</h3>
+                <h3 className="text-2xl font-semibold">United States</h3>
                 <p className="text-gray-400">
-                  Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
-                  imperdiet faucibus elementum.
+                  3403 Pistoia Trail, Temple Texas 776502 United States
                 </p>
 
                 <div className="space-y-4">

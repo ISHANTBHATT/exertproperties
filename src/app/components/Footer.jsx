@@ -109,6 +109,14 @@ const Footer = () => {
                     Gallery
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/contact"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
@@ -172,7 +180,9 @@ const Footer = () => {
                   <Phone className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-400">Phone number</p>
-                    <p>(123) 456 - 7890</p>
+                    <p>
+                      +2347025012424, +2348180000567, +12549520712, +16465049826
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start">
