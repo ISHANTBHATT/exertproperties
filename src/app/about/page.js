@@ -7,6 +7,37 @@ import Link from "next/link";
 import { IoMdArrowRoundForward, IoIosPeople } from "react-icons/io";
 import Mission from "../components/Mission";
 import OfficeSection from "../components/OfficeSection";
+
+const agents = [
+  {
+    id: 1,
+    image: "/images/team1.jpeg",
+    name: "OKEY OKATTA",
+    designation: "MD/CEO",
+    slug: "okey-okatta",
+  },
+  {
+    id: 2,
+    image: "/images/team2.jpeg",
+    name: "Adanna Okatta",
+    designation: "Director",
+    slug: "adanna-okatta",
+  },
+  {
+    id: 3,
+    image: "/images/team3.jpeg",
+    name: "Blessing Young Harris",
+    designation: "legal advisor",
+    slug: "blessing-young-harris",
+  },
+  {
+    id: 4,
+    image: "/images/team4.jpeg",
+    name: "Bidemi Adeshina",
+    designation: "Non Executive Director",
+    slug: "bidemi-adeshina",
+  },
+];
 function Page() {
   return (
     <main className="min-h-screen bg-[#fafafb] py-20">
@@ -125,26 +156,96 @@ function Page() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white rounded-xl p-8 shadow-sm">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {agents.map((agent) => (
+            <Link key={agent.key} href={`/agent/${agent.slug}`}>
+              <div className="bg-white rounded-xl p-8 shadow-sm">
+                <div className="relative mb-6">
+                  <div className="absolute top-0 right-0 bg-black rounded-full p-2">
+                    <Plus className="h-6 w-6 text-white" />
+                  </div>
+                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
+                    <Image
+                      src={agent.image}
+                      alt="John Carter"
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-fill"
+                    />
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <h3 className="text-xl font-semibold mb-1">{agent.name}</h3>
+                  <p className="text-gray-600 mb-6">{agent.designation}</p>
+
+                  <div className="flex justify-center space-x-4">
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4"
+                      >
+                        <rect width="20" height="16" x="2" y="4" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="icon"
+                      className="rounded-full"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="h-4 w-4"
+                      >
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+
+          {/* <div className="bg-white rounded-xl p-8 shadow-sm ">
             <div className="relative mb-6">
               <div className="absolute top-0 right-0 bg-black rounded-full p-2">
                 <Plus className="h-6 w-6 text-white" />
               </div>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <Image
-                  src="/images/profile3.jpg"
-                  alt="John Carter"
+                  src="/images/team3.jpeg"
+                  alt="Matt Cannon"
                   width={128}
                   height={128}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
               </div>
             </div>
 
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-1">John Carter</h3>
-              <p className="text-gray-600 mb-6">Inmobiliary Agent</p>
+              <h3 className="text-xl font-semibold mb-1">Adanna Okatta</h3>
+              <p className="text-gray-600 mb-6">Director</p>
 
               <div className="flex justify-center space-x-4">
                 <Button variant="outline" size="icon" className="rounded-full">
@@ -191,18 +292,20 @@ function Page() {
               </div>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <Image
-                  src="/images/profile2.jpg"
+                  src="/images/team2.jpeg"
                   alt="Sophie Moore"
                   width={128}
                   height={128}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
               </div>
             </div>
 
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-1">Sophie Moore</h3>
-              <p className="text-gray-600 mb-6">Inmobiliary Agent</p>
+              <h3 className="text-xl font-semibold mb-1">
+                Blessing Young Harris
+              </h3>
+              <p className="text-gray-600 mb-6">legal advisor</p>
 
               <div className="flex justify-center space-x-4">
                 <Button variant="outline" size="icon" className="rounded-full">
@@ -249,18 +352,18 @@ function Page() {
               </div>
               <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
                 <Image
-                  src="/images/profile3.jpg"
+                  src="/images/team4.jpeg"
                   alt="Matt Cannon"
                   width={128}
                   height={128}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-fill"
                 />
               </div>
             </div>
 
             <div className="text-center">
-              <h3 className="text-xl font-semibold mb-1">Matt Cannon</h3>
-              <p className="text-gray-600 mb-6">Inmobiliary Agent</p>
+              <h3 className="text-xl font-semibold mb-1">Bidemi Adeshina</h3>
+              <p className="text-gray-600 mb-6">Non Executive Director</p>
 
               <div className="flex justify-center space-x-4">
                 <Button variant="outline" size="icon" className="rounded-full">
@@ -298,7 +401,7 @@ function Page() {
                 </Button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex justify-center mt-12 space-x-6">
