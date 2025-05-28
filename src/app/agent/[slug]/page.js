@@ -73,8 +73,8 @@ export default async function AgentPage({ params }) {
 
   return (
     <div className="min-h-screen bg-gray-50 py-32">
-      <div className="w-full px-40 p-4 flex gap-10">
-        <div className="bg-white rounded-2xl shadow-sm overflow-hidden ">
+      <div className="w-full px-4 lg:px-40 p-4 flex flex-col lg:flex-row gap-10">
+        <div className="bg-white rounded-2xl shadow-sm overflow-hidden">
           {/* Banner and Profile Section */}
           <div className="relative">
             {/* Banner Image */}
@@ -107,7 +107,7 @@ export default async function AgentPage({ params }) {
                 </div>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="min-w-2xl flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between mt-16">
                 {/* Left Column - Personal Info */}
                 <div>
                   <h1 className="text-3xl font-bold mb-1">{agent.name}</h1>
@@ -153,7 +153,7 @@ export default async function AgentPage({ params }) {
             </div>
           </div>
         </div>
-        <div className="space-y-10 flex-1">
+        <div className="space-y-10 w-full">
           <section>
             <h2 className="text-3xl font-bold mb-4">About me</h2>
             <p className="text-gray-700 mb-4">{agent.about}</p>

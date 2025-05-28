@@ -243,7 +243,23 @@ const projects = [
       {
         type: "video",
         src: "/videos/p2bv-1.mp4",
-        thumbnail: "/images/p2b-1.jpeg",
+        // thumbnail: "/images/p2b-1.jpeg",
+      },
+      {
+        type: "video",
+        src: "/videos/p2bv-2.mp4",
+      },
+      {
+        type: "video",
+        src: "/videos/p2bv-3.mp4",
+      },
+      {
+        type: "video",
+        src: "/videos/p2bv-4.mp4",
+      },
+      {
+        type: "video",
+        src: "/videos/p2bv-5.mp4",
       },
     ],
     afterMedia: [
