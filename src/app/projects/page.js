@@ -393,9 +393,9 @@ const projects = [
       'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English.',
     image: "/images/h1-2.jpeg",
     beforeMedia: [
-      { type: "image", src: "/images/p2b-1.jpeg" },
-      { type: "image", src: "/images/p2b-2.jpeg" },
-      { type: "image", src: "/images/p2b-3.jpeg" },
+      { type: "image", src: "/images/p2b.jpeg" },
+      // { type: "image", src: "/images/p2b-2.jpeg" },
+      // { type: "image", src: "/images/p2b-3.jpeg" },
       // {
       //   type: "video",
       //   src: "/videos/p2bv-1.mp4",
@@ -421,6 +421,11 @@ const projects = [
       { type: "image", src: "/images/h1-16.jpeg" },
       { type: "image", src: "/images/h1-17.jpeg" },
       { type: "image", src: "/images/h1-18.jpeg" },
+      {
+        type: "video",
+        src: "/videos/p4av-1.mp4",
+        // thumbnail: "/images/p2-1.jpeg",
+      },
     ],
   },
 ];
@@ -481,7 +486,7 @@ function ProjectSection({
 
   return (
     <>
-      <div className="grid grid-cols-2 border-b border-gray-100 h-screen">
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-100 min-h-screen">
         {imagePosition === "left" ? (
           <>
             <div
@@ -501,7 +506,7 @@ function ProjectSection({
                 />
               </motion.div>
             </div>
-            <div className="p-12 flex flex-col justify-center">
+            <div className="p-6 md:p-12 flex flex-col justify-center">
               <div className="uppercase text-sm tracking-wider text-gray-500 mb-1">
                 {location}
               </div>
@@ -517,7 +522,7 @@ function ProjectSection({
           </>
         ) : (
           <>
-            <div className="p-12 flex flex-col justify-center">
+            <div className="p-6 md:p-12 flex flex-col justify-center">
               <div className="uppercase text-sm tracking-wider text-gray-500 mb-1">
                 {location}
               </div>
@@ -549,6 +554,47 @@ function ProjectSection({
             </div>
           </>
         )}
+      </div> */}
+      <div className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-100 min-h-screen">
+        {/* Image */}
+        <div
+          className={`
+      relative h-screen rounded-2xl overflow-hidden cursor-pointer
+      ${imagePosition === "left" ? "order-1 md:order-1" : "order-1 md:order-2"}
+    `}
+          onClick={() => setIsModalOpen(true)}
+        >
+          <motion.div
+            className="w-full h-full"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Image
+              src={image || "/placeholder.svg"}
+              alt={title}
+              fill
+              className="object-cover rounded-2xl transition-transform duration-500"
+            />
+          </motion.div>
+        </div>
+
+        {/* Text */}
+        <div
+          className={`
+      p-6 md:p-12 flex flex-col justify-center
+      ${imagePosition === "left" ? "order-2 md:order-2" : "order-2 md:order-1"}
+    `}
+        >
+          <div className="uppercase text-sm tracking-wider text-gray-500 mb-1">
+            {location}
+          </div>
+          <h2 className="text-2xl font-light mb-2">{title}</h2>
+          <div className="text-sm text-gray-500 mb-4">{date}</div>
+          <p className="text-sm leading-relaxed text-gray-700">{description}</p>
+          <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
+            Portfolio
+          </div>
+        </div>
       </div>
 
       <ProjectModal
