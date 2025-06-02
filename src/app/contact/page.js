@@ -49,9 +49,9 @@ export default function ContactForm() {
             Contact us
           </h1>
           <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12">
-            Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-            potenti. Metus in eu vel morbi dui nunc tellus. Non a massa maecenas
-            massa.
+            We’re here to help you find your perfect space.
+            <br />
+            Reach out to us and let’s start your real estate journey together.
           </p>
 
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -186,9 +186,9 @@ export default function ContactForm() {
                   Reach us directly
                 </h2>
                 <p className="text-gray-400 mb-8">
-                  Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-                  potenti. Metus in eu vel morbi dui nunc tellus. Non a massa
-                  maecenas massa.
+                  Have questions or are you ready to take the next step? Connect
+                  with us directly for personalized assistance and prompt
+                  responses.
                 </p>
 
                 <div className="space-y-4">
@@ -218,8 +218,9 @@ export default function ContactForm() {
                   Follow us on social media
                 </h2>
                 <p className="text-gray-400 mb-8">
-                  Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-                  potenti. Metus in eu vel morbi dui nunc.
+                  Stay connected for the latest property updates, market
+                  insights, and exclusive offers. Join our community and never
+                  miss a beat!
                 </p>
 
                 <div className="flex gap-4">
@@ -253,11 +254,11 @@ export default function ContactForm() {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Come and visit our offices
+            Your dream property awaits!
           </h2>
           <p className="text-gray-600 max-w-2xl mb-8">
-            Lorem ipsum dolor sit amet consectetur fermentum eget fringilla
-            egestas a aliquam arcu arcu nunc pretium id.
+            Drop by our office—where your property journey begins with a
+            friendly smile and expert guidance.
           </p>
 
           <div className="flex justify-end mb-8">
@@ -277,11 +278,11 @@ export default function ContactForm() {
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-white text-3xl font-bold mb-2">Nigeria</h3>
-                <p className="text-white/80 mb-6">
+                <h3 className="text-white text-3xl font-bold mb-4">Nigeria</h3>
+                {/* <p className="text-white/80 mb-6">
                   Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
                   imperdiet faucibus elementum.
-                </p>
+                </p> */}
                 <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>
@@ -305,13 +306,13 @@ export default function ContactForm() {
                 className="w-full h-[500px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
-                <h3 className="text-white text-3xl font-bold mb-2">
+                <h3 className="text-white text-3xl font-bold mb-4">
                   United States
                 </h3>
-                <p className="text-white/80 mb-6">
+                {/* <p className="text-white/80 mb-6">
                   Lorem ipsum dolor sit amet consectetur tellus eu enim ultrices
                   imperdiet faucibus elementum.
-                </p>
+                </p> */}
                 <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>

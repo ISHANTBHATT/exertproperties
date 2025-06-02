@@ -22,7 +22,7 @@ const PropertyListings = ({ properties }) => {
           </div>
 
           <motion.h2
-            className="text-5xl font-semibold mb-4 text-center"
+            className="text-4xl md:text-5xl font-bold mb-4 text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -32,9 +32,8 @@ const PropertyListings = ({ properties }) => {
           </motion.h2>
 
           <p className="text-gray-600 mb-12 max-w-2xl text-center">
-            Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-            potenti. Metus in eu vel morbi dui nunc tellus. Non a massa maecenas
-            massa.
+            Explore our complete portfolio of handpicked properties — designed
+            to match every dream and investment goal.
           </p>
         </div>
 

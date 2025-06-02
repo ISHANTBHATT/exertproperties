@@ -18,11 +18,13 @@ const Footer = () => {
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              Discover exclusive real estate opportunities
+              When you think real estate, think reliability. Think Exert
+              Properties
             </h2>
             <p className="text-gray-400 mb-6">
-              Lorem ipsum dolor sit amet consectetur. Egestas eu amet dictum
-              tellus. Purus morbi lorem viverra cras.
+              With years of experience and a commitment to excellence, we
+              provide elegant, lasting real estate solutions tailored to your
+              vision.
             </p>
 
             <div className="flex items-center space-x-3 max-w-sm">

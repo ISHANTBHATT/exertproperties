@@ -40,14 +40,14 @@ const StatsSection = () => {
           </motion.div>
 
           <motion.div
-            className="space-y-4 col-span-2 flex flex-col md:items-end bg-white p-10 rounded-4xl"
+            className="space-y-4 col-span-2 flex flex-col md:items-end bg-white p-4 md:p-10 rounded-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-4">
-              <div className="w-20">
+              <div className="w-40 md:w-20">
                 <img
                   src="https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                   alt="Sophie Moore"

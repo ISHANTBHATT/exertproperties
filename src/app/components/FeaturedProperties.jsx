@@ -119,8 +119,10 @@ export default function FeaturedProperties({ properties }) {
         </h2>
 
         <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
-          Lorem ipsum dolor sit amet consectetur fermentum eget fringilla
-          egestas a aliquam arcu arcu nunc pretium id.
+          Explore our curated premium properties that combine location, design,
+          and lifestyle. Whether looking for a dream home, investment, or
+          business address, our listings offer exceptional options for every
+          buyer.
         </p>
 
         <div className="relative">

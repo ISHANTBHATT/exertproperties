@@ -65,14 +65,14 @@ export default function Testimonials() {
         </div>
 
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
-          Look at what people
+          Real stories, real satisfaction —
           <br />
-          say about us
+          straight from our clients.
         </h2>
 
         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
-          Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam
-          ultrices augue convallis nunc ultrices amet consequat adipiscing.
+          Each testimonial reflects a journey we’ve proudly been a part of —
+          turning dreams into addresses and investments into milestones.
         </p>
 
         <div className="relative bg-white rounded-xl shadow-sm border max-w-4xl mx-auto">

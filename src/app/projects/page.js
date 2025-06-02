@@ -446,9 +446,8 @@ function Page() {
             <br /> we have available
           </h2>
           <p className="md:text-lg text-gray-400 mb-8">
-            Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-            potenti. Metus in eu vel morbi dui nunc tellus. Non a massa maecenas
-            massa.
+            Explore our complete portfolio of handpicked properties — designed
+            to match every dream and investment goal.
           </p>
         </div>
       </section>
@@ -588,7 +587,7 @@ function ProjectSection({
           <div className="uppercase text-sm tracking-wider text-gray-500 mb-1">
             {location}
           </div>
-          <h2 className="text-2xl font-light mb-2">{title}</h2>
+          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
           <div className="text-sm text-gray-500 mb-4">{date}</div>
           <p className="text-sm leading-relaxed text-gray-700">{description}</p>
           <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">

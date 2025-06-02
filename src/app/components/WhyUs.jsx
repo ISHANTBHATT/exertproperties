@@ -56,19 +56,19 @@ export default function WhyUs() {
               </div>
 
               <span className="text-gray-700 font-semibold text-sm">
-                Why us?
+                Why Choose us?
               </span>
             </div>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Innovation defines
-              <br />
-              our real estate
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Because you deserve more than just a property — you deserve peace
+              of mind.
             </h2>
 
             <p className="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-              potenti. Metus in eu vel morbi dui nunc tellus. Non a massa.
+              At Exert Properties, we believe real estate is not just about
+              buildings, but about building relationships, trust, and futures.
+              Here's why thousands choose us as their real estate partner:
             </p>
 
             <ul className="space-y-4 mb-8">
@@ -76,25 +76,37 @@ export default function WhyUs() {
                 <div className="bg-black rounded-full p-1">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <span>Move in 30 days or less</span>
+                <span>Expertise That Guides You</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="bg-black rounded-full p-1">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <span>The best interest available</span>
+                <span>Prime Properties, Carefully Curated</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="bg-black rounded-full p-1">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <span>Over 10% YoY home appreciation</span>
+                <span>Transparent Dealings, Every Step of the Way</span>
               </li>
               <li className="flex items-center gap-3">
                 <div className="bg-black rounded-full p-1">
                   <Check className="h-4 w-4 text-white" />
                 </div>
-                <span>Near Los Angeles office area</span>
+                <span>One-Stop Real Estate Solutions</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="bg-black rounded-full p-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <span>Client-Centric Approach</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="bg-black rounded-full p-1">
+                  <Check className="h-4 w-4 text-white" />
+                </div>
+                <span>Proven Track Record</span>
               </li>
             </ul>
 
@@ -105,7 +117,7 @@ export default function WhyUs() {
                 <IoMdArrowRoundForward className="h-4 w-4 text-black" />
               </div>
             </button> */}
-            <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+            {/* <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
               <button
                 // size="lg"
                 className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
@@ -115,7 +127,7 @@ export default function WhyUs() {
               <div className="rounded-full bg-white p-2 group">
                 <IoMdArrowRoundForward className="h-4 w-4 text-black" />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

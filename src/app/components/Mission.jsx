@@ -35,10 +35,14 @@ function Mission() {
           </h2>
 
           <p className="text-gray-600">
-            Lorem ipsum dolor sit amet consectetur. Gravida elementum dolor
-            semper felis pulvinar feugiat risus adipiscing dictum. Ultricies nec
-            elementum nisi ut. Cras diam odio sed auctor pellentesque. Sit nisi
-            ipsum id convallis tristique. Malesuada.
+            To empower individuals and businesses by delivering exceptional real
+            estate solutions that combine innovation, quality, and trust —
+            creating spaces that inspire, communities that thrive, and
+            investments that grow.
+            <br />
+            We strive to be a trusted partner in every step of your real estate
+            journey, committed to transparency, sustainability, and unmatched
+            customer satisfaction.
           </p>
 
           {/* <Button
@@ -48,14 +52,14 @@ function Mission() {
             Start exploring
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button> */}
-          <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+          {/* <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
             <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
               Start exploring
             </button>
             <div className="rounded-full bg-white p-2 group">
               <IoMdArrowRoundForward className="h-4 w-4 text-black" />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

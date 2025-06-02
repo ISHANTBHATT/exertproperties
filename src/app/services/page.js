@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ServicesSection() {
   return (
     <div className="container mx-auto px-4 py-16 md:py-32">
-      <h2 className="text-center text-5xl md:text-6xl font-serif tracking-wider  mb-16 md:mb-24">
+      <h2 className="text-center text-5xl md:text-6xl font-bold  tracking-wider  mb-16 md:mb-24">
         OUR SERVICES
       </h2>
 
@@ -11,7 +11,7 @@ export default function ServicesSection() {
       <div className="grid md:grid-cols-2 gap-8 mb-24 items-center">
         <div className="relative aspect-[4/3] w-full ">
           <Image
-            src="/images/1.jpg"
+            src="/images/s1.jpg"
             alt="Luxury property consultation"
             fill
             className="object-cover rounded-2xl"
@@ -22,7 +22,7 @@ export default function ServicesSection() {
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 01
           </div>
-          <h3 className="text-4xl md:text-5xl font-serif mb-6">
+          <h3 className="text-4xl md:text-5xl font-semibold mb-6">
             Advisory Services
           </h3>
           <p className="text-gray-700 leading-relaxed">
@@ -39,7 +39,7 @@ export default function ServicesSection() {
       <div className="grid md:grid-cols-2 gap-8 mb-24 items-center md:flex-row-reverse">
         <div className="md:order-2 relative aspect-[4/3] w-full ">
           <Image
-            src="/images/2.jpg"
+            src="/images/s2.jpg"
             alt="Luxury property development"
             fill
             className="object-cover rounded-2xl"
@@ -50,7 +50,7 @@ export default function ServicesSection() {
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 02
           </div>
-          <h3 className="text-4xl md:text-5xl font-serif mb-6">
+          <h3 className="text-4xl md:text-5xl font-semibold mb-6">
             Property Development
           </h3>
           <p className="text-gray-700 leading-relaxed">
@@ -65,7 +65,7 @@ export default function ServicesSection() {
       <div className="grid md:grid-cols-2 gap-8 items-center">
         <div className="relative aspect-[4/3] w-full ">
           <Image
-            src="/images/3.jpg"
+            src="/images/s3.jpg"
             alt="Facility management services"
             fill
             className="object-cover rounded-2xl"
@@ -76,7 +76,7 @@ export default function ServicesSection() {
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 03
           </div>
-          <h3 className="text-4xl md:text-5xl font-serif mb-6">
+          <h3 className="text-4xl md:text-5xl font-semibold mb-6">
             Facility Management
           </h3>
           <p className="text-gray-700 leading-relaxed">

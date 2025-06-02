@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { IoMdArrowRoundForward } from "react-icons/io";
@@ -23,12 +24,12 @@ function OfficeSection() {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              Come and visit our offices
+              Your dream property awaits!
             </h2>
 
             <p className="text-gray-400 max-w-2xl">
-              Lorem ipsum dolor sit amet consectetur fermentum eget fringilla
-              egestas a aliquam arcu arcu nunc pretium id.
+              Drop by our office—where your property journey begins with a
+              friendly smile and expert guidance.
             </p>
           </div>
 
@@ -85,7 +86,7 @@ function OfficeSection() {
                     >
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
-                    <span>(414) 325 - 427</span>
+                    <span>+2347025012424, +2348180000567</span>
                   </div>
                 </div>
               </div>
@@ -142,7 +143,7 @@ function OfficeSection() {
                     >
                       <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                     </svg>
-                    <span>(414) 325 - 427</span>
+                    <span>+12549520712, +16465049826</span>
                   </div>
                 </div>
               </div>
@@ -157,14 +158,16 @@ function OfficeSection() {
               Contact us
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button> */}
-            <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
-              <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
-                Contact us
-              </button>
-              <div className="rounded-full bg-black p-2 group">
-                <IoMdArrowRoundForward className="h-4 w-4 text-white" />
+            <Link href="/contact">
+              <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
+                <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
+                  Contact us
+                </button>
+                <div className="rounded-full bg-black p-2 group">
+                  <IoMdArrowRoundForward className="h-4 w-4 text-white" />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

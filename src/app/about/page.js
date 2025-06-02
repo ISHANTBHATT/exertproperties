@@ -45,7 +45,7 @@ function Page() {
         <div className="grid md:grid-cols-2 gap-2 md:gap-12">
           <div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6">
-              About our real estate firm
+              Turning Spaces into Statements
             </h2>
           </div>
 
@@ -150,9 +150,10 @@ function Page() {
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur. Sit ut gravida aenean
-            potenti. Metus in eu vel morbi dui nunc tellus. Non a massa maecenas
-            massa.
+            Your trusted guides in the world of real estate - Get to know the
+            faces behind the expertise, and discover how their local insights
+            and industry connections can turn your real estate dreams into
+            reality.
           </p>
         </div>
 

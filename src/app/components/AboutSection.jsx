@@ -68,6 +68,7 @@ import { Bath, Bed, Car, Square } from "lucide-react";
 import { motion } from "framer-motion";
 import { IoPersonSharp } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import Link from "next/link";
 const AboutSection = () => {
   return (
     <div className="py-10 md:p-10 lg:p-16 ">
@@ -81,13 +82,13 @@ const AboutSection = () => {
               About us
             </div>
             <motion.h2
-              className="text-5xl font-semibold mt-4 mb-6"
+              className="text-3xl md:text-4xl font-bold mt-4 mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              The best way to find your perfect home
+              Exert Properties - Where every square foot tells a story.
             </motion.h2>
             <motion.p
               className="text-gray-600 mb-8"
@@ -96,22 +97,26 @@ const AboutSection = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              Lorem ipsum dolor sit amet consectetur. Gravida elementum dolor
-              semper felis pulvinar feugiat risus adipiscing dictum. Ultricies
-              nec elementum nisi ut. Cras diam odio sed auctor pellentesque. Sit
-              nisl ipsum id convallis tristique. Malesuada.
+              We pride ourselves as developers of homes and projects that
+              represents best in class with regards to meeting standards and
+              finishing. Our developments are priced affordably to meet the
+              teeming demand of an urban middle class. Our clients expects
+              modern designs, proper facility management and breath taking
+              common areas and ambient locations
             </motion.p>
-            <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
-              <button
-                // size="lg"
-                className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
-              >
-                Start exploring
-              </button>
-              <div className="rounded-full bg-white p-2 group">
-                <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+            <Link href="/about">
+              <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+                <button
+                  // size="lg"
+                  className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
+                >
+                  Start exploring
+                </button>
+                <div className="rounded-full bg-white p-2 group">
+                  <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                </div>
               </div>
-            </div>
+            </Link>
           </div>
 
           <div className="relative">

@@ -285,17 +285,19 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-              Discover your
+              Turning Spaces
               <br />
-              dream home now
+              into Statements
             </h1>
           </div>
           <div>
             <div className="lg:max-w-xl">
               <p className="text-white text-lg">
-                Lorem ipsum dolor sit amet consectetur fermentum eget fringilla
-                egestas a aliquam arcu arcu nunc pretium id semper ut volutpat.
-                Id gravida aenean.
+                At Exert Properties, we don’t just build properties — we shape
+                lifestyles, foster communities, and redefine skylines. With
+                decades of experience and a passion for excellence, we deliver
+                real estate solutions that are elegant, enduring, and tailored
+                to your vision.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
