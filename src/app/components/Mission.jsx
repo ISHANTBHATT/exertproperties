@@ -10,7 +10,7 @@ function Mission() {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="rounded-3xl overflow-hidden">
           <Image
-            src="/images/1.jpg"
+            src="/images/5.jpg"
             alt="People viewing a home"
             width={600}
             height={600}

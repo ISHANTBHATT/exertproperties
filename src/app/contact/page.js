@@ -271,7 +271,7 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/images/1.jpg"
+                src="/images/6.jpg"
                 alt="San Francisco Office"
                 width={800}
                 height={600}
@@ -299,7 +299,7 @@ export default function ContactForm() {
 
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/images/1.jpg"
+                src="/images/7.jpg"
                 alt="San Francisco Office"
                 width={800}
                 height={600}

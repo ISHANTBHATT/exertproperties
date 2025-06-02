@@ -21,7 +21,7 @@ function HomePage() {
       title: "Home in Los Angeles Heart",
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
-      location: "2596 El Segundo, Los Angeles",
+      location: "2701 Northeast Dr #B-2, Austin, TX 78723",
       image: "/images/p2-2.jpg",
       status: "For sale",
     },
@@ -30,7 +30,7 @@ function HomePage() {
       title: "Luxury Loft in San Francisco",
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
-      location: "2238 Stradella Rd, SF",
+      location: "Lekki Foreshore Estate Lekki Phase 1 Lagos, Nigeria",
       image: "/images/h1-3.jpeg",
       status: "For rent",
     },
@@ -39,7 +39,7 @@ function HomePage() {
       title: "Modern Villa in Malibu",
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
-      location: "1432 Ocean Drive, Malibu",
+      location: "Vitoria Crest 2 Estate Orchid Lekki Lagos, Nigeria",
       image: "/images/p1-8.jpeg",
       status: "For sale",
     },

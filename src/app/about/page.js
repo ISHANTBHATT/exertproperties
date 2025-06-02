@@ -84,7 +84,7 @@ function Page() {
           <div>
             <div className="rounded-3xl overflow-hidden mb-8">
               <Image
-                src="/images/1.jpg"
+                src="/images/2.jpg"
                 alt="Real estate team"
                 width={600}
                 height={400}
@@ -117,7 +117,7 @@ function Page() {
 
           <div className="rounded-3xl overflow-hidden h-full">
             <Image
-              src="/images/1.jpg"
+              src="/images/3.jpg"
               alt="Real estate professionals"
               width={600}
               height={600}
