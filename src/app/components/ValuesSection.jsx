@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import React from "react";
 import { FaBalanceScale, FaRegHandshake } from "react-icons/fa";
-import { HiMiniTrophy } from "react-icons/hi2";
+import { HiMiniTrophy, HiOutlineTrophy } from "react-icons/hi2";
 import { PiPlantLight } from "react-icons/pi";
 import { IoBulbOutline } from "react-icons/io5";
 function ValuesSection() {
@@ -60,7 +60,7 @@ function ValuesSection() {
         </div>
 
         <div className="space-y-4 border-b-2 md:border-b-0 border-neutral-300 pb-4 md:pb-0">
-          <HiMiniTrophy className="h-8 w-8" />
+          <HiOutlineTrophy className="h-8 w-8" />
           <h3 className="text-2xl font-semibold">Excellence</h3>
           <p className="text-gray-600">
             From planning to possession, we uphold the highest standards of

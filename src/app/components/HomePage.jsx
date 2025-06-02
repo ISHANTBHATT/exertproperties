@@ -22,7 +22,7 @@ function HomePage() {
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
       location: "2596 El Segundo, Los Angeles",
-      image: "/images/1.jpg",
+      image: "/images/p2-2.jpg",
       status: "For sale",
     },
     {
@@ -31,7 +31,7 @@ function HomePage() {
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
       location: "2238 Stradella Rd, SF",
-      image: "/images/1.jpg",
+      image: "/images/h1-3.jpeg",
       status: "For rent",
     },
     {
@@ -40,7 +40,7 @@ function HomePage() {
       description:
         "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
       location: "1432 Ocean Drive, Malibu",
-      image: "/images/1.jpg",
+      image: "/images/p1-8.jpeg",
       status: "For sale",
     },
   ];
