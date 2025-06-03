@@ -192,7 +192,7 @@ const projects = [
     title: "3 in 1 FULL DETACHED HOUSES",
     date: "ORCHID LAGOS 2021",
     description:
-      "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class.",
+      "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detched duplexe with a maid roo. This roject was started in novemeber 2021 and finished by May 2022. Its all been sold and our clients are since living in them with their family.",
     image: "/images/p1a-1.jpg",
     beforeMedia: [
       { type: "image", src: "/images/p1b-1.jpeg" },
@@ -305,7 +305,7 @@ const projects = [
     title: "ENUGU LAND DEVELOPMENT",
     date: "INDEPENDENCE LAYOUT 2023",
     description:
-      "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access.",
+      "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
     image: "/images/3.jpg",
     beforeMedia: [
       { type: "image", src: "/images/p3b-1.jpeg" },
@@ -391,7 +391,7 @@ const projects = [
     title: "GAINS HEIGHTS",
     date: "LEKKI FORESHORE ESTATE 2024",
     description:
-      'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English.',
+      'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . we are concluding drawing and approvals and will move to sight by August 2025, gestation time for completion will be August 2027',
     image: "/images/h1-2.jpeg",
     beforeMedia: [
       { type: "image", src: "/images/p2b.jpeg" },
