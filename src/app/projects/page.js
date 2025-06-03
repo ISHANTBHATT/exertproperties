@@ -182,6 +182,7 @@ import { BiSolidHomeAlt2 } from "react-icons/bi";
 import Image from "next/image";
 import ProjectModal from "@/components/ui/ProjectModal";
 import { motion } from "framer-motion";
+import { IoMdArrowRoundForward } from "react-icons/io";
 
 // Project data
 const projects = [
@@ -593,6 +594,25 @@ function ProjectSection({
           <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
             Portfolio
           </div>
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="my-4 w-fit items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800"
+          >
+            <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
+              View more images
+            </button>
+            <div className="rounded-full bg-white p-2 group">
+              <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+            </div>
+          </div>
+          {/* <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
+            <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
+              Contact us
+            </button>
+            <div className="rounded-full bg-black p-2 group">
+              <IoMdArrowRoundForward className="h-4 w-4 text-white" />
+            </div>
+          </div> */}
         </div>
       </div>
 
