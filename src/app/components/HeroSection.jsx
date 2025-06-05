@@ -302,13 +302,13 @@ export default function HeroSection() {
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                href="/explore"
+                href="/"
                 className="flex items-center px-6 py-3 rounded-full bg-black text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-neutral-900"
               >
                 Start exploring <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                href="/post-property"
+                href="/"
                 className="flex items-center px-6 py-3 text-white font-medium hover:underline"
               >
                 Post properties <ArrowRight className="ml-2 h-5 w-5" />
