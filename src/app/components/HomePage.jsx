@@ -18,27 +18,27 @@ function HomePage() {
   const properties2 = [
     {
       id: 1,
-      title: "Home in Los Angeles Heart",
+      title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
+        " It had a cosmetic fire damage. We were able to partner with some local contractors to bring it back to life and was done by December 2023. ",
       location: "2701 Northeast Dr #B-2, Austin, TX 78723",
       image: "/images/p2-2.jpg",
       status: "For sale",
     },
     {
       id: 2,
-      title: "Luxury Loft in San Francisco",
+      title: "2 Bedroom Shotlet in Lekki 1",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
+        "A contemporary tastefully furnished & finished 2 bed apartment serviced and located at the ambient heart of Lekki phase 1. Two minutes drive to Ikoyi and Victoria Island.",
       location: "Lekki Foreshore Estate Lekki Phase 1 Lagos, Nigeria",
       image: "/images/h1-3.jpeg",
       status: "For rent",
     },
     {
       id: 3,
-      title: "Modern Villa in Malibu",
+      title: "3 in 1 FULL DETACHED HOUSES",
       description:
-        "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
+        "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room.",
       location: "Vitoria Crest 2 Estate Orchid Lekki Lagos, Nigeria",
       image: "/images/p1-8.jpeg",
       status: "For sale",

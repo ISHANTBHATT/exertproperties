@@ -84,7 +84,7 @@ function Page() {
           <div>
             <div className="rounded-3xl overflow-hidden mb-8">
               <Image
-                src="/images/2.jpg"
+                src="/images/p4a-1.jpeg"
                 alt="Real estate team"
                 width={600}
                 height={400}
@@ -92,8 +92,24 @@ function Page() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid  gap-8">
               <div>
+                <h3 className="text-5xl font-bold mb-2">GAINS HEIGHTS</h3>
+                <p className="text-gray-600">LEKKI FORESHORE ESTATE 2024</p>
+                <p className="text-gray-600 mt-2">
+                  In October 2024, we bought a 1000 square meter of land at
+                  Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural
+                  Ground Floor plus Four 20 units of 2 bedroom luxury flats with
+                  a 3 bedroom penthouse. This project is named after our CEO's
+                  hometown Urualla in Ideato North Local Government Area Imo
+                  state Nigeria. Urualla is "Gains of a land" when translated in
+                  English. This project is tagged GAINS HEIGHTS powered by Exert
+                  Properties . we are concluding drawing and approvals and will
+                  move to sight by August 2025, gestation time for completion
+                  will be August 2027
+                </p>
+              </div>
+              {/* <div>
                 <h3 className="text-5xl font-bold mb-2">
                   10k<span className="text-gray-400">+</span>
                 </h3>
@@ -101,9 +117,9 @@ function Page() {
                 <p className="text-gray-600 mt-2">
                   Lorem ipsum dolor sit amet consectetur fermentum
                 </p>
-              </div>
+              </div> */}
 
-              <div>
+              {/* <div>
                 <h3 className="text-5xl font-bold mb-2">
                   500<span className="text-gray-400">k</span>
                 </h3>
@@ -111,7 +127,7 @@ function Page() {
                 <p className="text-gray-600 mt-2">
                   Lorem ipsum dolor sit amet consectetur fermentum
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -24,7 +24,7 @@ const PropertyCard = ({ property, featured = false }) => {
     >
       <div className="relative">
         <img src={image} alt={title} className="w-full h-64 object-cover" />
-        <div className="absolute top-4 left-4">
+        {/* <div className="absolute top-4 left-4">
           <span
             className={`px-3 py-1 rounded-full text-xs font-medium inline-flex items-center ${
               type === "rent" ? "bg-black text-white" : "bg-white text-black"
@@ -32,7 +32,7 @@ const PropertyCard = ({ property, featured = false }) => {
           >
             For {type}
           </span>
-        </div>
+        </div> */}
         <button className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-sm hover:shadow-md transition-shadow">
           <Plus className="h-4 w-4" />
         </button>

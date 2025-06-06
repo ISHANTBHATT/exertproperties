@@ -1,7 +1,7 @@
 export const properties = [
   {
     id: "1",
-    title: "Luxury Loft in San Francisco",
+    title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
     location: {
       address: "2701 Northeast Dr #B-2, Austin",
       city: "TX 78723",
@@ -19,9 +19,9 @@ export const properties = [
   },
   {
     id: "2",
-    title: "GAINS HEIGHTS",
+    title: "2 Bedroom Shotlet in Lekki 1",
     location: {
-      address: "2596 El Segundo",
+      address: "Lekki Foreshore Estate Lekki Phase 1 Lagos",
       city: "Nigeria",
     },
     type: "sale",
@@ -37,7 +37,7 @@ export const properties = [
   },
   {
     id: "3",
-    title: "Modern Loft in San Francisco",
+    title: "3 in 1 FULL DETACHED HOUSES",
     location: {
       address: " Vitoria Crest 2 Estate Orchid Lekki Lagos",
       city: "Nigeria",
@@ -55,15 +55,14 @@ export const properties = [
   },
   {
     id: "4",
-    title: "Executive Office, San Diego",
+    title: "GAINS HEIGHTS",
     location: {
-      address: "9007, South Grand Avenue",
-      city: "San Diego",
+      address: "lekki Foreshore Estate Lekki Phase 1 Lekki Lagos",
+      city: "Nigeria",
     },
     type: "rent",
     price: 15000,
-    image:
-      "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    image: "/images/p4a-1.jpeg",
     sqft: 8392,
     bedrooms: 4,
     bathrooms: 6,
