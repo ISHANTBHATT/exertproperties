@@ -7,7 +7,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 function Mission() {
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="rounded-3xl overflow-hidden">
           <Image
             src="/images/5.jpg"
@@ -30,8 +30,9 @@ function Mission() {
             Our mission
           </div>
 
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-            We have only one goal: To help you find your dream home
+          <h2 className="text-4xl font-bold tracking-tight">
+            We have only one goal: To help you bring your envisioned dream home
+            to reality
           </h2>
 
           <p className="text-gray-600">

@@ -157,12 +157,12 @@ function Page() {
               <IoIosPeople className="h-4 w-4 text-white" />
             </div>
             <span className="text-gray-700 text-sm font-semibold">
-              Our agents
+              Our team
             </span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-            Meet our agents
+            Meet our team
           </h2>
 
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
