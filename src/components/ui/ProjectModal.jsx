@@ -223,41 +223,48 @@ export default function ProjectGalleryModal({
         <Tabs defaultValue="before" className="w-full mt-4">
           <div className="px-6">
             <TabsList className="grid w-full grid-cols-2 mb-4">
-              <TabsTrigger value="before">Before</TabsTrigger>
+              {beforeMedia.length > 1 && (
+                <TabsTrigger value="before">Before</TabsTrigger>
+              )}
               <TabsTrigger value="after">After</TabsTrigger>
             </TabsList>
           </div>
 
-          <TabsContent value="before" className="mt-0">
-            <div className="relative">
-              {renderMedia(beforeMedia[currentBeforeIndex], currentBeforeIndex)}
+          {beforeMedia.length > 1 && (
+            <TabsContent value="before" className="mt-0">
+              <div className="relative">
+                {renderMedia(
+                  beforeMedia[currentBeforeIndex],
+                  currentBeforeIndex
+                )}
 
-              {beforeMedia.length > 1 && (
-                <>
-                  <button
-                    onClick={() => navigateMedia("before", "prev")}
-                    className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-                  >
-                    <ChevronLeft className="h-6 w-6" />
-                  </button>
-                  <button
-                    onClick={() => navigateMedia("before", "next")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
-                  >
-                    <ChevronRight className="h-6 w-6" />
-                  </button>
-                </>
-              )}
-            </div>
+                {beforeMedia.length > 1 && (
+                  <>
+                    <button
+                      onClick={() => navigateMedia("before", "prev")}
+                      className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                    >
+                      <ChevronLeft className="h-6 w-6" />
+                    </button>
+                    <button
+                      onClick={() => navigateMedia("before", "next")}
+                      className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-colors"
+                    >
+                      <ChevronRight className="h-6 w-6" />
+                    </button>
+                  </>
+                )}
+              </div>
 
-            {beforeMedia.length > 1 &&
-              renderThumbnails(
-                beforeMedia,
-                currentBeforeIndex,
-                setCurrentBeforeIndex,
-                "before"
-              )}
-          </TabsContent>
+              {beforeMedia.length > 1 &&
+                renderThumbnails(
+                  beforeMedia,
+                  currentBeforeIndex,
+                  setCurrentBeforeIndex,
+                  "before"
+                )}
+            </TabsContent>
+          )}
 
           <TabsContent value="after" className="mt-0">
             <div className="relative">

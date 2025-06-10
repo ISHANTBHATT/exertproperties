@@ -26,9 +26,9 @@ export function TransformationCard({ property, onClick }) {
               width={400}
               height={300}
             />
-            <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+            {/* <div className="absolute top-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
               Before
-            </div>
+            </div> */}
           </div>
 
           <div className="absolute inset-0 w-full h-full">
@@ -39,9 +39,9 @@ export function TransformationCard({ property, onClick }) {
               width={400}
               height={300}
             />
-            <div className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
+            {/* <div className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
               After
-            </div>
+            </div> */}
           </div>
         </div>
 
