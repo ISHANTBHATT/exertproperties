@@ -145,7 +145,7 @@
 const properties = [
   {
     id: 1,
-    title: "2 Bedroom Shotlet",
+    title: "2 BEDROOM SHOTLET",
     category: "residential",
     location: "Lekki phase 1, Nigeria",
     beforeImage: `/images/h1-1.jpeg`,

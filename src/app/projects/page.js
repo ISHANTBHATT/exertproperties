@@ -230,7 +230,7 @@ const projects = [
   {
     id: 2,
     location: "Nigeria",
-    title: "2 Bedroom Shotlet in Lekki 1",
+    title: "2 BEDROOM SHOTLET IN LEKKI 1",
     date: "2023",
     description:
       "A contemporary tastefully furnished & finished 2 bed apartment serviced and located at the ambient heart of Lekki phase 1. Two minutes drive to Ikoyi and Victoria Island.",
