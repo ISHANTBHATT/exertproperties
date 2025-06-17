@@ -152,7 +152,7 @@ export default function FeaturedProperties({ properties }) {
 
         <div className="flex justify-center mt-12">
           <a
-            href="#"
+            href="/projects"
             className="text-white flex items-center gap-2 hover:underline"
           >
             Browse all properties

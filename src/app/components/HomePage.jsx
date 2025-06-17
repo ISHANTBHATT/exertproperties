@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import AmenitiesSection from "./AmenitiesSection";
@@ -44,6 +45,7 @@ function HomePage() {
       status: "For sale",
     },
   ];
+  const statsRef = useRef(null);
   return (
     // <main className="min-h-screen bg-[#f9f6f2]">
     //   <HeroSection />
@@ -55,8 +57,11 @@ function HomePage() {
     <main className="min-h-screen">
       {/* <Header /> */}
       {/* <Hero /> */}
-      <HeroSection />
-      <StatsSection />
+      <HeroSection scrollToRef={statsRef} />
+      <div ref={statsRef}>
+        <StatsSection />
+      </div>
+      {/* <StatsSection /> */}
       <FeaturedProperties properties={properties2} />
       {/* <FeaturedProperties properties={properties} /> */}
       <AboutSection />

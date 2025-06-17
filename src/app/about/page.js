@@ -174,8 +174,8 @@ function Page() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {agents.map((agent) => (
-            <Link key={agent.key} href={`/agent/${agent.slug}`}>
+          {agents.map((agent, index) => (
+            <Link key={index} href={`/agent/${agent.slug}`}>
               <div className="bg-white rounded-xl p-8 shadow-sm">
                 <div className="relative mb-6">
                   <div className="absolute top-0 right-0 bg-black rounded-full p-2">
@@ -421,7 +421,7 @@ function Page() {
           </div> */}
         </div>
 
-        <div className="flex justify-center mt-12 space-x-6">
+        {/* <div className="flex justify-center mt-12 space-x-6">
           <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
             <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
               Start exploring
@@ -435,7 +435,7 @@ function Page() {
             Browse all agents
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-        </div>
+        </div> */}
       </section>
       {/* Offices Section */}
     </main>

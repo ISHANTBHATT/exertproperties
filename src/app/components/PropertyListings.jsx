@@ -4,6 +4,7 @@ import PropertyCard from "@/components/ui/PropertyCard";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
+import Link from "next/link";
 const PropertyListings = ({ properties }) => {
   return (
     <div className="py-16">
@@ -46,10 +47,16 @@ const PropertyListings = ({ properties }) => {
         </div>
 
         <div className="flex justify-center space-x-4">
-          <Button className="rounded-full">Start exploring</Button>
-          <Button variant="secondary" className="rounded-full">
-            Browse all properties
-          </Button>
+          <Link href="/projects">
+            <Button className="rounded-full cursor-pointer">
+              Start exploring
+            </Button>
+          </Link>
+          <Link href="/gallery">
+            <Button variant="secondary" className="rounded-full cursor-pointer">
+              Browse all properties
+            </Button>
+          </Link>
         </div>
       </div>
     </div>

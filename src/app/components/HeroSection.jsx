@@ -245,8 +245,10 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-export default function HeroSection() {
+export default function HeroSection({ scrollToRef }) {
   const targetRef = useRef(null);
+  // const nextSectionRef = useRef(null);
+
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end start"],
@@ -256,6 +258,11 @@ export default function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
+  const handleExploreClick = () => {
+    if (scrollToRef?.current) {
+      scrollToRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <motion.section
       ref={targetRef}
@@ -301,17 +308,18 @@ export default function HeroSection() {
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
-              <Link
-                href="/"
+              <button
+                onClick={handleExploreClick}
+                // href="/"
                 className="flex items-center px-6 py-3 rounded-full bg-black text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-neutral-900"
               >
                 Start exploring <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </button>
               <Link
-                href="/"
+                href="/projects"
                 className="flex items-center px-6 py-3 text-white font-medium hover:underline"
               >
-                Post properties <ArrowRight className="ml-2 h-5 w-5" />
+                Explore projects <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
