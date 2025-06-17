@@ -11,7 +11,7 @@ export default function ServicesSection() {
       <div className="grid md:grid-cols-2 gap-8 mb-24 items-center">
         <div className="relative aspect-[4/3] w-full ">
           <Image
-            src="/images/s1.jpg"
+            src="/images/s4.jpg"
             alt="Luxury property consultation"
             fill
             className="object-cover rounded-2xl"

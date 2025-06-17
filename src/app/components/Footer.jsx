@@ -175,15 +175,17 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-400">Email address</p>
-                    <p>info@home.com</p>
+                    <p>info@exert.com</p>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-400">Phone number</p>
-                    <p>
-                      +2347025012424, +2348180000567, +12549520712, +16465049826
+                    <p className="text-sm">
+                      Nigeria Office : +2347025012424, +2348180000567
+                      <br />
+                      United States Office : +12549520712, +16465049826
                     </p>
                   </div>
                 </li>
@@ -191,15 +193,33 @@ const Footer = () => {
                   <MessageSquare className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-400">Help & support</p>
-                    <p>support@home.com</p>
+                    <p>support@exert.com</p>
                   </div>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4">Sales executives</h3>
-              <p className="text-gray-400">sales@home.com</p>
+              <h3 className="text-lg font-semibold mb-4">Follow us</h3>
+              {/* <p className="text-gray-400">sales@exert.com</p> */}
+              <div className="flex gap-4">
+                <a
+                  href="https://www.facebook.com/people/Exert-Properties-Ltd/100089793377102/"
+                  className="hover:text-gray-300"
+                  target="_blank"
+                >
+                  <Facebook className="h-6 w-6" />
+                  <span className="sr-only">Facebook</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/exertpropertiesltd?fbclid=IwY2xjawK97r9leHRuA2FlbQIxMABicmlkETFDVjFUVW5wdFM2T1c1WkI3AR7g2W250FvxF8UmnmVvQZhu5_M265pStFv9O7T88DctVz8XbwsfrIyLbzIfqw_aem_VQNZTHoC5ptDGGgtdw1Rvg"
+                  className="hover:text-gray-300"
+                  target="_blank"
+                >
+                  <Instagram className="h-6 w-6" />
+                  <span className="sr-only">Instagram</span>
+                </a>
+              </div>
             </div>
           </div>
 

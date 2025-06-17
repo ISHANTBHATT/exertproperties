@@ -205,8 +205,9 @@ export default function ContactForm() {
                     <div>
                       <p className="text-sm text-gray-400">Phone number</p>
                       <p className="font-medium">
-                        +2347025012424, +2348180000567, +12549520712,
-                        +16465049826
+                        Nigeria Office : +2347025012424, +2348180000567
+                        <br />
+                        United States Office : +12549520712, +16465049826
                       </p>
                     </div>
                   </div>
@@ -224,22 +225,30 @@ export default function ContactForm() {
                 </p>
 
                 <div className="flex gap-4">
-                  <a href="#" className="hover:text-gray-300">
+                  <a
+                    href="https://www.facebook.com/people/Exert-Properties-Ltd/100089793377102/"
+                    className="hover:text-gray-300"
+                    target="_blank"
+                  >
                     <Facebook className="h-6 w-6" />
                     <span className="sr-only">Facebook</span>
                   </a>
-                  <a href="#" className="hover:text-gray-300">
+                  {/* <a href="#" className="hover:text-gray-300">
                     <Twitter className="h-6 w-6" />
                     <span className="sr-only">Twitter</span>
-                  </a>
-                  <a href="#" className="hover:text-gray-300">
+                  </a> */}
+                  <a
+                    href="https://www.instagram.com/exertpropertiesltd?fbclid=IwY2xjawK97r9leHRuA2FlbQIxMABicmlkETFDVjFUVW5wdFM2T1c1WkI3AR7g2W250FvxF8UmnmVvQZhu5_M265pStFv9O7T88DctVz8XbwsfrIyLbzIfqw_aem_VQNZTHoC5ptDGGgtdw1Rvg"
+                    className="hover:text-gray-300"
+                    target="_blank"
+                  >
                     <Instagram className="h-6 w-6" />
                     <span className="sr-only">Instagram</span>
                   </a>
-                  <a href="#" className="hover:text-gray-300">
+                  {/* <a href="#" className="hover:text-gray-300">
                     <Linkedin className="h-6 w-6" />
                     <span className="sr-only">LinkedIn</span>
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
@@ -271,7 +280,7 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/images/6.jpg"
+                src="/images/p4a-2.jpeg"
                 alt="San Francisco Office"
                 width={800}
                 height={600}
@@ -299,7 +308,7 @@ export default function ContactForm() {
 
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/images/7.jpg"
+                src="/images/p2-4.jpg"
                 alt="San Francisco Office"
                 width={800}
                 height={600}

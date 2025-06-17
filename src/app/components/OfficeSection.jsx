@@ -37,7 +37,7 @@ function OfficeSection() {
             <div className="rounded-3xl overflow-hidden">
               <div className="relative h-80">
                 <Image
-                  src="/images/6.jpg"
+                  src="/images/p4a-2.jpeg"
                   alt="San Francisco Office"
                   fill
                   className="object-cover"
@@ -95,7 +95,7 @@ function OfficeSection() {
             <div className="rounded-3xl overflow-hidden">
               <div className="relative h-80">
                 <Image
-                  src="/images/7.jpg"
+                  src="/images/p2-4.jpg"
                   alt="Los Angeles Office"
                   fill
                   className="object-cover"

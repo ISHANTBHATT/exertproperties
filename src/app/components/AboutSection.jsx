@@ -121,7 +121,7 @@ const AboutSection = () => {
 
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="/images/p2-26.jpg"
               alt="Modern home"
               className="w-full h-96 object-cover rounded-lg"
             />

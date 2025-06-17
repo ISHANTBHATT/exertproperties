@@ -62,7 +62,7 @@ export const properties = [
     },
     type: "rent",
     price: 15000,
-    image: "/images/p4a-1.jpeg",
+    image: "/images/p4a-2.jpeg",
     sqft: 8392,
     bedrooms: 4,
     bathrooms: 6,

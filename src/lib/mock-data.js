@@ -294,10 +294,10 @@ const properties = [
   {
     id: 3,
     title: `ENUGU LAND DEVELOPMENT`,
-    category: "residential",
+    category: "",
     location: "Ukuta Close off Valley Crescent off Nza, Nigeria",
     beforeImage: `/images/p3b-1.jpeg`,
-    afterImage: `/images/2.jpg`,
+    afterImage: `/images/p3b-2.jpeg`,
     beforeMedia: [
       { type: "image", src: "/images/p3b-1.jpeg" },
       { type: "image", src: "/images/p3b-2.jpeg" },
@@ -378,8 +378,8 @@ const properties = [
     title: `GAINS HEIGHTS`,
     category: "residential",
     location: "Lekki Foreshore Estate Lekki Phase 1 Lagos, Nigeria",
-    beforeImage: `/images/p4a-1.jpeg`,
-    afterImage: `/images/2.jpg`,
+    beforeImage: `/images/p4a-2.jpeg`,
+    afterImage: `/images/p4a-1.jpeg`,
     beforeMedia: [
       { type: "image", src: "/images/p4b-1.jpeg" },
       { type: "image", src: "/images/p4b-2.jpeg" },
@@ -396,7 +396,7 @@ const properties = [
         src: "/videos/p4bv-2.mp4",
       },
     ],
-    afterMedia: [{ type: "image", src: "/images/p4a-1.jpeg" }],
+    afterMedia: [{ type: "image", src: "/images/p4a-2.jpeg" }],
     // duration: `32 months`,
     // renovationType: renovationTypes[renovationIndex],
     // description:
