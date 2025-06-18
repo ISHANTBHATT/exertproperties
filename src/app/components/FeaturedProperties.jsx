@@ -100,32 +100,49 @@ import {
 import { Star } from "lucide-react";
 import { useState } from "react";
 import PropertyCard from "./PropertyCard";
+import { fadeIn, staggerContainer } from "@/utils/motion";
+import { motion } from "framer-motion";
 
 export default function FeaturedProperties({ properties }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section className="w-full bg-black text-white py-16">
+    <motion.section
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="w-full bg-[#3A9188] text-white py-16"
+    >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-center mb-4">
+        <motion.div
+          variants={fadeIn("down", "tween", 0.2, 1)}
+          className="flex items-center justify-center mb-4"
+        >
           <div className="bg-zinc-800/80 rounded-full px-4 py-2 flex items-center gap-2">
             <Star className="h-4 w-4 fill-white text-white" />
             <span className="text-sm font-medium">Featured properties</span>
           </div>
-        </div>
+        </motion.div>
 
-        <h2 className="text-5xl font-bold text-center mb-6">
+        <motion.h2
+          variants={fadeIn("up", "tween", 0.5, 1)}
+          className="text-5xl font-bold text-center mb-6"
+        >
           Featured properties
-        </h2>
+        </motion.h2>
 
-        <p className="text-center text-gray-300 max-w-2xl mx-auto mb-12">
+        <motion.p
+          variants={fadeIn("up", "tween", 0.8, 1)}
+          className="text-center text-gray-200 max-w-2xl mx-auto mb-12"
+        >
           Explore our curated premium properties that combine location, design,
           and lifestyle. Whether looking for a dream home, investment, or
           business address, our listings offer exceptional options for every
           buyer.
-        </p>
+        </motion.p>
 
-        <div className="relative">
+        <motion.div variants={fadeIn("up", "tween", 1, 1)} className="relative">
           <Carousel
             opts={{
               loop: true,
@@ -148,9 +165,12 @@ export default function FeaturedProperties({ properties }) {
             <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-black hover:bg-white hover:text-black h-10 w-10 border-none" />
             <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-black hover:bg-white hover:text-black h-10 w-10 border-none" />
           </Carousel>
-        </div>
+        </motion.div>
 
-        <div className="flex justify-center mt-12">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.4, 1)}
+          className="flex justify-center mt-12"
+        >
           <a
             href="/projects"
             className="text-white flex items-center gap-2 hover:underline"
@@ -172,8 +192,8 @@ export default function FeaturedProperties({ properties }) {
               />
             </svg>
           </a>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }

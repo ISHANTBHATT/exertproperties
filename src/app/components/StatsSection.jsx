@@ -11,7 +11,7 @@ const StatsSection = () => {
             className="space-y-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h3 className="font-normal text-gray-500">Homes purchased</h3>
@@ -27,7 +27,7 @@ const StatsSection = () => {
             className="space-y-2"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             viewport={{ once: true }}
           >
             <h3 className="font-normal text-gray-500">Published properties</h3>
@@ -43,7 +43,7 @@ const StatsSection = () => {
             className="space-y-4 col-span-2 flex flex-col md:items-end bg-white p-4 md:p-10 rounded-4xl"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
             <div className="flex items-center gap-4">

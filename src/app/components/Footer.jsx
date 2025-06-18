@@ -14,14 +14,15 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div className="bg-[#fafafb]">
-      <footer className="bg-black text-white pt-16 pb-8 rounded-4xl md:mx-6 lg:mx-20 px-10">
+      {/* #3A9188 */}
+      <footer className="bg-[#3A9188] text-white pt-16 pb-8 rounded-4xl md:mx-6 lg:mx-20 px-10">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">
               When you think real estate, think reliability. Think Exert
               Properties
             </h2>
-            <p className="text-gray-400 mb-6">
+            <p className="text-gray-200 mb-6">
               With years of experience and a commitment to excellence, we
               provide elegant, lasting real estate solutions tailored to your
               vision.
@@ -31,7 +32,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 bg-neutral-800 rounded-full px-4 py-3 text-sm"
+                className="flex-1 bg-neutral-200 rounded-full text-neutral-800 px-4 py-3 text-sm"
               />
               <button className="bg-white text-black rounded-full px-5 py-3 text-sm font-medium transition-colors hover:bg-gray-200 flex items-center">
                 Subscribe
@@ -39,32 +40,32 @@ const Footer = () => {
               </button>
             </div>
 
-            <div className="flex space-x-4 mt-6">
+            {/* <div className="flex space-x-4 mt-6">
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-200 hover:text-white transition-colors"
               >
                 <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-200 hover:text-white transition-colors"
               >
                 <Twitter className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-200 hover:text-white transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-white transition-colors"
+                className="text-gray-200 hover:text-white transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -74,7 +75,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     Home
                   </a>
@@ -82,7 +83,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/about"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     About
                   </a>
@@ -90,7 +91,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/services"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     Services
                   </a>
@@ -98,7 +99,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/projects"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     Projects
                   </a>
@@ -106,7 +107,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/gallery"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     Gallery
                   </a>
@@ -114,7 +115,7 @@ const Footer = () => {
                 <li>
                   <a
                     href="/contact"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-200 hover:text-white transition-colors"
                   >
                     Contact
                   </a>
@@ -128,7 +129,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Style guide
                 </a>
@@ -136,7 +137,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   404 not found
                 </a>
@@ -144,7 +145,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Password protected
                 </a>
@@ -152,7 +153,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Licenses
                 </a>
@@ -160,7 +161,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-200 hover:text-white transition-colors"
                 >
                   Changelog
                 </a>
@@ -172,16 +173,16 @@ const Footer = () => {
               <h3 className="text-lg font-semibold mb-4">Contact us</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <Mail className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
+                  <Mail className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
-                    <p className="text-sm text-gray-400">Email address</p>
+                    <p className="text-sm text-gray-200">Email address</p>
                     <p>info@exert.com</p>
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Phone className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
+                  <Phone className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
-                    <p className="text-sm text-gray-400">Phone number</p>
+                    <p className="text-sm text-gray-200">Phone number</p>
                     <p className="text-sm">
                       Nigeria Office : +2347025012424, +2348180000567
                       <br />
@@ -190,9 +191,9 @@ const Footer = () => {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <MessageSquare className="h-5 w-5 text-gray-400 mr-3 mt-0.5" />
+                  <MessageSquare className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
-                    <p className="text-sm text-gray-400">Help & support</p>
+                    <p className="text-sm text-gray-200">Help & support</p>
                     <p>support@exert.com</p>
                   </div>
                 </li>
@@ -201,7 +202,7 @@ const Footer = () => {
 
             <div>
               <h3 className="text-lg font-semibold mb-4">Follow us</h3>
-              {/* <p className="text-gray-400">sales@exert.com</p> */}
+              {/* <p className="text-gray-200">sales@exert.com</p> */}
               <div className="flex gap-4">
                 <a
                   href="https://www.facebook.com/people/Exert-Properties-Ltd/100089793377102/"
@@ -223,7 +224,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <Image
                 src="/images/logo-white.png"
@@ -233,7 +234,7 @@ const Footer = () => {
                 className="w-40 h-28"
               />
             </div>
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-gray-200">
               Copyright © Expert Properties
             </p>
           </div>

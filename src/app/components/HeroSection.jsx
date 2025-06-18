@@ -244,6 +244,7 @@ import { ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import { staggerContainer, fadeIn } from "@/utils/motion";
 
 export default function HeroSection({ scrollToRef }) {
   const targetRef = useRef(null);
@@ -288,17 +289,26 @@ export default function HeroSection({ scrollToRef }) {
       </div>
 
       {/* Content container */}
-      <div className="relative pt-32 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 md:px-6">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true }}
+        className="relative pt-32 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 md:px-6"
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
             <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
               Turning Spaces
               <br />
               into Statements
             </h1>
-          </div>
+          </motion.div>
           <div>
-            <div className="lg:max-w-xl">
+            <motion.div
+              variants={fadeIn("left", "tween", 0.2, 1)}
+              className="lg:max-w-xl"
+            >
               <p className="text-white text-lg">
                 At Exert Properties, we don’t just build properties — we shape
                 lifestyles, foster communities, and redefine skylines. With
@@ -306,25 +316,30 @@ export default function HeroSection({ scrollToRef }) {
                 real estate solutions that are elegant, enduring, and tailored
                 to your vision.
               </p>
-            </div>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <button
-                onClick={handleExploreClick}
-                // href="/"
-                className="flex items-center px-6 py-3 rounded-full bg-black text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-neutral-900"
+            </motion.div>
+            <motion.div variants={fadeIn("left", "tween", 0.4, 1)}>
+              <motion.div
+                className="mt-8 flex flex-wrap gap-4"
+                variants={fadeIn("up", "tween", 0.6, 1)}
               >
-                Start exploring <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <Link
-                href="/projects"
-                className="flex items-center px-6 py-3 text-white font-medium hover:underline"
-              >
-                Explore projects <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
+                <button
+                  onClick={handleExploreClick}
+                  // href="/"
+                  className="flex items-center px-6 py-3 rounded-full bg-black text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-neutral-900"
+                >
+                  Start exploring <ArrowRight className="ml-2 h-5 w-5" />
+                </button>
+                <Link
+                  href="/projects"
+                  className="flex items-center px-6 py-3 text-white font-medium hover:underline"
+                >
+                  Explore projects <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

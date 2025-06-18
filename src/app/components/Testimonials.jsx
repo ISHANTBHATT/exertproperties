@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronUp, ChevronDown, CircleIcon } from "lucide-react";
 import { BiSolidMessageRounded } from "react-icons/bi";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -53,7 +54,13 @@ export default function Testimonials() {
   return (
     <section className="w-full py-20 px-4 md:px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="flex justify-center mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="flex justify-center mb-6"
+        >
           <div className="bg-gray-100 rounded-full p-2 flex items-center gap-2">
             <div className="rounded-full bg-gray-400 p-2">
               <BiSolidMessageRounded className="h-4 w-4 text-white" />
@@ -62,18 +69,30 @@ export default function Testimonials() {
               Testimonials
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-4xl md:text-5xl font-bold text-center mb-6"
+        >
           Real stories, real satisfaction —
           <br />
           straight from our clients.
-        </h2>
+        </motion.h2>
 
-        <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center text-gray-600 max-w-3xl mx-auto mb-16"
+        >
           Each testimonial reflects a journey we’ve proudly been a part of —
           turning dreams into addresses and investments into milestones.
-        </p>
+        </motion.p>
 
         <div className="relative bg-white rounded-xl shadow-sm border max-w-4xl mx-auto">
           <div className="absolute right-0 top-0 flex flex-col">
@@ -93,7 +112,14 @@ export default function Testimonials() {
             </button>
           </div>
 
-          <div className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start">
+          <motion.div
+            key={currentTestimonial.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="p-8 md:p-12 flex flex-col md:flex-row gap-8 items-start"
+          >
             <div className="flex-shrink-0">
               <div className="rounded-full overflow-hidden w-24 h-24">
                 <Image
@@ -120,7 +146,7 @@ export default function Testimonials() {
                 <p className="text-gray-500">{currentTestimonial.location}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

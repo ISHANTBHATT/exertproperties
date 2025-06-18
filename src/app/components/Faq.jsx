@@ -105,6 +105,7 @@ import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { BiSolidMessageRounded } from "react-icons/bi";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 const faqs = [
   {
     id: 1,
@@ -143,7 +144,13 @@ export function Faqs({ className }) {
     <section className="w-full py-20 px-4 md:px-6">
       <div className={cn("max-w-6xl mx-auto ", className)}>
         <div>
-          <div className="flex justify-center mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-6"
+          >
             <div className="bg-[#EEEFF1] rounded-full p-2 flex items-center gap-2 ">
               <div className="rounded-full bg-gray-400 p-2">
                 <BiSolidMessageRounded className="h-4 w-4 text-white" />
@@ -156,14 +163,26 @@ export function Faqs({ className }) {
              </div>
              FAQs
            </div> */}
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-5xl font-bold text-center mb-6"
+          >
             Frequently asked questions
-          </h2>
-          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-16">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center text-gray-600 max-w-3xl mx-auto mb-16"
+          >
             Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam
             ultrices augue convallis nunc ultrices amet consequat adipiscing.
-          </p>
+          </motion.p>
         </div>
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-10">
           {faqs.map((faq) => (
@@ -198,7 +217,17 @@ export function Faqs({ className }) {
                     : "max-h-0 opacity-0"
                 }`}
               >
-                <p className="text-gray-600">{faq.answer}</p>
+                <motion.p
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: openId === faq.id ? "auto" : 0,
+                    opacity: openId === faq.id ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                  className="text-gray-600"
+                >
+                  {faq.answer}
+                </motion.p>
               </div>
             </div>
           ))}

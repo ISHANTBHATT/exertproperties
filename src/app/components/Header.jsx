@@ -564,13 +564,15 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <Image
-              src="/images/logo2.png"
-              alt="Logo"
-              width={80}
-              height={80}
-              className="w-28 h-20"
-            />
+            <Link href="/">
+              <Image
+                src="/images/logo2.png"
+                alt="Logo"
+                width={80}
+                height={80}
+                className="w-28 h-20"
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

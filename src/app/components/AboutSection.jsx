@@ -69,23 +69,36 @@ import { motion } from "framer-motion";
 import { IoPersonSharp } from "react-icons/io5";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import Link from "next/link";
+import { fadeIn, staggerContainer } from "@/utils/motion";
 const AboutSection = () => {
   return (
-    <div className="py-10 md:p-10 lg:p-16 ">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="py-10 md:p-10 lg:p-16 overflow-hidden"
+    >
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="inline-flex  items-center p-2 gap-2 bg-[#EEEFF1]  text-gray-700 rounded-full font-semibold text-sm">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="inline-flex  items-center p-2 gap-2 bg-[#EEEFF1]  text-gray-700 rounded-full font-semibold text-sm"
+            >
               <div className="rounded-full bg-gray-400 p-2">
                 <IoPersonSharp className="h-3 w-3 text-white" />
               </div>
               About us
-            </div>
+            </motion.div>
             <motion.h2
               className="text-3xl md:text-4xl font-bold mt-4 mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
             >
               Exert Properties - Where every square foot tells a story.
@@ -94,7 +107,7 @@ const AboutSection = () => {
               className="text-gray-600 mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: true }}
             >
               We pride ourselves as developers of homes and projects that
@@ -104,59 +117,84 @@ const AboutSection = () => {
               modern designs, proper facility management and breath taking
               common areas and ambient locations
             </motion.p>
-            <Link href="/about">
-              <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
-                <button
-                  // size="lg"
-                  className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
-                >
-                  Start exploring
-                </button>
-                <div className="rounded-full bg-white p-2 group">
-                  <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+            <motion.div variants={fadeIn("up", "tween", 0.2, 0.6)}>
+              <Link href="/about">
+                <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+                  <button
+                    // size="lg"
+                    className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
+                  >
+                    Start exploring
+                  </button>
+                  <div className="rounded-full bg-white p-2 group">
+                    <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           </div>
 
-          <div className="relative">
+          <motion.div
+            variants={fadeIn("left", "tween", 0.2, 1)}
+            className="relative"
+          >
             <img
               src="/images/p2-26.jpg"
               alt="Modern home"
               className="w-full h-96 object-cover rounded-lg"
             />
 
-            <div className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-md">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-md"
+            >
               <div className="flex items-center space-x-2">
                 <Square className="h-5 w-5 text-gray-500" />
                 <span className="text-sm font-medium">4,821 sqft</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="absolute top-16 left-4 bg-white px-4 py-2 rounded-full shadow-md">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="absolute top-16 left-4 bg-white px-4 py-2 rounded-full shadow-md"
+            >
               <div className="flex items-center space-x-2">
                 <Bath className="h-5 w-5 text-gray-500" />
                 <span className="text-sm font-medium">3 bathrooms</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="absolute bottom-24 right-4 bg-white px-4 py-2 rounded-full shadow-md">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="absolute bottom-24 right-4 bg-white px-4 py-2 rounded-full shadow-md"
+            >
               <div className="flex items-center space-x-2">
                 <Bed className="h-5 w-5 text-gray-500" />
                 <span className="text-sm font-medium">3 bedrooms</span>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="absolute bottom-8 left-4 bg-white px-4 py-2 rounded-full shadow-md">
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ delay: 0.5 }}
+              className="absolute bottom-8 left-4 bg-white px-4 py-2 rounded-full shadow-md"
+            >
               <div className="flex items-center space-x-2">
                 <Car className="h-5 w-5 text-gray-500" />
                 <span className="text-sm font-medium">6 parking zones</span>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
