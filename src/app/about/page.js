@@ -68,12 +68,12 @@ function Page() {
             </p>
 
             <div className="flex space-x-6">
-              <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
-                <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
+              <div className=" items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
+                <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
                   Start exploring
                 </button>
                 <div className="rounded-full bg-white p-2 group">
-                  <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                  <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
                 </div>
               </div>
             </div>
@@ -176,9 +176,9 @@ function Page() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {agents.map((agent, index) => (
             <Link key={index} href={`/agent/${agent.slug}`}>
-              <div className="bg-white rounded-xl p-8 shadow-sm">
+              <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
                 <div className="relative mb-6">
-                  <div className="absolute top-0 right-0 bg-black rounded-full p-2">
+                  <div className="absolute top-0 right-0 bg-[#3A9188] rounded-full p-2">
                     <Plus className="h-6 w-6 text-white" />
                   </div>
                   <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">

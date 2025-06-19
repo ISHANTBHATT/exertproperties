@@ -460,10 +460,10 @@ const projects = [
 function Page() {
   return (
     <main className="min-h-screen bg-[#f9f6f2] py-28">
-      <section className="bg-black text-white py-28 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20">
+      <section className="bg-[#3A9188] text-white py-28 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20">
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center p-2 gap-2 bg-neutral-800 text-white rounded-full font-semibold text-sm">
-            <div className="rounded-full bg-neutral-700 p-2">
+          <div className="inline-flex items-center p-2 gap-2 bg-teal-500 text-white rounded-full font-semibold text-sm">
+            <div className="rounded-full bg-teal-400 p-2">
               <BiSolidHomeAlt2 className="h-3 w-3 text-white" />
             </div>
             All properties
@@ -472,7 +472,7 @@ function Page() {
             Check on all properties
             <br /> we have available
           </h2>
-          <p className="md:text-lg text-gray-400 mb-8">
+          <p className="md:text-lg text-gray-200 mb-8">
             Explore our complete portfolio of handpicked properties — designed
             to match every dream and investment goal.
           </p>
@@ -622,13 +622,13 @@ function ProjectSection({
           </div>
           <div
             onClick={() => setIsModalOpen(true)}
-            className="my-4 w-fit items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800"
+            className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
           >
-            <button className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white">
+            <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
               View more images
             </button>
             <div className="rounded-full bg-white p-2 group">
-              <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+              <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
             </div>
           </div>
           {/* <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">

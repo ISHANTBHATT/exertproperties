@@ -579,31 +579,31 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a
               href="/"
-              className="text-lg font-medium hover:text-black transition-colors"
+              className="text-lg font-medium hover:text-[#3A9188] transition-colors"
             >
               Home
             </a>
             <a
               href="/about"
-              className="text-lg font-medium hover:text-black transition-colors"
+              className="text-lg font-medium hover:text-[#3A9188] transition-colors"
             >
               About
             </a>
             <a
               href="/services"
-              className="text-lg font-medium hover:text-black transition-colors"
+              className="text-lg font-medium hover:text-[#3A9188] transition-colors"
             >
               Services
             </a>
             <a
               href="/projects"
-              className="text-lg font-medium hover:text-black transition-colors"
+              className="text-lg font-medium hover:text-[#3A9188] transition-colors"
             >
               Projects
             </a>
             <a
               href="/gallery"
-              className="text-lg font-medium hover:text-black transition-colors"
+              className="text-lg font-medium hover:text-[#3A9188] transition-colors"
             >
               Gallery
             </a>
@@ -612,12 +612,12 @@ const Header = () => {
           {/* Desktop Contact Button */}
           <div className="hidden md:block">
             <Link href="/contact">
-              <div className="items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
-                <button className="rounded-full p-3 bg-black group group-hover:bg-neutral-800 text-white">
+              <div className="items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
+                <button className="rounded-full p-3 bg-[#3A9188] group group-hover:bg-teal-700 text-white">
                   Contact
                 </button>
                 <div className="rounded-full bg-white p-2 group">
-                  <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                  <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
                 </div>
               </div>
             </Link>
@@ -730,10 +730,10 @@ const Header = () => {
               {/* Mobile Contact Button */}
               <Link href="/contact" onClick={closeMobileMenu}>
                 <div
-                  className="items-center px-4 py-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800 translate-y-4 animate-slide-up"
+                  className="items-center px-4 py-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700 translate-y-4 animate-slide-up"
                   style={{ animationDelay: "0.6s" }}
                 >
-                  <button className="rounded-full p-4 bg-black group group-hover:bg-neutral-800 text-white text-xl">
+                  <button className="rounded-full p-4 bg-[#3A9188] group group-hover:bg-teal-700 text-white text-xl">
                     Contact
                   </button>
                   <div className="rounded-full bg-white p-3 group ml-2">

@@ -294,7 +294,7 @@ const properties = [
   {
     id: 3,
     title: `ENUGU LAND DEVELOPMENT`,
-    category: "",
+    category: "Civil Construction",
     location: "Ukuta Close off Valley Crescent off Nza, Nigeria",
     beforeImage: `/images/p3b-1.jpeg`,
     afterImage: `/images/p3b-2.jpeg`,

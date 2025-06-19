@@ -325,7 +325,7 @@ export default function HeroSection({ scrollToRef }) {
                 <button
                   onClick={handleExploreClick}
                   // href="/"
-                  className="flex items-center px-6 py-3 rounded-full bg-black text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-neutral-900"
+                  className="flex items-center px-6 py-3 rounded-full bg-[#3A9188] text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-teal-700"
                 >
                   Start exploring <ArrowRight className="ml-2 h-5 w-5" />
                 </button>

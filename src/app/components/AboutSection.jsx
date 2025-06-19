@@ -119,15 +119,15 @@ const AboutSection = () => {
             </motion.p>
             <motion.div variants={fadeIn("up", "tween", 0.2, 0.6)}>
               <Link href="/about">
-                <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
+                <div className=" items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
                   <button
                     // size="lg"
-                    className="rounded-full p-3  bg-black group group-hover:bg-neutral-800 text-white"
+                    className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white"
                   >
                     Start exploring
                   </button>
                   <div className="rounded-full bg-white p-2 group">
-                    <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                    <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
                   </div>
                 </div>
               </Link>

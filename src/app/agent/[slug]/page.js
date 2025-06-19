@@ -78,7 +78,7 @@ export default async function AgentPage({ params }) {
           {/* Banner and Profile Section */}
           <div className="relative">
             {/* Banner Image */}
-            <div className="h-48 bg-gray-800"></div>
+            <div className="h-48 bg-gradient-to-r from-[#1D976C] to-[#3A9188]"></div>
 
             {/* Profile Content */}
             <div className="px-8 pb-8 pt-16 relative">
@@ -97,12 +97,12 @@ export default async function AgentPage({ params }) {
 
               {/* Contact Button */}
               <div className="absolute right-8 top-4">
-                <div className=" items-center px-2 bg-black rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-neutral-800">
-                  <button className="rounded-full p-2 font-semibold group group-hover:bg-neutral-800 text-white">
+                <div className=" items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
+                  <button className="rounded-full p-2 font-semibold group group-hover:bg-teal-700 text-white">
                     Contact us
                   </button>
                   <div className="rounded-full bg-white p-2 group">
-                    <IoMdArrowRoundForward className="h-4 w-4 text-black" />
+                    <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
                   </div>
                 </div>
               </div>

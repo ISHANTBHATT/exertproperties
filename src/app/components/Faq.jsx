@@ -197,7 +197,7 @@ export function Faqs({ className }) {
                   <div
                     className={`rounded-full p-2 transition-all duration-300 ${
                       openId === faq.id
-                        ? "bg-black text-white rotate-180"
+                        ? "bg-[#3A9188] text-white rotate-180"
                         : "border border-gray-300"
                     }`}
                   >

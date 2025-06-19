@@ -9,15 +9,15 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 function OfficeSection() {
   return (
     <div className="md:mx-6 lg:mx-20">
-      <section className="py-16 px-4 md:px-6 lg:px-8 bg-black text-white rounded-4xl">
+      <section className="py-16 px-4 md:px-6 lg:px-8 bg-[#3A9188] text-white rounded-4xl">
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             {/* <div className="inline-flex items-center rounded-full bg-gray-800 px-4 py-2 mb-6">
               <Star className="h-4 w-4 mr-2 text-gray-400" />
               <span className="text-sm font-medium">Our offices</span>
             </div> */}
-            <div className="inline-flex items-center p-2 gap-2 bg-neutral-800 text-white rounded-full font-semibold text-sm mb-4">
-              <div className="rounded-full bg-neutral-700 p-2">
+            <div className="inline-flex items-center p-2 gap-2 bg-teal-500 text-white rounded-full font-semibold text-sm mb-4">
+              <div className="rounded-full bg-teal-400 p-2">
                 <BiSolidHomeAlt2 className="h-3 w-3 text-white" />
               </div>
               Our offices
@@ -27,7 +27,7 @@ function OfficeSection() {
               Your dream property awaits!
             </h2>
 
-            <p className="text-gray-400 max-w-2xl">
+            <p className="text-gray-200 max-w-2xl">
               Drop by our office—where your property journey begins with a
               friendly smile and expert guidance.
             </p>
@@ -46,7 +46,7 @@ function OfficeSection() {
 
               <div className="p-8 space-y-6">
                 <h3 className="text-2xl font-semibold">Nigeria</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-200">
                   287B Akin Olugbade Street Victoria Island, Lagos Lagos State
                   Nigeria
                 </p>
@@ -104,7 +104,7 @@ function OfficeSection() {
 
               <div className="p-8 space-y-6">
                 <h3 className="text-2xl font-semibold">United States</h3>
-                <p className="text-gray-400">
+                <p className="text-gray-200">
                   3403 Pistoia Trail, Temple Texas 776502 United States
                 </p>
 
@@ -163,7 +163,7 @@ function OfficeSection() {
                 <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
                   Contact us
                 </button>
-                <div className="rounded-full bg-black p-2 group">
+                <div className="rounded-full bg-[#3A9188] p-2 group">
                   <IoMdArrowRoundForward className="h-4 w-4 text-white" />
                 </div>
               </div>

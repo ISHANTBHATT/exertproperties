@@ -43,12 +43,12 @@ export default function ContactForm() {
 
   return (
     <main className="min-h-screen py-28 bg-[#fafafb]">
-      <section className="bg-black text-white py-16 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20">
+      <section className="bg-[#3A9188] text-white py-16 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-center mb-6">
             Contact us
           </h1>
-          <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12">
+          <p className="text-gray-200 text-center max-w-3xl mx-auto mb-12">
             We’re here to help you find your perfect space.
             <br />
             Reach out to us and let’s start your real estate journey together.
@@ -61,7 +61,7 @@ export default function ContactForm() {
                   <div className="space-y-2">
                     <label
                       htmlFor="fullName"
-                      className="block text-black font-medium"
+                      className="block text-neutral-800 font-medium"
                     >
                       Full name
                     </label>
@@ -84,7 +84,7 @@ export default function ContactForm() {
                   <div className="space-y-2">
                     <label
                       htmlFor="email"
-                      className="block text-black font-medium"
+                      className="block text-neutral-800 font-medium"
                     >
                       Email address
                     </label>
@@ -107,7 +107,7 @@ export default function ContactForm() {
                   <div className="space-y-2">
                     <label
                       htmlFor="phone"
-                      className="block text-black font-medium"
+                      className="block text-neutral-800 font-medium"
                     >
                       Phone number
                     </label>
@@ -130,7 +130,7 @@ export default function ContactForm() {
                   <div className="space-y-2">
                     <label
                       htmlFor="subject"
-                      className="block text-black font-medium"
+                      className="block text-neutral-800 font-medium"
                     >
                       Subject
                     </label>
@@ -154,7 +154,7 @@ export default function ContactForm() {
                 <div className="mt-6 space-y-2">
                   <label
                     htmlFor="message"
-                    className="block text-black font-medium"
+                    className="block text-neutral-800 font-medium"
                   >
                     Listing short description
                   </label>
@@ -171,7 +171,7 @@ export default function ContactForm() {
                 <div className="mt-6">
                   <Button
                     type="submit"
-                    className="bg-black text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-gray-800"
+                    className="bg-[#3A9188] text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-teal-700"
                   >
                     Send message
                     <ArrowRight className="h-5 w-5" />
@@ -185,7 +185,7 @@ export default function ContactForm() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Reach us directly
                 </h2>
-                <p className="text-gray-400 mb-8">
+                <p className="text-gray-200 mb-8">
                   Have questions or are you ready to take the next step? Connect
                   with us directly for personalized assistance and prompt
                   responses.
@@ -195,7 +195,7 @@ export default function ContactForm() {
                   <div className="flex items-center gap-3">
                     <Mail className="h-6 w-6" />
                     <div>
-                      <p className="text-sm text-gray-400">Send us an email</p>
+                      <p className="text-sm text-gray-200">Send us an email</p>
                       <p className="font-medium">contact@property.com</p>
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export default function ContactForm() {
                   <div className="flex items-center gap-3">
                     <Phone className="h-6 w-6" />
                     <div>
-                      <p className="text-sm text-gray-400">Phone number</p>
+                      <p className="text-sm text-gray-200">Phone number</p>
                       <p className="font-medium">
                         Nigeria Office : +2347025012424, +2348180000567
                         <br />
@@ -218,7 +218,7 @@ export default function ContactForm() {
                 <h2 className="text-3xl md:text-4xl font-bold mb-6">
                   Follow us on social media
                 </h2>
-                <p className="text-gray-400 mb-8">
+                <p className="text-gray-200 mb-8">
                   Stay connected for the latest property updates, market
                   insights, and exclusive offers. Join our community and never
                   miss a beat!
@@ -271,7 +271,7 @@ export default function ContactForm() {
           </p>
 
           <div className="flex justify-end mb-8">
-            <Button className="bg-black text-white rounded-full px-6 py-6 flex items-center gap-2 hover:bg-gray-800">
+            <Button className="bg-[#3A9188] text-white rounded-full px-6 py-6 flex items-center gap-2 hover:bg-teal-700">
               Contact us
               <ArrowRight className="h-5 w-5" />
             </Button>
