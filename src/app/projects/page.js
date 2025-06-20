@@ -181,7 +181,7 @@ import { useState } from "react";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import Image from "next/image";
 import ProjectModal from "@/components/ui/ProjectModal";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 // Project data
@@ -458,31 +458,71 @@ const projects = [
 ];
 
 function Page() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
   return (
     <main className="min-h-screen bg-[#f9f6f2] py-28">
-      <section className="bg-[#3A9188] text-white py-28 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20">
+      <motion.section
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="bg-[#3A9188] text-white py-28 px-4 md:px-8 lg:px-16 rounded-4xl md:mx-6 lg:mx-20"
+      >
         <div className="max-w-4xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center p-2 gap-2 bg-teal-500 text-white rounded-full font-semibold text-sm">
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center p-2 gap-2 bg-teal-500 text-white rounded-full font-semibold text-sm"
+          >
             <div className="rounded-full bg-teal-400 p-2">
               <BiSolidHomeAlt2 className="h-3 w-3 text-white" />
             </div>
             All properties
-          </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+          </motion.div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            viewport={{ once: true }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+          >
             Check on all properties
             <br /> we have available
-          </h2>
-          <p className="md:text-lg text-gray-200 mb-8">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            viewport={{ once: true }}
+            className="md:text-lg text-gray-200 mb-8"
+          >
             Explore our complete portfolio of handpicked properties — designed
             to match every dream and investment goal.
-          </p>
+          </motion.p>
         </div>
-      </section>
+      </motion.section>
 
-      <main className="container mx-auto py-10">
+      <motion.main
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+        className="container mx-auto py-10"
+      >
         {projects.map((project, index) => (
           <ProjectSection
             key={project.id}
+            index={index}
             imagePosition={index % 2 === 0 ? "left" : "right"}
             location={project.location}
             title={project.title}
@@ -493,12 +533,13 @@ function Page() {
             afterMedia={project.afterMedia}
           />
         ))}
-      </main>
+      </motion.main>
     </main>
   );
 }
 
 function ProjectSection({
+  index,
   imagePosition,
   location,
   title,
@@ -509,6 +550,26 @@ function ProjectSection({
   afterMedia,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+        delay: index * 0.1,
+      },
+    },
+  };
+
+  const imageVariants = {
+    hover: {
+      scale: 1.03,
+      transition: { duration: 0.4, ease: "easeOut" },
+    },
+  };
 
   return (
     <>
@@ -581,14 +642,22 @@ function ProjectSection({
           </>
         )}
       </div> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-100 min-h-screen">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={itemVariants}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 md:grid-cols-2 border-b border-gray-100 min-h-screen"
+      >
         {/* Image */}
-        <div
+        <motion.div
           className={`
       relative h-screen rounded-2xl overflow-hidden cursor-pointer
       ${imagePosition === "left" ? "order-1 md:order-1" : "order-1 md:order-2"}
     `}
           onClick={() => setIsModalOpen(true)}
+          // variants={imageVariants}
+          // whileHover="hover"
         >
           <motion.div
             className="w-full h-full"
@@ -602,10 +671,13 @@ function ProjectSection({
               className="object-cover rounded-2xl transition-transform duration-500"
             />
           </motion.div>
-        </div>
+        </motion.div>
 
         {/* Text */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, x: imagePosition === "left" ? -50 : 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className={`
       p-6 md:p-12 flex flex-col justify-center
       ${imagePosition === "left" ? "order-2 md:order-2" : "order-2 md:order-1"}
@@ -620,7 +692,9 @@ function ProjectSection({
           <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
             Portfolio
           </div>
-          <div
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setIsModalOpen(true)}
             className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
           >
@@ -630,7 +704,7 @@ function ProjectSection({
             <div className="rounded-full bg-white p-2 group">
               <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
             </div>
-          </div>
+          </motion.div>
           {/* <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
             <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
               Contact us
@@ -639,18 +713,22 @@ function ProjectSection({
               <IoMdArrowRoundForward className="h-4 w-4 text-white" />
             </div>
           </div> */}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <ProjectModal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={title}
-        location={location}
-        date={date}
-        beforeMedia={beforeMedia}
-        afterMedia={afterMedia}
-      />
+      <AnimatePresence>
+        {isModalOpen && (
+          <ProjectModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            title={title}
+            location={location}
+            date={date}
+            beforeMedia={beforeMedia}
+            afterMedia={afterMedia}
+          />
+        )}
+      </AnimatePresence>
     </>
   );
 }

@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
@@ -5,13 +6,35 @@ import Link from "next/link";
 import React from "react";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import { motion } from "framer-motion";
 
+const officeCard = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.2,
+      duration: 0.6,
+    },
+  }),
+};
 function OfficeSection() {
   return (
-    <div className="md:mx-6 lg:mx-20">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="md:mx-6 lg:mx-20"
+    >
       <section className="py-16 px-4 md:px-6 lg:px-8 bg-[#3A9188] text-white rounded-4xl">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
             {/* <div className="inline-flex items-center rounded-full bg-gray-800 px-4 py-2 mb-6">
               <Star className="h-4 w-4 mr-2 text-gray-400" />
               <span className="text-sm font-medium">Our offices</span>
@@ -31,10 +54,17 @@ function OfficeSection() {
               Drop by our office—where your property journey begins with a
               friendly smile and expert guidance.
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="rounded-3xl overflow-hidden">
+            <motion.div
+              variants={officeCard}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={0}
+              className="rounded-3xl overflow-hidden"
+            >
               <div className="relative h-80">
                 <Image
                   src="/images/p4a-2.jpeg"
@@ -90,9 +120,16 @@ function OfficeSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="rounded-3xl overflow-hidden">
+            <motion.div
+              variants={officeCard}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={1}
+              className="rounded-3xl overflow-hidden"
+            >
               <div className="relative h-80">
                 <Image
                   src="/images/p2-4.jpg"
@@ -147,10 +184,16 @@ function OfficeSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
-          <div className="flex justify-center mt-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.5 }}
+            className="flex justify-center mt-12"
+          >
             {/* <Button
               variant="outline"
               className="rounded-full px-6 py-6 h-auto border-white text-white hover:bg-white hover:text-black"
@@ -168,10 +211,10 @@ function OfficeSection() {
                 </div>
               </div>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
-    </div>
+    </motion.div>
   );
 }
 

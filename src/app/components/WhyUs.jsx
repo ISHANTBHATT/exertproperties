@@ -49,6 +49,7 @@ export default function WhyUs() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
+                  viewport={{ once: true }}
                   className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 shadow-md"
                 >
                   <Square className="h-5 w-5 text-gray-500" />
@@ -59,6 +60,7 @@ export default function WhyUs() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
+                  viewport={{ once: true }}
                   className="absolute top-1/3 left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 shadow-md"
                 >
                   <Bath className="h-5 w-5 text-gray-500" />
@@ -69,6 +71,7 @@ export default function WhyUs() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
+                  viewport={{ once: true }}
                   className="absolute bottom-1/4 left-8 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 shadow-md"
                 >
                   <Bed className="h-5 w-5 text-gray-500" />
@@ -79,6 +82,7 @@ export default function WhyUs() {
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
+                  viewport={{ once: true }}
                   className="absolute bottom-8 right-8 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 flex items-center gap-2 shadow-md"
                 >
                   <Car className="h-5 w-5 text-gray-500" />

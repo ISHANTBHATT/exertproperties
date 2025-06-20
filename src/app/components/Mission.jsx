@@ -1,14 +1,27 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { IoMdArrowRoundForward } from "react-icons/io";
-
+import { motion } from "framer-motion";
 function Mission() {
   return (
-    <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto"
+    >
       <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="rounded-3xl overflow-hidden">
+        <motion.div
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="rounded-3xl overflow-hidden"
+        >
           <Image
             src="/images/5.jpg"
             alt="People viewing a home"
@@ -16,9 +29,15 @@ function Mission() {
             height={600}
             className="w-full h-auto object-cover"
           />
-        </div>
+        </motion.div>
 
-        <div className="space-y-6">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="space-y-6"
+        >
           {/* <div className="inline-flex items-center rounded-full bg-gray-100 px-4 py-2">
             <Star className="h-4 w-4 mr-2 text-gray-500" />
             <span className="text-sm font-medium">Our mission</span>
@@ -61,9 +80,9 @@ function Mission() {
               <IoMdArrowRoundForward className="h-4 w-4 text-black" />
             </div>
           </div> */}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

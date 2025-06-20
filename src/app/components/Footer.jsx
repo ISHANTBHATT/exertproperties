@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import {
   Facebook,
   Twitter,
@@ -10,8 +11,13 @@ import {
   MessageSquare,
 } from "lucide-react";
 import Image from "next/image";
+import InquiryFormModal from "./InquiryFormMoal";
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleViewDetails = () => {
+    setIsModalOpen(true);
+  };
   return (
     <div className="bg-[#fafafb]">
       {/* #3A9188 */}
@@ -34,7 +40,10 @@ const Footer = () => {
                 placeholder="Enter your email address"
                 className="flex-1 bg-neutral-200 rounded-full text-neutral-800 px-4 py-3 text-sm"
               />
-              <button className="bg-white text-black rounded-full px-5 py-3 text-sm font-medium transition-colors hover:bg-gray-200 flex items-center">
+              <button
+                onClick={() => handleViewDetails()}
+                className="bg-white text-black rounded-full px-5 py-3 text-sm font-medium transition-colors hover:bg-gray-200 flex items-center"
+              >
                 Subscribe
                 <span className="ml-2">→</span>
               </button>
@@ -240,6 +249,10 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      <InquiryFormModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };

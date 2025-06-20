@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Plus, Star } from "lucide-react";
 import Image from "next/image";
@@ -7,6 +8,19 @@ import Link from "next/link";
 import { IoMdArrowRoundForward, IoIosPeople } from "react-icons/io";
 import Mission from "../components/Mission";
 import OfficeSection from "../components/OfficeSection";
+import { motion } from "framer-motion";
+
+const agentCard = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: (index) => ({
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delay: index * 0.1,
+      duration: 0.5,
+    },
+  }),
+};
 
 const agents = [
   {
@@ -43,13 +57,23 @@ function Page() {
     <main className="min-h-screen bg-[#fafafb] py-20">
       <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-2 md:gap-12">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight mb-6">
               Turning Spaces into Statements
             </h2>
-          </div>
+          </motion.div>
 
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <p className="text-gray-600 mb-6">
               We pride ourselves as developers of homes and projects that
               represents best in class with regards to meeting standards and
@@ -77,11 +101,16 @@ function Page() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mt-12">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className="rounded-3xl overflow-hidden mb-8">
               <Image
                 src="/images/p4a-2.jpeg"
@@ -129,9 +158,15 @@ function Page() {
                 </p>
               </div> */}
             </div>
-          </div>
+          </motion.div>
 
-          <div className="rounded-3xl overflow-hidden h-full">
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="rounded-3xl overflow-hidden h-full"
+          >
             <Image
               src="/images/3.jpg"
               alt="Real estate professionals"
@@ -139,15 +174,26 @@ function Page() {
               height={600}
               className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </section>
       <ValuesSection />
       <Mission />
       <OfficeSection />
       {/* Agents Section */}
-      <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center mb-12">
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto"
+      >
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          iv
+          className="text-center mb-12"
+        >
           {/* <div className="inline-flex items-center rounded-full bg-gray-100 px-4 py-2 mb-6">
             <Star className="h-4 w-4 mr-2 text-gray-500" />
             <span className="text-sm font-medium">Our agents</span>
@@ -171,54 +217,67 @@ function Page() {
             and industry connections can turn your real estate dreams into
             reality.
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {agents.map((agent, index) => (
-            <Link key={index} href={`/agent/${agent.slug}`}>
-              <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
-                <div className="relative mb-6">
-                  <div className="absolute top-0 right-0 bg-[#3A9188] rounded-full p-2">
-                    <Plus className="h-6 w-6 text-white" />
+            <motion.div
+              key={index}
+              variants={agentCard}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              custom={index}
+              whileHover={{
+                y: -10,
+                boxShadow:
+                  "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+              }}
+            >
+              <Link href={`/agent/${agent.slug}`}>
+                <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-shadow duration-300">
+                  <div className="relative mb-6">
+                    <div className="absolute top-0 right-0 bg-[#3A9188] rounded-full p-2">
+                      <Plus className="h-6 w-6 text-white" />
+                    </div>
+                    <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
+                      <Image
+                        src={agent.image}
+                        alt="John Carter"
+                        width={128}
+                        height={128}
+                        className="w-full h-full object-fill"
+                      />
+                    </div>
                   </div>
-                  <div className="w-32 h-32 mx-auto rounded-full overflow-hidden">
-                    <Image
-                      src={agent.image}
-                      alt="John Carter"
-                      width={128}
-                      height={128}
-                      className="w-full h-full object-fill"
-                    />
-                  </div>
-                </div>
 
-                <div className="text-center">
-                  <h3 className="text-xl font-semibold mb-1">{agent.name}</h3>
-                  <p className="text-gray-600 mb-6">{agent.designation}</p>
+                  <div className="text-center">
+                    <h3 className="text-xl font-semibold mb-1">{agent.name}</h3>
+                    <p className="text-gray-600 mb-6">{agent.designation}</p>
 
-                  <div className="flex justify-center space-x-4">
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-4 w-4"
+                    <div className="flex justify-center space-x-4">
+                      <Button
+                        variant="outline"
+                        size="icon"
+                        className="rounded-full"
                       >
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                      </svg>
-                    </Button>
-                    {/* <Button
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="h-4 w-4"
+                        >
+                          <rect width="20" height="16" x="2" y="4" rx="2" />
+                          <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                      </Button>
+                      {/* <Button
                       variant="outline"
                       size="icon"
                       className="rounded-full"
@@ -238,10 +297,11 @@ function Page() {
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                       </svg>
                     </Button> */}
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
 
           {/* <div className="bg-white rounded-xl p-8 shadow-sm ">
@@ -436,7 +496,7 @@ function Page() {
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div> */}
-      </section>
+      </motion.section>
       {/* Offices Section */}
     </main>
   );

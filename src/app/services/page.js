@@ -1,15 +1,61 @@
+"use client";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
 export default function ServicesSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 50, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  const imageVariants = {
+    hidden: { scale: 0.9, opacity: 0 },
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  };
   return (
-    <div className="container mx-auto px-4 py-16 md:py-32">
-      <h2 className="text-center text-5xl md:text-6xl font-bold  tracking-wider  mb-16 md:mb-24">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+      className="container mx-auto px-4 py-16 md:py-32"
+    >
+      <motion.h2
+        variants={itemVariants}
+        className="text-center text-5xl md:text-6xl font-bold  tracking-wider  mb-16 md:mb-24"
+      >
         OUR SERVICES
-      </h2>
+      </motion.h2>
 
       {/* Service 01 - Advisory Services */}
-      <div className="grid md:grid-cols-2 gap-8 mb-24 items-center">
-        <div className="relative aspect-[4/3] w-full ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={itemVariants}
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-8 mb-24 items-center"
+      >
+        <motion.div
+          variants={imageVariants}
+          className="relative aspect-[4/3] w-full "
+        >
           <Image
             src="/images/s4.jpg"
             alt="Luxury property consultation"
@@ -17,8 +63,8 @@ export default function ServicesSection() {
             className="object-cover rounded-2xl"
           />
           <div className="absolute -left-3  sm:top-5 sm:left-5 w-full h-full border-2 border-[#1B243C] m-6 rounded-2xl"></div>
-        </div>
-        <div className="p-6 md:p-8">
+        </motion.div>
+        <motion.div variants={itemVariants} className="p-6 md:p-8">
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 01
           </div>
@@ -32,12 +78,21 @@ export default function ServicesSection() {
             our clients on the need to take advantage of offers using our best
             analytical ability in current and future planned projects.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Service 02 - Property Development */}
-      <div className="grid md:grid-cols-2 gap-8 mb-24 items-center md:flex-row-reverse">
-        <div className="md:order-2 relative aspect-[4/3] w-full ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={itemVariants}
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-8 mb-24 items-center md:flex-row-reverse"
+      >
+        <motion.div
+          variants={imageVariants}
+          className="md:order-2 relative aspect-[4/3] w-full "
+        >
           <Image
             src="/images/s2.jpg"
             alt="Luxury property development"
@@ -45,8 +100,8 @@ export default function ServicesSection() {
             className="object-cover rounded-2xl"
           />
           <div className="absolute -right-3 sm:top-5 sm:right-5 w-full h-full border-2 border-[#1B243C] m-6 rounded-2xl"></div>
-        </div>
-        <div className="md:order-1 p-6 md:p-8">
+        </motion.div>
+        <motion.div variants={itemVariants} className="md:order-1 p-6 md:p-8">
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 02
           </div>
@@ -58,12 +113,21 @@ export default function ServicesSection() {
             thoughtful designs fit for purpose, be it residential or commercial.
             We develop sub divisions, multi-unit homes and mixed use apartments.
           </p>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Service 03 - Facility Management */}
-      <div className="grid md:grid-cols-2 gap-8 items-center">
-        <div className="relative aspect-[4/3] w-full ">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        variants={itemVariants}
+        viewport={{ once: true }}
+        className="grid md:grid-cols-2 gap-8 items-center"
+      >
+        <motion.div
+          variants={imageVariants}
+          className="relative aspect-[4/3] w-full "
+        >
           <Image
             src="/images/s3.jpg"
             alt="Facility management services"
@@ -71,8 +135,8 @@ export default function ServicesSection() {
             className="object-cover rounded-2xl"
           />
           <div className="absolute -left-3 sm:top-5 sm:left-5 w-full h-full border-2 border-[#1B243C] m-6 rounded-2xl"></div>
-        </div>
-        <div className="p-6 md:p-8">
+        </motion.div>
+        <motion.div variants={itemVariants} className="p-6 md:p-8">
           <div className="text-[#1B243C] uppercase tracking-widest mb-2">
             Service 03
           </div>
@@ -84,8 +148,8 @@ export default function ServicesSection() {
             efficient property management, this includes power, water, security,
             cleaning and other related management services.
           </p>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

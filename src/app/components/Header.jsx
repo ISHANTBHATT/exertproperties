@@ -610,7 +610,21 @@ const Header = () => {
           </nav>
 
           {/* Desktop Contact Button */}
-          <div className="hidden md:block">
+          <div className="hidden md:flex">
+            <Link
+              href="https://wa.me/+2348180000567" // Replace with your actual number
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" rounded-md flex items-center text-base font-medium text-[#8A0206] transition-colors mr-2"
+            >
+              <Image
+                src="/images/whatsapp-icon.png" // Place your image in public folder with this name
+                alt="WhatsApp"
+                width={40}
+                height={50}
+                className="mr-2"
+              />
+            </Link>
             <Link href="/contact">
               <div className="items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
                 <button className="rounded-full p-3 bg-[#3A9188] group group-hover:bg-teal-700 text-white">
@@ -726,6 +740,24 @@ const Header = () => {
                   Gallery
                 </a>
               </nav>
+
+              <div className="p-8">
+                <Link
+                  href="https://wa.me/+2348180000567"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full bg-[#25D366] text-white p-4 rounded-xl shadow-lg hover:scale-105 transition-transform"
+                >
+                  <Image
+                    src="/images/whatsapp-icon.png"
+                    alt="WhatsApp"
+                    width={32}
+                    height={32}
+                    className="mr-3"
+                  />
+                  Chat on WhatsApp
+                </Link>
+              </div>
 
               {/* Mobile Contact Button */}
               <Link href="/contact" onClick={closeMobileMenu}>
