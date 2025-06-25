@@ -183,6 +183,8 @@ import Image from "next/image";
 import ProjectModal from "@/components/ui/ProjectModal";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import InquiryFormModal from "../components/InquiryFormMoal";
+import { Link } from "lucide-react";
 
 // Project data
 const projects = [
@@ -216,6 +218,8 @@ const projects = [
     id: 2,
     location: "Nigeria",
     title: "2 BEDROOM SHOTLET IN LEKKI 1",
+    booking: true,
+    tag: "For Shortlet",
     date: "2023",
     description:
       " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. We use this place for shorlet and it's listed on abnb",
@@ -333,6 +337,7 @@ const projects = [
     location: "Nigeria",
     title: "3 in 1 FULL DETACHED HOUSES",
     date: "ORCHID LAGOS 2021",
+    tag: "Sold",
     description:
       "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detched duplexe with a maid roo. This roject was started in novemeber 2021 and finished by May 2022. Its all been sold and our clients are since living in them with their family.",
     image: "/images/p1a-1.jpg",
@@ -374,6 +379,8 @@ const projects = [
     location: "Nigeria",
     title: "ENUGU LAND DEVELOPMENT",
     date: "INDEPENDENCE LAYOUT 2023",
+    tag: "For Sale",
+    sub: true,
     description:
       "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
     image: "/images/p3b-1.jpeg",
@@ -467,6 +474,7 @@ function Page() {
       },
     },
   };
+
   return (
     <main className="min-h-screen bg-[#f9f6f2] py-28">
       <motion.section
@@ -531,6 +539,9 @@ function Page() {
             image={project.image}
             beforeMedia={project.beforeMedia}
             afterMedia={project.afterMedia}
+            tag={project.tag}
+            sub={project.sub}
+            booking={project.booking}
           />
         ))}
       </motion.main>
@@ -548,9 +559,15 @@ function ProjectSection({
   image,
   beforeMedia,
   afterMedia,
+  tag,
+  sub,
+  booking,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const handleViewDetails = () => {
+    setIsFormModalOpen(true);
+  };
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: {
@@ -686,25 +703,75 @@ function ProjectSection({
           <div className="uppercase text-sm tracking-wider text-gray-500 mb-1">
             {location}
           </div>
-          <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+          <div className="flex items-center gap-3 mb-2">
+            <h2 className="text-2xl font-semibold mb-2">{title}</h2>
+            {tag && (
+              <span
+                className={`mb-2 px-2 py-1 text-xs rounded-full font-medium ${
+                  tag === "Sold"
+                    ? "bg-red-100 text-red-800"
+                    : "bg-green-100 text-green-800"
+                }`}
+              >
+                {tag}
+              </span>
+            )}
+          </div>
           <div className="text-sm text-gray-500 mb-4">{date}</div>
           <p className="text-sm leading-relaxed text-gray-700">{description}</p>
+
           <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
             Portfolio
           </div>
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => setIsModalOpen(true)}
-            className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
-          >
-            <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
-              View more images
-            </button>
-            <div className="rounded-full bg-white p-2 group">
-              <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
-            </div>
-          </motion.div>
+          <div className="flex flex-wrap gap-4">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => setIsModalOpen(true)}
+              className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
+            >
+              <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
+                View more images
+              </button>
+              <div className="rounded-full bg-white p-2 group">
+                <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
+              </div>
+            </motion.div>
+
+            {sub && (
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => handleViewDetails()}
+                className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
+              >
+                <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
+                  Subscription
+                </button>
+                <div className="rounded-full bg-white p-2 group">
+                  <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
+                </div>
+              </motion.div>
+            )}
+
+            {booking && (
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                href="https://www.airbnb.com/rooms/1006307763204538494?viralityEntryPoint=1&s=76"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
+              >
+                <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
+                  Book Now
+                </button>
+                <div className="rounded-full bg-white p-2 group">
+                  <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
+                </div>
+              </motion.a>
+            )}
+          </div>
           {/* <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
             <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
               Contact us
@@ -729,6 +796,11 @@ function ProjectSection({
           />
         )}
       </AnimatePresence>
+
+      <InquiryFormModal
+        isOpen={isFormModalOpen}
+        onClose={() => setIsFormModalOpen(false)}
+      />
     </>
   );
 }

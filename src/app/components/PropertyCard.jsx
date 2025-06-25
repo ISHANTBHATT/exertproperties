@@ -16,7 +16,7 @@ export default function PropertyCard({ property }) {
 
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        <div className="absolute top-4 left-4">
+        {/* <div className="absolute top-4 left-4">
           <div className="bg-black/70 text-white px-4 py-2 rounded-full flex items-center gap-2">
             <svg
               width="16"
@@ -35,7 +35,7 @@ export default function PropertyCard({ property }) {
             </svg>
             {property.status}
           </div>
-        </div>
+        </div> */}
 
         <button className="absolute top-4 right-4 bg-white rounded-full p-2">
           <Plus className="h-5 w-5 text-black" />

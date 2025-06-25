@@ -133,9 +133,10 @@ function Page() {
                   CEO&apos;s hometown Urualla in Ideato North Local Government
                   Area Imo state Nigeria. Urualla is &quot;Gains of a land&quot;
                   when translated in English. This project is tagged GAINS
-                  HEIGHTS powered by Exert Properties . we are concluding
-                  drawing and approvals and will move to sight by August 2025,
-                  gestation time for completion will be August 2027
+                  HEIGHTS powered by Exert Properties . We are concluding the
+                  drawings and approvals, and will move to the site by October
+                  2025. The estimated completion time is the 4th quarter of
+                  2027.
                 </p>
               </div>
               {/* <div>

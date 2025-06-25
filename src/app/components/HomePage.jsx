@@ -58,16 +58,17 @@ function HomePage() {
       {/* <Header /> */}
       {/* <Hero /> */}
       <HeroSection scrollToRef={statsRef} />
-      <div ref={statsRef}>
+      {/* <div ref={statsRef}>
         <StatsSection />
+      </div> */}
+      <div ref={statsRef} className="pt-20">
+        <FeaturedProperties properties={properties2} />
       </div>
-      {/* <StatsSection /> */}
-      <FeaturedProperties properties={properties2} />
       {/* <FeaturedProperties properties={properties} /> */}
       <AboutSection />
       <WhyUs />
       <PropertyListings properties={properties} />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faqs />
       {/* <Footer /> */}
     </main>

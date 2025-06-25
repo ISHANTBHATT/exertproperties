@@ -109,27 +109,44 @@ import { motion } from "framer-motion";
 const faqs = [
   {
     id: 1,
-    question: "How can I post my house for sale?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur et ullamcorper morbi lectus fermentum viverra malesuada consequat.",
+    question:
+      "What is the distance from property to Victoria Island- commercial hub of Lagos?",
+    answer: "It's within 10km radius of 7mins drive.",
   },
   {
     id: 2,
-    question: "What is your realtor sale commission?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur et ullamcorper morbi lectus fermentum viverra malesuada consequat.",
+    question:
+      "What is the minimum down payment expected on property on Gains height?",
+    answer: "30% is the minimum down payment.",
   },
   {
     id: 3,
-    question: "Which type of house do you take for promoting?",
+    question: "What is the expected security condition of Gains height?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur et ullamcorper morbi lectus fermentum viverra malesuada consequat.",
+      "24/7 on site uniformed security men with 12 hours shift. 2 men on duty at each interval.",
   },
   {
     id: 4,
-    question: "What's the average time to sale a house?",
+    question:
+      "When is the expected date of commercial opening of Gains height?",
+    answer: "Ending 4th Quarter of 2027.",
+  },
+  {
+    id: 5,
+    question: "What is the title that developers of Gains height have over it?",
+    answer: "Registered Governors Consent of the deed of assignent.",
+  },
+  {
+    id: 6,
+    question:
+      "What are the utility benefits that services expected to be provided on Gains Height?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur et ullamcorper morbi lectus fermentum viverra malesuada consequat.",
+      "Steady power via EKEDC, Generator and solar, 24/7 on site security, clean water supply that's unmetered. Round the clock cleaning of common areas. 24/7 concierge services, swimming pool and gym etc.",
+  },
+  {
+    id: 7,
+    question: "What are the power facilities expected on Gains Height?",
+    answer: "Ekedc, solar & standby generator.",
   },
 ];
 

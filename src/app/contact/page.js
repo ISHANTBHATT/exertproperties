@@ -817,7 +817,7 @@ export default function ContactForm() {
         </div>
       </motion.section>
 
-      <Faqs className="flex flex-col lg:flex-row items-center" />
+      <Faqs className="flex flex-col lg:flex-row items-center gap-4 max-w-full px-4 md:px-8 lg:px-16" />
     </main>
   );
 }
