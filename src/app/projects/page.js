@@ -193,8 +193,9 @@ const projects = [
     location: "Nigeria",
     title: "GAINS HEIGHTS",
     date: "LEKKI FORESHORE ESTATE 2024",
+    sub: true,
     description:
-      'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . we are concluding drawing and approvals and will move to sight by August 2025, gestation time for completion will be August 2027',
+      'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
     image: "/images/p4a-2.jpeg",
     beforeMedia: [
       { type: "image", src: "/images/p4b-1.jpeg" },
@@ -563,10 +564,12 @@ function ProjectSection({
   sub,
   booking,
 }) {
+  const [selectedTitle, setSelectedTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
-  const handleViewDetails = () => {
+  const handleViewDetails = (e) => {
     setIsFormModalOpen(true);
+    setSelectedTitle(e);
   };
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -742,7 +745,7 @@ function ProjectSection({
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => handleViewDetails()}
+                onClick={() => handleViewDetails(title)}
                 className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
               >
                 <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
@@ -799,6 +802,7 @@ function ProjectSection({
 
       <InquiryFormModal
         isOpen={isFormModalOpen}
+        title={selectedTitle}
         onClose={() => setIsFormModalOpen(false)}
       />
     </>

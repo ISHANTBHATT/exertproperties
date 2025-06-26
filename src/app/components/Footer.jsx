@@ -185,7 +185,7 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Email address</p>
-                    <p>info@exert.com</p>
+                    <p>Info@exertproperties.com</p>
                   </div>
                 </li>
                 <li className="flex items-start">

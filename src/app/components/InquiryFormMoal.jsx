@@ -7,6 +7,13 @@ import { Send, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 // import { Checkbox } from "@/components/ui/checkbox";
 import {
   Dialog,
@@ -24,22 +31,29 @@ import {
 //   SelectValue,
 // } from "@/components/ui/select";
 
-export default function InquiryFormModal({ isOpen, onClose }) {
+export default function InquiryFormModal({ isOpen, onClose, title }) {
   // Initial form state
   const initialFormData = {
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
-    university: "",
+    units: "",
+    floor: "",
+    title: title,
+
     consent: false,
   };
-
   const [formData, setFormData] = useState(initialFormData);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
 
+  useEffect(() => {
+    if (title) {
+      setFormData((prev) => ({ ...prev, title }));
+    }
+  }, [title]);
   // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -195,17 +209,55 @@ export default function InquiryFormModal({ isOpen, onClose }) {
                 />
               </div>
 
-              <div className="space-y-2">
-                {/* <Label htmlFor="university">University</Label>
-                <Input
-                  id="university"
-                  name="university"
-                  value={formData.university}
-                  onChange={handleChange}
-                /> */}
-              </div>
-
-              <div className="space-y-2"></div>
+              {title === "GAINS HEIGHTS" && (
+                <>
+                  <div className="space-y-2">
+                    <Label htmlFor="floor">FLoor</Label>
+                    <Select
+                      value={formData.floor}
+                      onValueChange={(value) =>
+                        handleSelectChange("floor", value)
+                      }
+                      className=""
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Please Select" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="1">1 </SelectItem>
+                        <SelectItem value="2">2 </SelectItem>
+                        <SelectItem value="3">3</SelectItem>
+                        <SelectItem value="4">4</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="units">Unit</Label>
+                    <Select
+                      value={formData.units}
+                      onValueChange={(value) =>
+                        handleSelectChange("units", value)
+                      }
+                      className=""
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Please Select" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="A">
+                          A (front facing flats)
+                        </SelectItem>
+                        <SelectItem value="B">
+                          B (front facing flats)
+                        </SelectItem>
+                        <SelectItem value="C">C (middle flats)</SelectItem>
+                        <SelectItem value="D">D (middle flats)</SelectItem>
+                        <SelectItem value="E">E (back flats)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                </>
+              )}
 
               <div className="space-y-2"></div>
 
