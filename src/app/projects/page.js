@@ -193,6 +193,7 @@ const projects = [
     location: "Nigeria",
     title: "GAINS HEIGHTS",
     date: "LEKKI FORESHORE ESTATE 2024",
+    tag: "For Sale",
     sub: true,
     description:
       'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
@@ -266,6 +267,8 @@ const projects = [
     location: "United States",
     title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
     date: "2023",
+    tag: "For Sale",
+    sub: true,
     description:
       "We bought this property in 2023 to test the United States Market in June/July 2023. It had a cosmetic fire damage. We were able to partner with some local contractors to bring it back to life and was done by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
     image: "/images/p2-1.jpg",

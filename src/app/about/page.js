@@ -1,8 +1,8 @@
 "use client";
+import React, { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Plus, Star } from "lucide-react";
 import Image from "next/image";
-import React from "react";
 import ValuesSection from "../components/ValuesSection";
 import Link from "next/link";
 import { IoMdArrowRoundForward, IoIosPeople } from "react-icons/io";
@@ -52,7 +52,14 @@ const agents = [
     slug: "bidemi-adeshina",
   },
 ];
+
 function Page() {
+  const nextSectionRef = useRef(null);
+  const handleExploreClick = () => {
+    if (nextSectionRef.current) {
+      nextSectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <main className="min-h-screen bg-[#fafafb] py-20">
       <section className="py-16 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -92,7 +99,10 @@ function Page() {
             </p>
 
             <div className="flex space-x-6">
-              <div className=" items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700">
+              <div
+                onClick={handleExploreClick}
+                className=" items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
+              >
                 <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
                   Start exploring
                 </button>
@@ -110,6 +120,7 @@ function Page() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            ref={nextSectionRef}
           >
             <div className="rounded-3xl overflow-hidden mb-8">
               <Image
@@ -192,7 +203,6 @@ function Page() {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
-          iv
           className="text-center mb-12"
         >
           {/* <div className="inline-flex items-center rounded-full bg-gray-100 px-4 py-2 mb-6">

@@ -45,9 +45,14 @@ export function TransformationCard({ property, onClick }) {
           </div>
         </div>
 
-        <Badge className="absolute bottom-2 right-2 z-20" variant="secondary">
-          {property.category}
-        </Badge>
+        <div className="absolute bottom-2 right-2 z-20 flex items-center gap-2">
+          <Badge className="" variant="secondary">
+            {property.category}
+          </Badge>
+          <Badge className="" variant="secondary">
+            {property.type}
+          </Badge>
+        </div>
       </div>
 
       <CardContent className="p-4">

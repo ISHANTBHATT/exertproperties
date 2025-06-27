@@ -146,6 +146,7 @@ const properties = [
   {
     id: 1,
     title: "2 BEDROOM SHOTLET",
+    type: "For Shortlet",
     category: "residential",
     location: "Lekki phase 1, Nigeria",
     beforeImage: `/images/h1-1.jpeg`,
@@ -185,6 +186,7 @@ const properties = [
   {
     id: 2,
     title: `FIX & FLIP OF A FIRE DAMAGED CONDO`,
+    type: "For Sale",
     category: "residential",
     location: "United States",
     beforeImage: `/images/p2-1.jpg`,
@@ -294,6 +296,7 @@ const properties = [
   {
     id: 3,
     title: `ENUGU LAND DEVELOPMENT`,
+    type: "For Sale",
     category: "Civil Construction",
     location: "Ukuta Close off Valley Crescent off Nza, Nigeria",
     beforeImage: `/images/p3b-1.jpeg`,
@@ -377,6 +380,7 @@ const properties = [
     id: 4,
     title: `GAINS HEIGHTS`,
     category: "residential",
+    type: "For Sale",
     location: "Lekki Foreshore Estate Lekki Phase 1 Lagos, Nigeria",
     beforeImage: `/images/p4a-2.jpeg`,
     afterImage: `/images/p4a-1.jpeg`,
@@ -407,6 +411,7 @@ const properties = [
     id: 5,
     title: `3 in 1 FULL DETACHED HOUSES`,
     category: "residential",
+    type: "Sold",
     location: "Vitoria Crest 2 Estate Orchid Lekki Lagos, Nigeria",
     beforeImage: `/images/p1a-1.jpeg`,
     afterImage: `/images/p1-8.jpeg`,
