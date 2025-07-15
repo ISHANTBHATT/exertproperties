@@ -148,6 +148,7 @@ const AboutSection = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
               className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-md"
             >
               <div className="flex items-center space-x-2">
@@ -160,6 +161,7 @@ const AboutSection = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
               className="absolute top-16 left-4 bg-white px-4 py-2 rounded-full shadow-md"
             >
               <div className="flex items-center space-x-2">
@@ -172,6 +174,7 @@ const AboutSection = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
               className="absolute bottom-24 right-4 bg-white px-4 py-2 rounded-full shadow-md"
             >
               <div className="flex items-center space-x-2">
@@ -184,6 +187,7 @@ const AboutSection = () => {
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
               className="absolute bottom-8 left-4 bg-white px-4 py-2 rounded-full shadow-md"
             >
               <div className="flex items-center space-x-2">

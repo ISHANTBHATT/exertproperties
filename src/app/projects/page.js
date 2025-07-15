@@ -197,7 +197,7 @@ const projects = [
     sub: true,
     description:
       'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
-    image: "/images/p4a-2.jpeg",
+    image: "/images/p0.png",
     beforeMedia: [
       { type: "image", src: "/images/p4b-1.jpeg" },
       { type: "image", src: "/images/p4b-2.jpeg" },
@@ -214,7 +214,24 @@ const projects = [
         src: "/videos/p4bv-2.mp4",
       },
     ],
-    afterMedia: [{ type: "image", src: "/images/p4a-2.jpeg" }],
+    afterMedia: [
+      { type: "image", src: "/images/p0.png" },
+      { type: "image", src: "/images/p0a-1.png" },
+      { type: "image", src: "/images/p0a-2.png" },
+      { type: "image", src: "/images/p0a-3.png" },
+      { type: "image", src: "/images/p0a-4.png" },
+      { type: "image", src: "/images/p0a-5.png" },
+      { type: "image", src: "/images/p0a-6.png" },
+      { type: "image", src: "/images/p0a-7.png" },
+      { type: "image", src: "/images/p0a-8.png" },
+      { type: "image", src: "/images/p0a-9.png" },
+      { type: "image", src: "/images/p0a-10.png" },
+      {
+        type: "video",
+        src: "/images/Gains_Heights.mp4",
+        // thumbnail: "/images/p2-1.jpeg",
+      },
+    ],
   },
   {
     id: 2,

@@ -9,6 +9,7 @@ import {
   Square,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const PropertyCard = ({ property, featured = false }) => {
   const { title, location, type, image, sqft, bedrooms, bathrooms, parking } =
@@ -67,10 +68,12 @@ const PropertyCard = ({ property, featured = false }) => {
         </div>
 
         <div className="flex justify-end">
-          <button className="text-sm font-medium text-gray-700 hover:text-black transition-colors flex items-center">
-            Contact agent
-            <ChevronsRight className="h-4 w-4 ml-1" />
-          </button>
+          <Link href={`/contact`}>
+            <button className="text-sm font-medium text-gray-700 hover:text-black transition-colors flex items-center">
+              Contact agent
+              <ChevronsRight className="h-4 w-4 ml-1" />
+            </button>
+          </Link>
         </div>
       </div>
     </motion.div>

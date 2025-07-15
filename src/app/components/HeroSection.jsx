@@ -284,7 +284,7 @@ export default function HeroSection({ scrollToRef }) {
           className="object-fill"
         /> */}
         <video autoPlay loop muted className="object-fill w-full h-full">
-          <source src="/images/1.mp4" type="video/mp4" />
+          <source src="/images/Gains_Heights1.mp4" type="video/mp4" />
         </video>
       </div>
 
