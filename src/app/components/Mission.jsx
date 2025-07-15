@@ -23,7 +23,7 @@ function Mission() {
           className="rounded-3xl overflow-hidden"
         >
           <Image
-            src="/images/5.jpg"
+            src="/images/6.png"
             alt="People viewing a home"
             width={600}
             height={600}

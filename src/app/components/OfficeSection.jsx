@@ -67,7 +67,7 @@ function OfficeSection() {
             >
               <div className="relative h-80">
                 <Image
-                  src="/images/p4a-2.jpeg"
+                  src="/images/p0.png"
                   alt="San Francisco Office"
                   fill
                   className="object-cover"
