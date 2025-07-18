@@ -240,7 +240,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
@@ -249,6 +249,7 @@ import { staggerContainer, fadeIn } from "@/utils/motion";
 export default function HeroSection({ scrollToRef }) {
   const targetRef = useRef(null);
   const [videoUrl, setVideoUrl] = useState(null);
+  const [isMuted, setIsMuted] = useState(true);
   // const nextSectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -308,10 +309,26 @@ export default function HeroSection({ scrollToRef }) {
       <div className="absolute inset-0 w-full h-full">
         {videoUrl ? (
           <>
-            <video autoPlay loop muted className="object-fill w-full h-full">
+            <video
+              autoPlay
+              loop
+              muted={isMuted}
+              className="object-cover md:object-fill w-full h-full"
+            >
               <source src={videoUrl} type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/30 bg-opacity-60 z-10" />
+            <button
+              onClick={() => setIsMuted(!isMuted)}
+              className="absolute z-20 bottom-6 right-6 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition"
+              aria-label="Toggle Mute"
+            >
+              {isMuted ? (
+                <VolumeX className="w-5 h-5" />
+              ) : (
+                <Volume2 className="w-5 h-5" />
+              )}
+            </button>
           </>
         ) : (
           <div className="bg-black w-full h-full flex items-center justify-center text-white">

@@ -69,7 +69,7 @@ const PropertyListings = ({ properties }) => {
           ))}
         </motion.div>
 
-        <div className="flex justify-center space-x-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <Link href="/projects">
             <Button className="rounded-full cursor-pointer bg-[#3A9188] hover:bg-teal-700">
               Start exploring

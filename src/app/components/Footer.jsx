@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <div className="bg-[#fafafb]">
       {/* #3A9188 */}
-      <footer className="bg-[#3A9188] text-white pt-16 pb-8 rounded-4xl md:mx-6 lg:mx-20 px-10">
+      <footer className="bg-[#3A9188] text-white pt-16 pb-8 rounded-4xl md:mx-6 lg:mx-20 px-4 sm:px-10">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h2 className="text-3xl font-bold mb-4">
@@ -34,7 +34,7 @@ const Footer = () => {
               vision.
             </p>
 
-            <div className="flex items-center space-x-3 max-w-sm">
+            <div className="flex flex-wrap gap-3 items-center max-w-sm">
               <input
                 type="email"
                 placeholder="Enter your email address"

@@ -209,7 +209,9 @@ export function Faqs({ className }) {
                 onClick={() => toggleFaq(faq.id)}
                 aria-expanded={openId === faq.id}
               >
-                <h3 className="text-xl font-semibold pr-4">{faq.question}</h3>
+                <h3 className="text-lg sm:text-xl font-semibold pr-4">
+                  {faq.question}
+                </h3>
                 <div className="flex-shrink-0">
                   <div
                     className={`rounded-full p-2 transition-all duration-300 ${
