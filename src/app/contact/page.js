@@ -420,16 +420,52 @@ export default function ContactForm() {
     subject: "",
     message: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form submitted:", formData);
+  //   // Add your form submission logic here
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Add your form submission logic here
+    setIsLoading(true);
+    const { fullName, email, phone, message, subject } = formData;
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          userEmail: email,
+          userName: fullName,
+          subject: subject,
+          phone: phone,
+          message: message,
+        }),
+      });
+      if (res.ok) {
+        alert("Message sent successfully!");
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          message: "",
+          subject: "",
+        }); // reset form
+      } else {
+        alert("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("An error occurred. Please try again later.");
+    }
+    setIsLoading(false);
   };
 
   // Animation variants
@@ -621,9 +657,10 @@ export default function ContactForm() {
                 >
                   <Button
                     type="submit"
+                    disabled={isLoading}
                     className="bg-[#3A9188] text-white rounded-full px-6 py-3 flex items-center gap-2 hover:bg-teal-700"
                   >
-                    Send message
+                    {isLoading ? "Sending..." : "SEND MESSAGE"}
                     <ArrowRight className="h-5 w-5" />
                   </Button>
                 </motion.div>

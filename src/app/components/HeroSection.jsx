@@ -241,13 +241,14 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import { staggerContainer, fadeIn } from "@/utils/motion";
 
 export default function HeroSection({ scrollToRef }) {
   const targetRef = useRef(null);
+  const [videoUrl, setVideoUrl] = useState(null);
   // const nextSectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -264,6 +265,22 @@ export default function HeroSection({ scrollToRef }) {
       scrollToRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    // Simulate fetch from server (replace with actual API call)
+    async function fetchVideo() {
+      try {
+        const res = await fetch("/api/video"); // Replace with your actual endpoint
+        const data = await res.json();
+        setVideoUrl(data.videoUrl); // Assuming the response is { videoUrl: "https://yourserver.com/video.mp4" }
+      } catch (error) {
+        console.error("Failed to fetch video:", error);
+      }
+    }
+
+    fetchVideo();
+  }, []);
+
   return (
     <motion.section
       ref={targetRef}
@@ -276,16 +293,31 @@ export default function HeroSection({ scrollToRef }) {
       // h-[150vh]
     >
       {/* Full-size background image */}
-      <div className="absolute inset-0 w-full h-full">
-        {/* <Image
+      {/* <div className="absolute inset-0 w-full h-full">
+         <Image
           src="/images/1.jpg"
           alt="Background Image"
           fill
           className="object-fill"
-        /> */}
+        /> 
         <video autoPlay loop muted className="object-fill w-full h-full">
           <source src="/images/Gains_Heights1.mp4" type="video/mp4" />
         </video>
+      </div> */}
+
+      <div className="absolute inset-0 w-full h-full">
+        {videoUrl ? (
+          <>
+            <video autoPlay loop muted className="object-fill w-full h-full">
+              <source src={videoUrl} type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-black/30 bg-opacity-60 z-10" />
+          </>
+        ) : (
+          <div className="bg-black w-full h-full flex items-center justify-center text-white">
+            Loading video...
+          </div>
+        )}
       </div>
 
       {/* Content container */}
@@ -294,7 +326,7 @@ export default function HeroSection({ scrollToRef }) {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="relative pt-32 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 md:px-6"
+        className="relative pt-32 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 md:px-6 z-20"
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
