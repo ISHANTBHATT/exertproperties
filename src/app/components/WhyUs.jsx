@@ -45,7 +45,7 @@ export default function WhyUs() {
                   className="object-cover"
                 />
 
-                <motion.div
+                {/* <motion.div
                   initial={{ scale: 0 }}
                   whileInView={{ scale: 1 }}
                   transition={{ delay: 0.5 }}
@@ -87,7 +87,7 @@ export default function WhyUs() {
                 >
                   <Car className="h-5 w-5 text-gray-500" />
                   <span className="text-sm font-medium">4 parking zones</span>
-                </motion.div>
+                </motion.div> */}
               </div>
             </div>
           </motion.div>

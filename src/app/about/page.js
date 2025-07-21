@@ -26,7 +26,7 @@ const agents = [
   {
     id: 1,
     image: "/images/team1.jpeg",
-    name: "OKEY OKATTA",
+    name: "Okey Okatta",
     designation: "MD/CEO",
     slug: "okey-okatta",
   },

@@ -203,7 +203,7 @@ const Footer = () => {
                   <MessageSquare className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Help & support</p>
-                    <p>support@exert.com</p>
+                    <p>support@exertproperties.com</p>
                   </div>
                 </li>
               </ul>

@@ -14,7 +14,7 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 // This would typically come from a database or API
 const agents = {
   "okey-okatta": {
-    name: "OKEY OKATTA",
+    name: "Okey Okatta",
     username: "@okey-okatta",
     img: "/images/team1.jpeg",
     email: "okey-okatta@exert.com",

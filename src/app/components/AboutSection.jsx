@@ -144,7 +144,7 @@ const AboutSection = () => {
               className="w-full h-96 object-cover rounded-lg"
             />
 
-            <motion.div
+            {/* <motion.div
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
               transition={{ delay: 0.5 }}
@@ -194,7 +194,7 @@ const AboutSection = () => {
                 <Car className="h-5 w-5 text-gray-500" />
                 <span className="text-sm font-medium">6 parking zones</span>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>

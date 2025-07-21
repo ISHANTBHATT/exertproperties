@@ -177,7 +177,7 @@
 
 //current
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiSolidHomeAlt2 } from "react-icons/bi";
 import Image from "next/image";
 import ProjectModal from "@/components/ui/ProjectModal";
@@ -186,306 +186,8 @@ import { IoMdArrowRoundForward } from "react-icons/io";
 import InquiryFormModal from "../components/InquiryFormMoal";
 import { Link } from "lucide-react";
 
-// Project data
-const projects = [
-  {
-    id: 1,
-    location: "Nigeria",
-    title: "GAINS HEIGHTS",
-    date: "LEKKI FORESHORE ESTATE 2024",
-    tag: "For Sale",
-    sub: true,
-    description:
-      'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
-    image: "/images/p0.png",
-    beforeMedia: [
-      { type: "image", src: "/images/p4b-1.jpeg" },
-      { type: "image", src: "/images/p4b-2.jpeg" },
-      { type: "image", src: "/images/p4b-3.jpeg" },
-      { type: "image", src: "/images/p4b-4.jpeg" },
-      // { type: "image", src: "/images/p2b-2.jpeg" },
-      // { type: "image", src: "/images/p2b-3.jpeg" },
-      {
-        type: "video",
-        src: "/videos/p4bv-1.mp4",
-      },
-      {
-        type: "video",
-        src: "/videos/p4bv-2.mp4",
-      },
-    ],
-    afterMedia: [
-      { type: "image", src: "/images/p0.png" },
-      { type: "image", src: "/images/p0a-1.png" },
-      { type: "image", src: "/images/p0a-2.png" },
-      { type: "image", src: "/images/p0a-3.png" },
-      { type: "image", src: "/images/p0a-4.png" },
-      { type: "image", src: "/images/p0a-5.png" },
-      { type: "image", src: "/images/p0a-6.png" },
-      { type: "image", src: "/images/p0a-7.png" },
-      { type: "image", src: "/images/p0a-8.png" },
-      { type: "image", src: "/images/p0a-9.png" },
-      { type: "image", src: "/images/p0a-10.png" },
-      {
-        type: "video",
-        src: "/images/Gains_Heights.mp4",
-        // thumbnail: "/images/p2-1.jpeg",
-      },
-    ],
-  },
-  {
-    id: 2,
-    location: "Nigeria",
-    title: "2 BEDROOM SHOTLET IN LEKKI 1",
-    booking: true,
-    tag: "For Shortlet",
-    date: "2023",
-    description:
-      " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. We use this place for shorlet and it's listed on abnb",
-    image: "/images/h1-3.jpeg",
-    beforeMedia: [
-      {
-        type: "video",
-        src: "/videos/p4av-1.mp4",
-        // thumbnail: "/images/p2-1.jpeg",
-      },
-      // { type: "image", src: "/images/p4b-2.jpeg" },
-      // { type: "image", src: "/images/p4b-3.jpeg" },
-      // { type: "image", src: "/images/p4b-4.jpeg" },
-    ],
-    afterMedia: [
-      { type: "image", src: "/images/h1-1.jpeg" },
-      { type: "image", src: "/images/h1-2.jpeg" },
-      { type: "image", src: "/images/h1-3.jpeg" },
-      { type: "image", src: "/images/h1-4.jpeg" },
-      { type: "image", src: "/images/h1-5.jpeg" },
-      { type: "image", src: "/images/h1-6.jpeg" },
-      { type: "image", src: "/images/h1-7.jpeg" },
-      { type: "image", src: "/images/h1-8.jpeg" },
-      { type: "image", src: "/images/h1-9.jpeg" },
-      { type: "image", src: "/images/h1-10.jpeg" },
-      { type: "image", src: "/images/h1-11.jpeg" },
-      { type: "image", src: "/images/h1-12.jpeg" },
-      { type: "image", src: "/images/h1-13.jpeg" },
-      { type: "image", src: "/images/h1-14.jpeg" },
-      { type: "image", src: "/images/h1-15.jpeg" },
-      { type: "image", src: "/images/h1-16.jpeg" },
-      { type: "image", src: "/images/h1-17.jpeg" },
-      { type: "image", src: "/images/h1-18.jpeg" },
-      {
-        type: "video",
-        src: "/videos/p4av-1.mp4",
-        // thumbnail: "/images/p2-1.jpeg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    location: "United States",
-    title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
-    date: "2023",
-    tag: "For Sale",
-    sub: true,
-    description:
-      "We bought this property in 2023 to test the United States Market in June/July 2023. It had a cosmetic fire damage. We were able to partner with some local contractors to bring it back to life and was done by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
-    image: "/images/p2-1.jpg",
-    // beforeImage: "/images/p2b-1.jpeg",
-    // afterImage: "/images/p2-1.jpg",
-    beforeMedia: [
-      { type: "image", src: "/images/p2b-1.jpeg" },
-      { type: "image", src: "/images/p2b-2.jpeg" },
-      { type: "image", src: "/images/p2b-3.jpeg" },
-      {
-        type: "video",
-        src: "/videos/p2bv-1.mp4",
-        // thumbnail: "/images/p2b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p2bv-2.mp4",
-      },
-      {
-        type: "video",
-        src: "/videos/p2bv-3.mp4",
-      },
-      {
-        type: "video",
-        src: "/videos/p2bv-4.mp4",
-      },
-      {
-        type: "video",
-        src: "/videos/p2bv-5.mp4",
-      },
-    ],
-    afterMedia: [
-      { type: "image", src: "/images/p2-1.jpg" },
-      { type: "image", src: "/images/p2-2.jpg" },
-      { type: "image", src: "/images/p2-3.jpg" },
-      { type: "image", src: "/images/p2-4.jpg" },
-      { type: "image", src: "/images/p2-5.jpg" },
-      { type: "image", src: "/images/p2-6.jpg" },
-      { type: "image", src: "/images/p2-7.jpg" },
-      { type: "image", src: "/images/p2-8.jpg" },
-      { type: "image", src: "/images/p2-9.jpg" },
-      { type: "image", src: "/images/p2-10.jpg" },
-      { type: "image", src: "/images/p2-11.jpg" },
-      { type: "image", src: "/images/p2-12.jpg" },
-      { type: "image", src: "/images/p2-13.jpg" },
-      { type: "image", src: "/images/p2-14.jpg" },
-      { type: "image", src: "/images/p2-15.jpg" },
-      { type: "image", src: "/images/p2-16.jpg" },
-      { type: "image", src: "/images/p2-17.jpg" },
-      { type: "image", src: "/images/p2-18.jpg" },
-      { type: "image", src: "/images/p2-19.jpg" },
-      { type: "image", src: "/images/p2-20.jpg" },
-      { type: "image", src: "/images/p2-21.jpg" },
-      { type: "image", src: "/images/p2-22.jpg" },
-      { type: "image", src: "/images/p2-23.jpg" },
-      { type: "image", src: "/images/p2-24.jpg" },
-      { type: "image", src: "/images/p2-25.jpg" },
-      { type: "image", src: "/images/p2-26.jpg" },
-      { type: "image", src: "/images/p2-27.jpg" },
-      { type: "image", src: "/images/p2-28.jpg" },
-      { type: "image", src: "/images/p2-29.jpg" },
-      { type: "image", src: "/images/p2-30.jpg" },
-      { type: "image", src: "/images/p2-31.jpg" },
-      { type: "image", src: "/images/p2-32.jpg" },
-      { type: "image", src: "/images/p2-33.jpg" },
-    ],
-  },
-  {
-    id: 4,
-    location: "Nigeria",
-    title: "3 in 1 FULL DETACHED HOUSES",
-    date: "ORCHID LAGOS 2021",
-    tag: "Sold",
-    description:
-      "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detched duplexe with a maid roo. This roject was started in novemeber 2021 and finished by May 2022. Its all been sold and our clients are since living in them with their family.",
-    image: "/images/p1a-1.jpg",
-    beforeMedia: [
-      { type: "image", src: "/images/p1b-1.jpeg" },
-      { type: "image", src: "/images/p1b-2.jpeg" },
-      { type: "image", src: "/images/p1b-3.jpeg" },
-      { type: "image", src: "/images/p1b-4.jpeg" },
-      { type: "image", src: "/images/p1b-5.jpeg" },
-      { type: "image", src: "/images/p1b-6.jpeg" },
-      { type: "image", src: "/images/p1b-7.jpeg" },
-      { type: "image", src: "/images/p1b-8.jpeg" },
-    ],
-    afterMedia: [
-      { type: "image", src: "/images/p1a-1.jpg" },
-      { type: "image", src: "/images/p1a-2.jpeg" },
-      { type: "image", src: "/images/p1a-3.jpeg" },
-      { type: "image", src: "/images/p1a-4.jpeg" },
-      { type: "image", src: "/images/p1-1.jpeg" },
-      { type: "image", src: "/images/p1-2.jpeg" },
-      { type: "image", src: "/images/p1-3.jpeg" },
-      { type: "image", src: "/images/p1-4.jpeg" },
-      { type: "image", src: "/images/p1-5.jpeg" },
-      { type: "image", src: "/images/p1-6.jpeg" },
-      { type: "image", src: "/images/p1-7.jpeg" },
-      { type: "image", src: "/images/p1-8.jpeg" },
-      { type: "image", src: "/images/p1-9.jpeg" },
-      { type: "image", src: "/images/p1-10.jpeg" },
-      { type: "image", src: "/images/p1-11.jpeg" },
-      { type: "image", src: "/images/p1-12.jpeg" },
-      { type: "image", src: "/images/p1-13.jpeg" },
-      { type: "image", src: "/images/p1-14.jpeg" },
-      { type: "image", src: "/images/p1-15.jpeg" },
-      { type: "image", src: "/images/p1-16.jpeg" },
-    ],
-  },
-  {
-    id: 5,
-    location: "Nigeria",
-    title: "ENUGU LAND DEVELOPMENT",
-    date: "INDEPENDENCE LAYOUT 2023",
-    tag: "For Sale",
-    sub: true,
-    description:
-      "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
-    image: "/images/p3b-1.jpeg",
-    beforeMedia: [
-      { type: "image", src: "/images/p3b-1.jpeg" },
-      { type: "image", src: "/images/p3b-2.jpeg" },
-      {
-        type: "video",
-        src: "/videos/p3bv-1.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-2.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-3.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-4.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-5.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-6.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-7.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-8.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-9.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-10.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-11.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3bv-12.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-    ],
-    afterMedia: [
-      // { type: "image", src: "/images/p3av-1.jpg" },
-      {
-        type: "video",
-        src: "/videos/p3av-1.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-      {
-        type: "video",
-        src: "/videos/p3av-2.mp4",
-        // thumbnail: "/images/p3b-1.jpeg",
-      },
-    ],
-  },
-];
-
 function Page() {
+  const [videoUrl, setVideoUrl] = useState(null);
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -495,7 +197,335 @@ function Page() {
       },
     },
   };
+  useEffect(() => {
+    // Simulate fetch from server (replace with actual API call)
+    async function fetchVideo() {
+      try {
+        const res = await fetch("/api/video"); // Replace with your actual endpoint
+        const data = await res.json();
+        setVideoUrl(data.videoUrl); // Assuming the response is { videoUrl: "https://yourserver.com/video.mp4" }
+      } catch (error) {
+        console.error("Failed to fetch video:", error);
+      }
+    }
 
+    fetchVideo();
+  }, []);
+
+  // Project data
+  const projects = [
+    {
+      id: 1,
+      location: "Nigeria",
+      title: "GAINS HEIGHTS",
+      date: "LEKKI FORESHORE ESTATE 2024",
+      tag: "For Sale",
+      sub: true,
+      description:
+        'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
+      image: "/images/p0.png",
+      beforeMedia: [
+        { type: "image", src: "/images/p4b-1.jpeg" },
+        { type: "image", src: "/images/p4b-2.jpeg" },
+        { type: "image", src: "/images/p4b-3.jpeg" },
+        { type: "image", src: "/images/p4b-4.jpeg" },
+        // { type: "image", src: "/images/p2b-2.jpeg" },
+        // { type: "image", src: "/images/p2b-3.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p4bv-1.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-2.mp4",
+        },
+      ],
+      afterMedia: [
+        { type: "image", src: "/images/p0.png" },
+        { type: "image", src: "/images/p0a-1.jpg" },
+        { type: "image", src: "/images/p0a-2.jpg" },
+        { type: "image", src: "/images/p0a-3.jpg" },
+        { type: "image", src: "/images/p0a-4.jpg" },
+        { type: "image", src: "/images/p0a-5.jpg" },
+        { type: "image", src: "/images/p0a-6.jpg" },
+        { type: "image", src: "/images/p0a-7.jpg" },
+        { type: "image", src: "/images/p0a-8.jpg" },
+        { type: "image", src: "/images/p0a-9.jpg" },
+        { type: "image", src: "/images/p0a-10.jpg" },
+        { type: "image", src: "/images/p0a-11.jpg" },
+        { type: "image", src: "/images/p0a-12.jpg" },
+        { type: "image", src: "/images/p0a-13.jpg" },
+        { type: "image", src: "/images/p0a-14.jpg" },
+        { type: "image", src: "/images/p0a-15.jpg" },
+        { type: "image", src: "/images/p0a-16.jpg" },
+        { type: "image", src: "/images/p0a-17.jpg" },
+        { type: "image", src: "/images/p0a-18.jpg" },
+        { type: "image", src: "/images/p0a-19.jpg" },
+        { type: "image", src: "/images/p0a-20.jpg" },
+        { type: "image", src: "/images/p0a-21.jpg" },
+        { type: "image", src: "/images/p0a-22.jpg" },
+        { type: "image", src: "/images/p0a-23.jpg" },
+        { type: "image", src: "/images/p0a-24.jpg" },
+        { type: "image", src: "/images/p0a-25.jpg" },
+
+        {
+          type: "video",
+          src: videoUrl,
+          // thumbnail: "/images/p2-1.jpeg",
+        },
+      ],
+    },
+    {
+      id: 2,
+      location: "Nigeria",
+      title: "2 BEDROOM SHOTLET IN LEKKI 1",
+      booking: true,
+      tag: "For Shortlet",
+      date: "2023",
+      description:
+        " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. We use this place for shorlet and it's listed on abnb",
+      image: "/images/h1-3.jpeg",
+      beforeMedia: [
+        {
+          type: "video",
+          src: "/videos/p4av-1.mp4",
+          // thumbnail: "/images/p2-1.jpeg",
+        },
+        // { type: "image", src: "/images/p4b-2.jpeg" },
+        // { type: "image", src: "/images/p4b-3.jpeg" },
+        // { type: "image", src: "/images/p4b-4.jpeg" },
+      ],
+      afterMedia: [
+        { type: "image", src: "/images/h1-1.jpeg" },
+        { type: "image", src: "/images/h1-2.jpeg" },
+        { type: "image", src: "/images/h1-3.jpeg" },
+        { type: "image", src: "/images/h1-4.jpeg" },
+        { type: "image", src: "/images/h1-5.jpeg" },
+        { type: "image", src: "/images/h1-6.jpeg" },
+        { type: "image", src: "/images/h1-7.jpeg" },
+        { type: "image", src: "/images/h1-8.jpeg" },
+        { type: "image", src: "/images/h1-9.jpeg" },
+        { type: "image", src: "/images/h1-10.jpeg" },
+        { type: "image", src: "/images/h1-11.jpeg" },
+        { type: "image", src: "/images/h1-12.jpeg" },
+        { type: "image", src: "/images/h1-13.jpeg" },
+        { type: "image", src: "/images/h1-14.jpeg" },
+        { type: "image", src: "/images/h1-15.jpeg" },
+        { type: "image", src: "/images/h1-16.jpeg" },
+        { type: "image", src: "/images/h1-17.jpeg" },
+        { type: "image", src: "/images/h1-18.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p4av-1.mp4",
+          // thumbnail: "/images/p2-1.jpeg",
+        },
+      ],
+    },
+    {
+      id: 3,
+      location: "United States",
+      title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
+      date: "2023",
+      tag: "For Sale",
+      sub: true,
+      description:
+        "We bought this property in 2023 to test the United States Market in June/July 2023. It had a cosmetic fire damage. We were able to partner with some local contractors to bring it back to life and was done by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
+      image: "/images/p2-1.jpg",
+      // beforeImage: "/images/p2b-1.jpeg",
+      // afterImage: "/images/p2-1.jpg",
+      beforeMedia: [
+        { type: "image", src: "/images/p2b-1.jpeg" },
+        { type: "image", src: "/images/p2b-2.jpeg" },
+        { type: "image", src: "/images/p2b-3.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p2bv-1.mp4",
+          // thumbnail: "/images/p2b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p2bv-2.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p2bv-3.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p2bv-4.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p2bv-5.mp4",
+        },
+      ],
+      afterMedia: [
+        { type: "image", src: "/images/p2-1.jpg" },
+        { type: "image", src: "/images/p2-2.jpg" },
+        { type: "image", src: "/images/p2-3.jpg" },
+        { type: "image", src: "/images/p2-4.jpg" },
+        { type: "image", src: "/images/p2-5.jpg" },
+        { type: "image", src: "/images/p2-6.jpg" },
+        { type: "image", src: "/images/p2-7.jpg" },
+        { type: "image", src: "/images/p2-8.jpg" },
+        { type: "image", src: "/images/p2-9.jpg" },
+        { type: "image", src: "/images/p2-10.jpg" },
+        { type: "image", src: "/images/p2-11.jpg" },
+        { type: "image", src: "/images/p2-12.jpg" },
+        { type: "image", src: "/images/p2-13.jpg" },
+        { type: "image", src: "/images/p2-14.jpg" },
+        { type: "image", src: "/images/p2-15.jpg" },
+        { type: "image", src: "/images/p2-16.jpg" },
+        { type: "image", src: "/images/p2-17.jpg" },
+        { type: "image", src: "/images/p2-18.jpg" },
+        { type: "image", src: "/images/p2-19.jpg" },
+        { type: "image", src: "/images/p2-20.jpg" },
+        { type: "image", src: "/images/p2-21.jpg" },
+        { type: "image", src: "/images/p2-22.jpg" },
+        { type: "image", src: "/images/p2-23.jpg" },
+        { type: "image", src: "/images/p2-24.jpg" },
+        { type: "image", src: "/images/p2-25.jpg" },
+        { type: "image", src: "/images/p2-26.jpg" },
+        { type: "image", src: "/images/p2-27.jpg" },
+        { type: "image", src: "/images/p2-28.jpg" },
+        { type: "image", src: "/images/p2-29.jpg" },
+        { type: "image", src: "/images/p2-30.jpg" },
+        { type: "image", src: "/images/p2-31.jpg" },
+        { type: "image", src: "/images/p2-32.jpg" },
+        { type: "image", src: "/images/p2-33.jpg" },
+      ],
+    },
+    {
+      id: 4,
+      location: "Nigeria",
+      title: "3 in 1 FULL DETACHED HOUSES",
+      date: "ORCHID LAGOS 2021",
+      tag: "Sold",
+      description:
+        "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detched duplexe with a maid roo. This roject was started in novemeber 2021 and finished by May 2022. Its all been sold and our clients are since living in them with their family.",
+      image: "/images/p1a-1.jpg",
+      beforeMedia: [
+        { type: "image", src: "/images/p1b-1.jpeg" },
+        { type: "image", src: "/images/p1b-2.jpeg" },
+        { type: "image", src: "/images/p1b-3.jpeg" },
+        { type: "image", src: "/images/p1b-4.jpeg" },
+        { type: "image", src: "/images/p1b-5.jpeg" },
+        { type: "image", src: "/images/p1b-6.jpeg" },
+        { type: "image", src: "/images/p1b-7.jpeg" },
+        { type: "image", src: "/images/p1b-8.jpeg" },
+      ],
+      afterMedia: [
+        { type: "image", src: "/images/p1a-1.jpg" },
+        { type: "image", src: "/images/p1a-2.jpeg" },
+        { type: "image", src: "/images/p1a-3.jpeg" },
+        { type: "image", src: "/images/p1a-4.jpeg" },
+        { type: "image", src: "/images/p1-1.jpeg" },
+        { type: "image", src: "/images/p1-2.jpeg" },
+        { type: "image", src: "/images/p1-3.jpeg" },
+        { type: "image", src: "/images/p1-4.jpeg" },
+        { type: "image", src: "/images/p1-5.jpeg" },
+        { type: "image", src: "/images/p1-6.jpeg" },
+        { type: "image", src: "/images/p1-7.jpeg" },
+        { type: "image", src: "/images/p1-8.jpeg" },
+        { type: "image", src: "/images/p1-9.jpeg" },
+        { type: "image", src: "/images/p1-10.jpeg" },
+        { type: "image", src: "/images/p1-11.jpeg" },
+        { type: "image", src: "/images/p1-12.jpeg" },
+        { type: "image", src: "/images/p1-13.jpeg" },
+        { type: "image", src: "/images/p1-14.jpeg" },
+        { type: "image", src: "/images/p1-15.jpeg" },
+        { type: "image", src: "/images/p1-16.jpeg" },
+      ],
+    },
+    {
+      id: 5,
+      location: "Nigeria",
+      title: "ENUGU LAND DEVELOPMENT",
+      date: "INDEPENDENCE LAYOUT 2023",
+      tag: "For Sale",
+      sub: true,
+      description:
+        "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
+      image: "/images/p3b-1.jpeg",
+      beforeMedia: [
+        { type: "image", src: "/images/p3b-1.jpeg" },
+        { type: "image", src: "/images/p3b-2.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p3bv-1.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-2.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-3.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-4.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-5.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-6.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-7.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-8.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-9.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-10.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-11.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-12.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+      ],
+      afterMedia: [
+        // { type: "image", src: "/images/p3av-1.jpg" },
+        {
+          type: "video",
+          src: "/videos/p3av-1.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+        {
+          type: "video",
+          src: "/videos/p3av-2.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
+      ],
+    },
+  ];
   return (
     <main className="min-h-screen bg-[#f9f6f2] py-28">
       <motion.section
