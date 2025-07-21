@@ -40,9 +40,9 @@ const agents = [
   {
     id: 3,
     image: "/images/team3.jpeg",
-    name: "Blessing Young Harris",
+    name: "Blessing Youngharry",
     designation: "Legal Advisor",
-    slug: "blessing-young-harris",
+    slug: "blessing-youngharry",
   },
   {
     id: 4,

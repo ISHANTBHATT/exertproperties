@@ -35,11 +35,11 @@ const agents = {
     about:
       "Adanna L. Okatta is the co-founder and  Director of Exert Properties, LLC. She holds a BSc in Biomedical Engineering from Tulane University (2002), an MPH in Epidemiology & Public Health from Yale University (2004), and a Doctor of Medicine from the University of Texas Health Center- San Antonio (2009). She has over fifteen years of women’s health consultation experience, specifically in the specialization of Maternal Fetal Medicine and high risk pregnancies. Her dedication to public service lead her to this real estate managing position. Access to outstanding homes is the building block for flourishing families in both in Nigeria and the United States.",
   },
-  "blessing-young-harris": {
-    name: "Blessing Young Harris",
-    username: "@blessing-young-harris",
+  "blessing-youngharry": {
+    name: "Blessing Youngharry",
+    username: "@blessing-youngharry",
     img: "/images/team3.jpeg",
-    email: "blessing-young-harris@exert.com",
+    email: "blessing-youngharry@exert.com",
     phone: "(212) 678 - 1234",
     location: "New York, NY",
     position: "Legal Advisor",
