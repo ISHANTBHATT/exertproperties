@@ -237,6 +237,163 @@
 //   );
 // }
 
+//current working
+// "use client";
+
+// import Link from "next/link";
+// import { ArrowRight, Volume2, VolumeX } from "lucide-react";
+// import { useEffect, useRef, useState } from "react";
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import Image from "next/image";
+// import { staggerContainer, fadeIn } from "@/utils/motion";
+
+// export default function HeroSection({ scrollToRef }) {
+//   const targetRef = useRef(null);
+//   const [videoUrl, setVideoUrl] = useState(null);
+//   const [isMuted, setIsMuted] = useState(true);
+//   // const nextSectionRef = useRef(null);
+
+//   const { scrollYProgress } = useScroll({
+//     target: targetRef,
+//     offset: ["start start", "end start"],
+//   });
+
+//   // Transform scale and opacity based on scroll
+//   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+//   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+//   const handleExploreClick = () => {
+//     if (scrollToRef?.current) {
+//       scrollToRef.current.scrollIntoView({ behavior: "smooth" });
+//     }
+//   };
+
+//   useEffect(() => {
+//     // Simulate fetch from server (replace with actual API call)
+//     async function fetchVideo() {
+//       try {
+//         const res = await fetch("/api/video"); // Replace with your actual endpoint
+//         const data = await res.json();
+//         setVideoUrl(data.videoUrl); // Assuming the response is { videoUrl: "https://yourserver.com/video.mp4" }
+//       } catch (error) {
+//         console.error("Failed to fetch video:", error);
+//       }
+//     }
+
+//     fetchVideo();
+//   }, []);
+
+//   return (
+//     <motion.section
+//       ref={targetRef}
+//       style={{
+//         scale,
+//         borderRadius: useTransform(scrollYProgress, [0, 0.7], ["0rem", "5rem"]),
+//       }}
+//       // Use h-screen to ensure full viewport height and full width
+//       className="relative h-screen w-full overflow-hidden"
+//       // h-[150vh]
+//     >
+//       {/* Full-size background image */}
+//       {/* <div className="absolute inset-0 w-full h-full">
+//          <Image
+//           src="/images/1.jpg"
+//           alt="Background Image"
+//           fill
+//           className="object-fill"
+//         />
+//         <video autoPlay loop muted className="object-fill w-full h-full">
+//           <source src="/images/Gains_Heights1.mp4" type="video/mp4" />
+//         </video>
+//       </div> */}
+
+//       <div className="absolute inset-0 w-full h-full">
+//         {videoUrl ? (
+//           <>
+//             <video
+//               autoPlay
+//               loop
+//               muted={isMuted}
+//               className="object-cover md:object-fill w-full h-full"
+//             >
+//               <source src={videoUrl} type="video/mp4" />
+//             </video>
+//             <div className="absolute inset-0 bg-black/30 bg-opacity-60 z-10" />
+//             <button
+//               onClick={() => setIsMuted(!isMuted)}
+//               className="absolute z-20 bottom-6 right-6 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition"
+//               aria-label="Toggle Mute"
+//             >
+//               {isMuted ? (
+//                 <VolumeX className="w-5 h-5" />
+//               ) : (
+//                 <Volume2 className="w-5 h-5" />
+//               )}
+//             </button>
+//           </>
+//         ) : (
+//           <div className="bg-black w-full h-full flex items-center justify-center text-white">
+//             Loading video...
+//           </div>
+//         )}
+//       </div>
+
+//       {/* Content container */}
+//       <motion.div
+//         variants={staggerContainer}
+//         initial="hidden"
+//         whileInView="show"
+//         viewport={{ once: true }}
+//         className="relative pt-32 pb-16 md:pt-32 md:pb-24 container mx-auto px-4 md:px-6 z-20"
+//       >
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+//           <motion.div variants={fadeIn("right", "tween", 0.2, 1)}>
+//             <h1 className="text-5xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
+//               Turning Spaces
+//               <br />
+//               into Statements
+//             </h1>
+//           </motion.div>
+//           <div>
+//             <motion.div
+//               variants={fadeIn("left", "tween", 0.2, 1)}
+//               className="lg:max-w-xl"
+//             >
+//               <p className="text-white text-lg">
+//                 At Exert Properties, we don’t just build properties — we shape
+//                 lifestyles, foster communities, and redefine skylines. With
+//                 decades of experience and a passion for excellence, we deliver
+//                 real estate solutions that are elegant, enduring, and tailored
+//                 to your vision.
+//               </p>
+//             </motion.div>
+//             <motion.div variants={fadeIn("left", "tween", 0.4, 1)}>
+//               <motion.div
+//                 className="mt-8 flex flex-wrap gap-4"
+//                 variants={fadeIn("up", "tween", 0.6, 1)}
+//               >
+//                 <button
+//                   onClick={handleExploreClick}
+//                   // href="/"
+//                   className="flex items-center px-6 py-3 rounded-full bg-[#3A9188] text-white font-medium transform transition-transform duration-300 ease-in-out hover:scale-90 hover:bg-teal-700"
+//                 >
+//                   Start exploring <ArrowRight className="ml-2 h-5 w-5" />
+//                 </button>
+//                 <Link
+//                   href="/projects"
+//                   className="flex items-center px-6 py-3 text-white font-medium hover:underline"
+//                 >
+//                   Explore projects <ArrowRight className="ml-2 h-5 w-5" />
+//                 </Link>
+//               </motion.div>
+//             </motion.div>
+//           </div>
+//         </div>
+//       </motion.div>
+//     </motion.section>
+//   );
+// }
+
 "use client";
 
 import Link from "next/link";
@@ -248,18 +405,37 @@ import { staggerContainer, fadeIn } from "@/utils/motion";
 
 export default function HeroSection({ scrollToRef }) {
   const targetRef = useRef(null);
+  const videoRef = useRef(null);
   const [videoUrl, setVideoUrl] = useState(null);
   const [isMuted, setIsMuted] = useState(true);
-  // const nextSectionRef = useRef(null);
+  const [isIOS, setIsIOS] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end start"],
   });
 
-  // Transform scale and opacity based on scroll
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  // Detect iOS
+  useEffect(() => {
+    const iOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+    setIsIOS(iOS);
+  }, []);
+
+  // Handle muted state properly for React/iOS
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = isMuted;
+      videoRef.current.defaultMuted = true;
+
+      // For iOS, attempt to load and play
+      if (isIOS && videoUrl) {
+        videoRef.current.load();
+      }
+    }
+  }, [isMuted, videoUrl, isIOS]);
 
   const handleExploreClick = () => {
     if (scrollToRef?.current) {
@@ -267,13 +443,16 @@ export default function HeroSection({ scrollToRef }) {
     }
   };
 
+  const handleMuteToggle = () => {
+    setIsMuted(!isMuted);
+  };
+
   useEffect(() => {
-    // Simulate fetch from server (replace with actual API call)
     async function fetchVideo() {
       try {
-        const res = await fetch("/api/video"); // Replace with your actual endpoint
+        const res = await fetch("/api/video");
         const data = await res.json();
-        setVideoUrl(data.videoUrl); // Assuming the response is { videoUrl: "https://yourserver.com/video.mp4" }
+        setVideoUrl(data.videoUrl);
       } catch (error) {
         console.error("Failed to fetch video:", error);
       }
@@ -289,46 +468,37 @@ export default function HeroSection({ scrollToRef }) {
         scale,
         borderRadius: useTransform(scrollYProgress, [0, 0.7], ["0rem", "5rem"]),
       }}
-      // Use h-screen to ensure full viewport height and full width
       className="relative h-screen w-full overflow-hidden"
-      // h-[150vh]
     >
-      {/* Full-size background image */}
-      {/* <div className="absolute inset-0 w-full h-full">
-         <Image
-          src="/images/1.jpg"
-          alt="Background Image"
-          fill
-          className="object-fill"
-        /> 
-        <video autoPlay loop muted className="object-fill w-full h-full">
-          <source src="/images/Gains_Heights1.mp4" type="video/mp4" />
-        </video>
-      </div> */}
-
       <div className="absolute inset-0 w-full h-full">
         {videoUrl ? (
           <>
             <video
+              ref={videoRef}
               autoPlay
               loop
               muted={isMuted}
+              playsInline
+              webkit-playsinline="true"
               className="object-cover md:object-fill w-full h-full"
+              onError={(e) => console.error("Video error:", e)}
             >
               <source src={videoUrl} type="video/mp4" />
             </video>
             <div className="absolute inset-0 bg-black/30 bg-opacity-60 z-10" />
-            <button
-              onClick={() => setIsMuted(!isMuted)}
-              className="absolute z-20 bottom-6 right-6 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition"
-              aria-label="Toggle Mute"
-            >
-              {isMuted ? (
-                <VolumeX className="w-5 h-5" />
-              ) : (
-                <Volume2 className="w-5 h-5" />
-              )}
-            </button>
+            {!isIOS && (
+              <button
+                onClick={handleMuteToggle}
+                className="absolute z-20 bottom-6 right-6 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition"
+                aria-label="Toggle Mute"
+              >
+                {isMuted ? (
+                  <VolumeX className="w-5 h-5" />
+                ) : (
+                  <Volume2 className="w-5 h-5" />
+                )}
+              </button>
+            )}
           </>
         ) : (
           <div className="bg-black w-full h-full flex items-center justify-center text-white">
@@ -337,7 +507,6 @@ export default function HeroSection({ scrollToRef }) {
         )}
       </div>
 
-      {/* Content container */}
       <motion.div
         variants={staggerContainer}
         initial="hidden"
