@@ -190,7 +190,7 @@ export function Faqs({ className }) {
           >
             Frequently asked questions
           </motion.h2>
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -199,7 +199,7 @@ export function Faqs({ className }) {
           >
             Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam
             ultrices augue convallis nunc ultrices amet consequat adipiscing.
-          </motion.p>
+          </motion.p> */}
         </div>
         <div className="max-w-3xl mx-auto bg-white rounded-3xl shadow-lg p-10">
           {faqs.map((faq) => (
