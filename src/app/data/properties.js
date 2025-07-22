@@ -72,15 +72,3 @@ export const properties = [
       "Lorem ipsum dolor sit amet consectetur. Id eu mi ac ac aliquam etiam ultrices augue convallis.",
   },
 ];
-
-export const featuredAgent = {
-  id: "1",
-  name: "Sophie Moore",
-  location: "NY",
-  image:
-    "https://images.pexels.com/photos/5717632/pexels-photo-5717632.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-  quote: "If you wanna sell fast, call John Carter",
-};
-
-export const heroImage =
-  "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
