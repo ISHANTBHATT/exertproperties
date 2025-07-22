@@ -47,7 +47,7 @@ const PropertyCard = ({ property, featured = false }) => {
             {location.address}, {location.city}
           </span>
         </div>
-
+        {/* 
         <div className="flex justify-between text-sm text-gray-600 mb-4">
           <div className="flex items-center">
             <Square className="h-4 w-4 mr-1" />
@@ -65,7 +65,7 @@ const PropertyCard = ({ property, featured = false }) => {
             <Car className="h-4 w-4 mr-1" />
             <span>{parking}</span>
           </div>
-        </div>
+        </div> */}
 
         <div className="flex justify-end">
           <Link href={`/contact`}>

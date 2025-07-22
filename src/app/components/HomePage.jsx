@@ -33,7 +33,7 @@ function HomePage() {
       status: "For Sale",
       description:
         ' This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
-      image: "/images/p0.png",
+      image: "/images/p0.jpg",
     },
     {
       id: 3,

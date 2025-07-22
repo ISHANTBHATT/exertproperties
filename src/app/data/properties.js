@@ -62,7 +62,7 @@ export const properties = [
     },
     type: "For Sale",
     price: 15000,
-    image: "/images/p0.png",
+    image: "/images/p0.jpg",
     sqft: 8392,
     bedrooms: 4,
     bathrooms: 6,

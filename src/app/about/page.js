@@ -124,7 +124,7 @@ function Page() {
           >
             <div className="rounded-3xl overflow-hidden mb-8">
               <Image
-                src="/images/p0.png"
+                src="/images/p0.jpg"
                 alt="Real estate team"
                 width={600}
                 height={400}

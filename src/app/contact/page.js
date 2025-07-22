@@ -799,7 +799,7 @@ export default function ContactForm() {
               variants={cardHover}
             >
               <Image
-                src="/images/p0.png"
+                src="/images/p0.jpg"
                 alt="San Francisco Office"
                 width={800}
                 height={600}
