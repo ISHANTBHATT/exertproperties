@@ -286,14 +286,11 @@ function Page() {
         " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. We use this place for shorlet and it's listed on abnb",
       image: "/images/h1-3.jpeg",
       beforeMedia: [
-        {
-          type: "video",
-          src: "/videos/p4av-1.mp4",
-          // thumbnail: "/images/p2-1.jpeg",
-        },
-        // { type: "image", src: "/images/p4b-2.jpeg" },
-        // { type: "image", src: "/images/p4b-3.jpeg" },
-        // { type: "image", src: "/images/p4b-4.jpeg" },
+        // {
+        //   type: "video",
+        //   src: "/videos/p4av-1.mp4",
+        //   // thumbnail: "/images/p2-1.jpeg",
+        // },
       ],
       afterMedia: [
         { type: "image", src: "/images/h1-1.jpeg" },
