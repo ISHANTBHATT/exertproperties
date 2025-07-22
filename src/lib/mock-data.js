@@ -429,7 +429,7 @@ const properties = [
       { type: "image", src: "/images/p0a-25.jpg" },
       {
         type: "video",
-        src: "https://apacedigitalcargo.com/test/Gains_Heights2.mp4",
+        src: "https://apacedigitalcargo.com/test/Gains_Heights3.mp4",
       },
     ],
     // duration: `32 months`,
