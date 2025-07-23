@@ -222,7 +222,7 @@ function Page() {
       tag: "For Sale",
       sub: true,
       description:
-        'In October 2024, we bought a 1000 square meter of land at Lekki Foreshore Estate Lekki Phase 1 Lagos for our inaugural Ground Floor plus Four 20 units of 2 bedroom luxury flats with a 3 bedroom penthouse. This project is named after our CEO\'s hometown Urualla in Ideato North Local Government Area Imo state Nigeria. Urualla is "Gains of a land" when translated in English. This project is tagged GAINS HEIGHTS powered by Exert Properties . We are concluding the drawings and approvals, and will move to the site by October 2025. The estimated completion time is the 4th quarter of 2027.',
+        "In 2024, Exert Properties purchased 1000 square meters of land at LEKKI Foreshore Estate, Lekki Phase 1.  This property will consist of four 20 unit two bedroom luxury flats and a stellar three bedroom penthouse. The project is named “Gained Heights” after our CEOs hometown “Urualla” which means “Gains of Land”. Urualla is located in Ideato North Local Government area, Imo State, Nigeria. Architectural drafts and approvals have been completed. Construction begins October 2025 with estimated projection completion by fourth quarter 2026.",
       image: "/images/p0.jpg",
       beforeMedia: [
         { type: "image", src: "/images/p4b-1.jpeg" },
@@ -283,7 +283,7 @@ function Page() {
       tag: "For Shortlet",
       date: "2023",
       description:
-        " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. We use this place for shorlet and it's listed on abnb",
+        " In 2023 we bought a 2 bed luxury flat known as flat 2f on Signature Residence Plot 30 Ibiyinka Salvador Street lekki phase 1 lekki lagos nigeria. It is currently listed as a shortlet on AirBnB.",
       image: "/images/h1-3.jpeg",
       beforeMedia: [
         // {
@@ -326,7 +326,7 @@ function Page() {
       tag: "For Sale",
       sub: true,
       description:
-        "We bought this property in 2023 to test the United States Market in June/July 2023. It had a cosmetic fire damage. We were able to partner with some local contractors to bring it back to life and was done by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
+        "We bought this property to test the United States Market in June/July 2023. The property had cosmetic damages from a contained fire. We were able to partner with some local contractors to bring it back to life and completed the project in record time by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
       image: "/images/p2-1.jpg",
       // beforeImage: "/images/p2b-1.jpeg",
       // afterImage: "/images/p2-1.jpg",
@@ -399,7 +399,7 @@ function Page() {
       date: "ORCHID LAGOS 2021",
       tag: "Sold",
       description:
-        "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with Maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detched duplexe with a maid roo. This roject was started in novemeber 2021 and finished by May 2022. Its all been sold and our clients are since living in them with their family.",
+        "This was our inaugural project located at Vitoria Crest 2 Estate Orchid Lekki Lagos State Nigeria. It consists of 2 units of Full detached all Ensuite 4 bedroom duplexes with maids room. This was a master piece that was uniquely designed for upper middle class. It also has a 5 bedroom full detached duplexes with a maid room. This project was started in November 2021 and finished by May 2022. All units have been sold and our clients have been enjoying this luxury living with their families.",
       image: "/images/p1a-1.jpg",
       beforeMedia: [
         { type: "image", src: "/images/p1b-1.jpeg" },
@@ -413,7 +413,6 @@ function Page() {
       ],
       afterMedia: [
         { type: "image", src: "/images/p1a-1.jpg" },
-        { type: "image", src: "/images/p1a-2.jpeg" },
         { type: "image", src: "/images/p1a-3.jpeg" },
         { type: "image", src: "/images/p1a-4.jpeg" },
         { type: "image", src: "/images/p1-1.jpeg" },

@@ -458,7 +458,6 @@ const properties = [
     ],
     afterMedia: [
       { type: "image", src: "/images/p1a-1.jpg" },
-      { type: "image", src: "/images/p1a-2.jpeg" },
       { type: "image", src: "/images/p1a-3.jpeg" },
       { type: "image", src: "/images/p1a-4.jpeg" },
       { type: "image", src: "/images/p1-1.jpeg" },
