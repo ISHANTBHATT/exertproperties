@@ -87,85 +87,29 @@
 // }
 
 //chatgpt suggested code
-// import nodemailer from "nodemailer";
-
-// // Read credentials from environment variables
-// const { SMTP_USER, SMTP_PASS } = process.env;
-
-// const transporter = nodemailer.createTransport({
-//   host: "exertproperties.com", // e.g., mail.yourdomain.com or smtp.yourdomain.com
-//   port: 587, // or 587 if not using SSL
-//   secure: false, // true for 465, false for 587
-//   auth: {
-//     user: SMTP_USER,
-//     pass: SMTP_PASS,
-//   },
-// });
-
-// export async function POST(request) {
-//   try {
-//     const data = await request.json();
-//     const { userName, userEmail, phone, message, subject } = data;
-
-//     const mailOptions = {
-//       from: SMTP_USER, // use sender's info
-//       to: SMTP_USER, // your own email to receive messages
-//       subject: `${subject}`,
-//       html: `
-//         <h2>New enquiry received</h2>
-//         <p><strong>Name:</strong> ${userName}</p>
-//         <p><strong>Email:</strong> ${userEmail}</p>
-//         <p><strong>Phone:</strong> ${phone}</p>
-//         <p><strong>Message:</strong> ${message}</p>
-//       `,
-//     };
-
-//     await transporter.sendMail(mailOptions);
-
-//     return new Response(JSON.stringify({ success: true }), {
-//       status: 200,
-//       headers: { "Content-Type": "application/json" },
-//     });
-//   } catch (err) {
-//     console.error("Nodemailer error:", err);
-//     return new Response(
-//       JSON.stringify({ success: false, error: "Failed to send email" }),
-//       { status: 500, headers: { "Content-Type": "application/json" } }
-//     );
-//   }
-// }
-
 import nodemailer from "nodemailer";
 
+// Read credentials from environment variables
 const { SMTP_USER, SMTP_PASS } = process.env;
 
 const transporter = nodemailer.createTransport({
-  host: "mail.exertproperties.com",
-  port: 587, // use 465 only if confirmed open
-  secure: false, // STARTTLS
-  requireTLS: true,
-  // pool: true,
+  host: "mail.exertproperties.com", // e.g., mail.yourdomain.com or smtp.yourdomain.com
+  port: 587, // or 587 if not using SSL
+  secure: false, // true for 465, false for 587
   auth: {
     user: SMTP_USER,
     pass: SMTP_PASS,
   },
-  // tls: {
-  //   minVersion: "TLSv1.2", // enforces modern cipher suites
-  // },
 });
 
-// Optional pre-flight
-await transporter.verify();
-
-// API route
 export async function POST(request) {
   try {
     const data = await request.json();
     const { userName, userEmail, phone, message, subject } = data;
 
-    await transporter.sendMail({
-      from: SMTP_USER,
-      to: SMTP_USER, // or separate info@ address
+    const mailOptions = {
+      from: SMTP_USER, // use sender's info
+      to: SMTP_USER, // your own email to receive messages
       subject: `${subject}`,
       html: `
         <h2>New enquiry received</h2>
@@ -174,7 +118,9 @@ export async function POST(request) {
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
-    });
+    };
+
+    await transporter.sendMail(mailOptions);
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
@@ -184,10 +130,64 @@ export async function POST(request) {
     console.error("Nodemailer error:", err);
     return new Response(
       JSON.stringify({ success: false, error: "Failed to send email" }),
-      {
-        status: 500,
-        headers: { "Content-Type": "application/json" },
-      }
+      { status: 500, headers: { "Content-Type": "application/json" } }
     );
   }
 }
+
+// import nodemailer from "nodemailer";
+
+// const { SMTP_USER, SMTP_PASS } = process.env;
+
+// const transporter = nodemailer.createTransport({
+//   host: "mail.exertproperties.com",
+//   port: 587, // use 465 only if confirmed open
+//   secure: false, // STARTTLS
+//   requireTLS: true,
+//   pool: true,
+//   auth: {
+//     user: SMTP_USER,
+//     pass: SMTP_PASS,
+//   },
+//   tls: {
+//     minVersion: "TLSv1.2", // enforces modern cipher suites
+//   },
+// });
+
+// // Optional pre-flight
+// await transporter.verify();
+
+// // API route
+// export async function POST(request) {
+//   try {
+//     const data = await request.json();
+//     const { userName, userEmail, phone, message, subject } = data;
+
+//     await transporter.sendMail({
+//       from: SMTP_USER,
+//       to: SMTP_USER, // or separate info@ address
+//       subject: `${subject}`,
+//       html: `
+//         <h2>New enquiry received</h2>
+//         <p><strong>Name:</strong> ${userName}</p>
+//         <p><strong>Email:</strong> ${userEmail}</p>
+//         <p><strong>Phone:</strong> ${phone}</p>
+//         <p><strong>Message:</strong> ${message}</p>
+//       `,
+//     });
+
+//     return new Response(JSON.stringify({ success: true }), {
+//       status: 200,
+//       headers: { "Content-Type": "application/json" },
+//     });
+//   } catch (err) {
+//     console.error("Nodemailer error:", err);
+//     return new Response(
+//       JSON.stringify({ success: false, error: "Failed to send email" }),
+//       {
+//         status: 500,
+//         headers: { "Content-Type": "application/json" },
+//       }
+//     );
+//   }
+// }
