@@ -222,7 +222,7 @@ function Page() {
       tag: "For Sale",
       sub: true,
       description:
-        "In 2024, Exert Properties purchased 1000 square meters of land at LEKKI Foreshore Estate, Lekki Phase 1.  This property will consist of four 20 unit two bedroom luxury flats and a stellar three bedroom penthouse. The project is named “Gained Heights” after our CEOs hometown “Urualla” which means “Gains of Land”. Urualla is located in Ideato North Local Government area, Imo State, Nigeria. Architectural drafts and approvals have been completed. Construction begins October 2025 with estimated projection completion by fourth quarter 2026.",
+        "In 2024, Exert Properties purchased 1000 square meters of land at LEKKI Foreshore Estate, Lekki Phase 1.  This property will consist of four 20 unit two bedroom luxury flats and a stellar three bedroom penthouse. The project is named “Gained Heights” after our CEOs hometown “Urualla” which means “Gains of Land”. Urualla is located in Ideato North Local Government area, Imo State, Nigeria. Architectural drafts and approvals have been completed. Construction begins October 2025 with estimated projection completion by fourth quarter 2027.",
       image: "/images/p0.jpg",
       beforeMedia: [
         { type: "image", src: "/images/p4b-1.jpeg" },
@@ -326,7 +326,7 @@ function Page() {
       tag: "For Sale",
       sub: true,
       description:
-        "We bought this property to test the United States Market in June/July 2023. The property had cosmetic damages from a contained fire. We were able to partner with some local contractors to bring it back to life and completed the project in record time by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
+        "We bought this property to test the United States market in June/July 2023. The property had cosmetic damages from a contained fire. We were able to partner with some local contractors to bring back to life and completed the project in record time by December 2023. The property is currently being used as an Airbnb while also in the market for outright sales.",
       image: "/images/p2-1.jpg",
       // beforeImage: "/images/p2b-1.jpeg",
       // afterImage: "/images/p2-1.jpg",
