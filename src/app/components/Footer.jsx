@@ -260,7 +260,7 @@ const Footer = () => {
                 href="https://apacedigitalcargo.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:underline "
+                className="hover:underline"
               >
                 Apace Digital Cargo
               </a>

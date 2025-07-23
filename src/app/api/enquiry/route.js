@@ -137,27 +137,35 @@
 
 import nodemailer from "nodemailer";
 
-// Read creds from environment
 const { SMTP_USER, SMTP_PASS } = process.env;
 
 const transporter = nodemailer.createTransport({
-  host: "exertproperties.com", // BigRock SMTP host
-  port: 465, // SSL port
-  secure: true, // Use SSL
+  host: "mail.exertproperties.com",
+  port: 587, // use 465 only if confirmed open
+  secure: false, // STARTTLS
+  requireTLS: true,
+  // pool: true,
   auth: {
-    user: SMTP_USER, // Your BigRock email (e.g., info@exertproperties.com)
-    pass: SMTP_PASS, // Your email account password
+    user: SMTP_USER,
+    pass: SMTP_PASS,
   },
+  // tls: {
+  //   minVersion: "TLSv1.2", // enforces modern cipher suites
+  // },
 });
 
+// Optional pre-flight
+await transporter.verify();
+
+// API route
 export async function POST(request) {
   try {
     const data = await request.json();
     const { userName, userEmail, phone, message, subject } = data;
 
-    const mailOptions = {
+    await transporter.sendMail({
       from: SMTP_USER,
-      to: SMTP_USER,
+      to: SMTP_USER, // or separate info@ address
       subject: `${subject}`,
       html: `
         <h2>New enquiry received</h2>
@@ -166,9 +174,7 @@ export async function POST(request) {
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
-    };
-
-    await transporter.sendMail(mailOptions);
+    });
 
     return new Response(JSON.stringify({ success: true }), {
       status: 200,
