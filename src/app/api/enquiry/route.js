@@ -92,9 +92,9 @@ import nodemailer from "nodemailer";
 const { SMTP_USER, SMTP_PASS } = process.env;
 
 const transporter = nodemailer.createTransport({
-  host: "exertproperties.com", // e.g., mail.yourdomain.com or smtp.yourdomain.com
-  port: 465, // or 587 if not using SSL
-  secure: true, // true for 465, false for 587
+  host: "mail.exertproperties.com", // e.g., mail.yourdomain.com or smtp.yourdomain.com
+  port: 587, // or 587 if not using SSL
+  secure: false, // true for 465, false for 587
   auth: {
     user: SMTP_USER,
     pass: SMTP_PASS,
