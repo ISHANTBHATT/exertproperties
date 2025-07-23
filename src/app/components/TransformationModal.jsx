@@ -466,12 +466,12 @@ export function TransformationModal({ property, isOpen, onClose }) {
                     <TabsList className="w-full mb-6">
                       {hasBeforeMedia && (
                         <TabsTrigger value="before" className="flex-1">
-                          Before Renovation
+                          Before
                         </TabsTrigger>
                       )}
                       {hasAfterMedia && (
                         <TabsTrigger value="after" className="flex-1">
-                          After Renovation
+                          After
                         </TabsTrigger>
                       )}
                     </TabsList>
