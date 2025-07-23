@@ -687,7 +687,12 @@ export default function ContactForm() {
                     <Mail className="h-6 w-6" />
                     <div>
                       <p className="text-sm text-gray-200">Send us an email</p>
-                      <p className="font-medium">Info@exertproperties.com</p>
+                      <a
+                        href="mailto:Info@exertproperties.com"
+                        className="font-medium hover:underline"
+                      >
+                        Info@exertproperties.com
+                      </a>
                     </div>
                   </motion.div>
 

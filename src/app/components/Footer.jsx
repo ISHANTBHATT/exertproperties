@@ -185,7 +185,12 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Email address</p>
-                    <p>Info@exertproperties.com</p>
+                    <a
+                      href="mailto:Info@exertproperties.com"
+                      className="hover:underline"
+                    >
+                      Info@exertproperties.com
+                    </a>
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -203,7 +208,12 @@ const Footer = () => {
                   <MessageSquare className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Help & support</p>
-                    <p>support@exertproperties.com</p>
+                    <a
+                      href="mailto:support@exertproperties.com"
+                      className="hover:underline"
+                    >
+                      support@exertproperties.com
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -243,9 +253,18 @@ const Footer = () => {
                 className="w-40 h-28"
               />
             </div>
-            <p className="text-sm text-gray-200">
-              Copyright © Expert Properties
-            </p>
+            <div className="flex gap-1 text-sm text-gray-200">
+              <p className="">Copyright © Expert Properties</p>
+              <p className=""> | Website Developed By</p>
+              <a
+                href="https://apacedigitalcargo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="hover:underline "
+              >
+                Apace Digital Cargo
+              </a>
+            </div>
           </div>
         </div>
       </footer>

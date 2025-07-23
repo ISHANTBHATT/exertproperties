@@ -115,7 +115,7 @@ const AboutSection = () => {
               finishing. Our developments are priced affordably to meet the
               teeming demand of an urban middle class. Our clients expects
               modern designs, proper facility management and breath taking
-              common areas and ambient locations
+              common areas and ambient locations.
             </motion.p>
             <motion.div variants={fadeIn("up", "tween", 0.2, 0.6)}>
               <Link href="/about">

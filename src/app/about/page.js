@@ -87,7 +87,7 @@ function Page() {
               finishing. Our developments are priced affordably to meet the
               teeming demand of an urban middle class. Our clients expects
               modern designs, proper facility management and breath taking
-              common areas and ambient locations
+              common areas and ambient locations.
             </p>
 
             <p className="text-gray-600 mb-6">
