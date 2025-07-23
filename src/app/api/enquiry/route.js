@@ -137,43 +137,23 @@
 
 import nodemailer from "nodemailer";
 
-// Alternative configuration - try this if the main one doesn't work
+// Read creds from environment
 const { SMTP_USER, SMTP_PASS } = process.env;
+
+const transporter = nodemailer.createTransport({
+  host: "exertproperties.com", // BigRock SMTP host
+  port: 465, // SSL port
+  secure: true, // Use SSL
+  auth: {
+    user: SMTP_USER, // Your BigRock email (e.g., info@exertproperties.com)
+    pass: SMTP_PASS, // Your email account password
+  },
+});
 
 export async function POST(request) {
   try {
     const data = await request.json();
     const { userName, userEmail, phone, message, subject } = data;
-
-    // Alternative configuration using different host formats
-    const configs = [
-      {
-        name: "SSL with mail subdomain",
-        host: "mail.exertproperties.com",
-        port: 465,
-        secure: true,
-      },
-      {
-        name: "STARTTLS with mail subdomain",
-        host: "mail.exertproperties.com",
-        port: 587,
-        secure: false,
-        requireTLS: true,
-      },
-      {
-        name: "SSL with main domain",
-        host: "exertproperties.com",
-        port: 465,
-        secure: true,
-      },
-      {
-        name: "STARTTLS with main domain",
-        host: "exertproperties.com",
-        port: 587,
-        secure: false,
-        requireTLS: true,
-      },
-    ];
 
     const mailOptions = {
       from: SMTP_USER,
@@ -188,58 +168,16 @@ export async function POST(request) {
       `,
     };
 
-    // Try each configuration until one works
-    for (const config of configs) {
-      try {
-        console.log(`Trying configuration: ${config.name}`);
+    await transporter.sendMail(mailOptions);
 
-        const transporter = nodemailer.createTransport({
-          host: config.host,
-          port: config.port,
-          secure: config.secure,
-          requireTLS: config.requireTLS,
-          auth: {
-            user: SMTP_USER,
-            pass: SMTP_PASS,
-          },
-          connectionTimeout: 30000,
-          greetingTimeout: 15000,
-          socketTimeout: 30000,
-        });
-
-        await transporter.sendMail(mailOptions);
-        console.log(`Email sent successfully with: ${config.name}`);
-
-        return new Response(
-          JSON.stringify({
-            success: true,
-            config: config.name,
-          }),
-          {
-            status: 200,
-            headers: { "Content-Type": "application/json" },
-          }
-        );
-      } catch (configError) {
-        console.log(
-          `Configuration ${config.name} failed:`,
-          configError.message
-        );
-        continue; // Try next configuration
-      }
-    }
-
-    // If all configurations failed
-    throw new Error("All SMTP configurations failed");
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (err) {
-    console.error("All Nodemailer configurations failed:", err);
-
+    console.error("Nodemailer error:", err);
     return new Response(
-      JSON.stringify({
-        success: false,
-        error: "Failed to send email with any configuration",
-        details: err.message,
-      }),
+      JSON.stringify({ success: false, error: "Failed to send email" }),
       {
         status: 500,
         headers: { "Content-Type": "application/json" },
