@@ -16,7 +16,7 @@ const agents = {
   "okey-okatta": {
     name: "Okey Okatta",
     username: "@okey-okatta",
-    img: "/images/team1.jpeg",
+    img: "/images/team0.jpeg",
     email: "Okey@exertproperties.com",
     phone: "(414) 325 - 427",
     location: "Nigeria",

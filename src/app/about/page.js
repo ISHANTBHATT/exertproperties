@@ -25,7 +25,7 @@ const agentCard = {
 const agents = [
   {
     id: 1,
-    image: "/images/team1.jpeg",
+    image: "/images/team0.jpeg",
     name: "Okey Okatta",
     designation: "MD/CEO",
     slug: "okey-okatta",
