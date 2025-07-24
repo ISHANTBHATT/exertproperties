@@ -140,13 +140,22 @@ import nodemailer from "nodemailer";
 // Read creds from environment
 const { SMTP_USER, SMTP_PASS } = process.env;
 
+// const transporter = nodemailer.createTransport({
+//   host: "exertproperties.com", // BigRock SMTP host
+//   port: 465, // SSL port
+//   secure: true, // Use SSL
+//   auth: {
+//     user: SMTP_USER, // Your BigRock email (e.g., info@exertproperties.com)
+//     pass: SMTP_PASS, // Your email account password
+//   },
+// });
 const transporter = nodemailer.createTransport({
-  host: "exertproperties.com", // BigRock SMTP host
-  port: 465, // SSL port
-  secure: true, // Use SSL
+  host: "smtp.mailhostbox.com", // or correct SMTP host
+  port: 587, // or 465 for SSL
+  secure: false, // Use SSL
   auth: {
-    user: SMTP_USER, // Your BigRock email (e.g., info@exertproperties.com)
-    pass: SMTP_PASS, // Your email account password
+    user: SMTP_USER,
+    pass: SMTP_PASS,
   },
 });
 
