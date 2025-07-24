@@ -196,12 +196,19 @@ const Footer = () => {
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
-                    <p className="text-sm text-gray-200">Phone number</p>
-                    <p className="text-sm">
+                    <p className="text-sm text-gray-200 mb-1">Phone number</p>
+                    {/*<p className="text-sm">
                       Nigeria Office : +2347025012424, +2348180000567
                       <br />
                       United States Office : +12549520712, +16465049826
-                    </p>
+                    </p> */}
+                    <Image
+                      src="/images/contact.png"
+                      alt="Office Map"
+                      // className="w-full h-full object-cover"
+                      width={400}
+                      height={400}
+                    />
                   </div>
                 </li>
                 <li className="flex items-start">

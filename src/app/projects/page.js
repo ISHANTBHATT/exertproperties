@@ -559,9 +559,9 @@ function Page() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="md:text-lg text-gray-200 mb-8"
+            className="md:text-lg text-gray-200 mb-8 text-balance"
           >
-            Explore our complete portfolio of handpicked properties — designed
+            Explore our complete portfolio of handpicked properties - designed
             to match every dream and investment goal.
           </motion.p>
         </div>
