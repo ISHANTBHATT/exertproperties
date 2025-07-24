@@ -4,10 +4,15 @@ import nodemailer from "nodemailer";
 const { SMTP_USER, SMTP_PASS } = process.env;
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "mail.exertproperties.com", // or correct SMTP host
+  port: 465, // or 465 for SSL
+  secure: true, // Use SSL
   auth: {
     user: SMTP_USER,
     pass: SMTP_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false, // disables strict TLS checks
   },
 });
 

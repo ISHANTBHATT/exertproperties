@@ -157,8 +157,17 @@ const transporter = nodemailer.createTransport({
     user: SMTP_USER,
     pass: SMTP_PASS,
   },
+  tls: {
+    rejectUnauthorized: false, // disables strict TLS checks
+  },
 });
-
+transporter.verify((error, success) => {
+  if (error) {
+    console.error("SMTP Connection Failed:", error);
+  } else {
+    console.log("SMTP is ready to send emails ✅");
+  }
+});
 export async function POST(request) {
   try {
     const data = await request.json();

@@ -704,11 +704,18 @@ export default function ContactForm() {
                     <Phone className="h-6 w-6" />
                     <div>
                       <p className="text-sm text-gray-200">Phone number</p>
-                      <p className="font-medium">
+                      {/* <p className="font-medium">
                         Nigeria Office : +2347025012424, +2348180000567
                         <br />
                         United States Office : +12549520712, +16465049826
-                      </p>
+                      </p> */}
+                      <Image
+                        src="/images/contact.png"
+                        alt="Office Map"
+                        // className="w-full h-full object-cover"
+                        width={400}
+                        height={400}
+                      />
                     </div>
                   </motion.div>
                 </div>
@@ -812,16 +819,23 @@ export default function ContactForm() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-white text-3xl font-bold mb-4">Nigeria</h3>
-                <div className="flex items-center gap-2 text-white mb-6">
+                {/* <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>
                     287B Akin Olugbade Street Victoria Island, Lagos Lagos State
                     Nigeria
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2 text-white">
-                  <Phone className="h-5 w-5" />
-                  <span>+2347025012424, +2348180000567</span>
+                  <Image
+                    src="/images/c22.png"
+                    alt="Nigeria Office"
+                    width={300}
+                    height={50}
+                    className=""
+                  />
+                  {/* <Phone className="h-5 w-5" />
+                  <span>+2347025012424, +2348180000567</span> */}
                 </div>
               </div>
             </motion.div>
@@ -843,15 +857,22 @@ export default function ContactForm() {
                 <h3 className="text-white text-3xl font-bold mb-4">
                   United States
                 </h3>
-                <div className="flex items-center gap-2 text-white mb-6">
+                {/* <div className="flex items-center gap-2 text-white mb-6">
                   <MapPin className="h-5 w-5" />
                   <span>
                     3403 Pistoia Trail, Temple Texas 776502 United States
                   </span>
-                </div>
+                </div> */}
                 <div className="flex items-center gap-2 text-white">
-                  <Phone className="h-5 w-5" />
-                  <span>+12549520712, +16465049826</span>
+                  <Image
+                    src="/images/c11.png"
+                    alt="United States Office"
+                    width={300}
+                    height={50}
+                    className=""
+                  />
+                  {/* <Phone className="h-5 w-5" />
+                  <span>+12549520712, +16465049826</span> */}
                 </div>
               </div>
             </motion.div>
