@@ -150,7 +150,7 @@ const { SMTP_USER, SMTP_PASS } = process.env;
 //   },
 // });
 const transporter = nodemailer.createTransport({
-  host: "smtp.mailhostbox.com", // or correct SMTP host
+  host: "mail.exertproperties.com", // or correct SMTP host
   port: 587, // or 465 for SSL
   secure: false, // Use SSL
   auth: {
