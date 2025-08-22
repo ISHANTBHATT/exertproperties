@@ -185,12 +185,19 @@ const Footer = () => {
                   <Mail className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Email address</p>
-                    <a
+                    {/* <a
                       href="mailto:Info@exertproperties.com"
                       className="hover:underline"
                     >
                       Info@exertproperties.com
-                    </a>
+                    </a> */}
+                    <Image
+                      src="/images/info.png"
+                      alt="Office Map"
+                      className="w-full h-6"
+                      width={1000}
+                      height={1000}
+                    />
                   </div>
                 </li>
                 <li className="flex items-start">
@@ -215,12 +222,19 @@ const Footer = () => {
                   <MessageSquare className="h-5 w-5 text-gray-200 mr-3 mt-0.5" />
                   <div>
                     <p className="text-sm text-gray-200">Help & support</p>
-                    <a
+                    {/* <a
                       href="mailto:support@exertproperties.com"
                       className="hover:underline"
                     >
                       support@exertproperties.com
-                    </a>
+                    </a> */}
+                    <Image
+                      src="/images/support.png"
+                      alt="Office Map"
+                      className="w-full h-6"
+                      width={1000}
+                      height={1000}
+                    />
                   </div>
                 </li>
               </ul>
