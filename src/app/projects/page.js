@@ -333,7 +333,7 @@ function Page() {
       sub: false,
       progress: true,
       description: `Gains Mini Independence Layout Enugu State. This mini estate is uniquely designed to be the best mini estate in enugu at completion Q3 2026. Its a 7 unit of 5 bedroom all ensuite 5 bedroom duplexes on 2 floors. It comes with a 30 x 60 square meters playground for the convenience of the occupants. It also have the following ammenities CCTV Cameras, Swimming pool, Gym, 24/7 security, Clean water supply, Cleaners, Gardeners, Paved internal roads`,
-      image: "/images/p5-6.jpeg",
+      image: "/images/p5-0.jpeg",
       beforeMedia: [
         { type: "image", src: "/images/p5b-1.jpeg" },
         {
@@ -358,6 +358,7 @@ function Page() {
         },
       ],
       afterMedia: [
+        { type: "image", src: "/images/p5-0.jpeg" },
         { type: "image", src: "/images/p5-1.jpeg" },
         { type: "image", src: "/images/p5-2.jpeg" },
         { type: "image", src: "/images/p5-3.jpeg" },
