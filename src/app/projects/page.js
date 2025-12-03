@@ -185,6 +185,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import InquiryFormModal from "../components/InquiryFormMoal";
 import { Link } from "lucide-react";
+import ProgressReportModal from "../components/ProgressReportModal";
 
 function Page() {
   const [videoUrl, setVideoUrl] = useState(null);
@@ -221,6 +222,7 @@ function Page() {
       date: "LEKKI FORESHORE ESTATE 2024",
       tag: "For Sale",
       sub: true,
+      progress: true,
       description:
         "In 2024, Exert Properties purchased 1000 square meters of land at LEKKI Foreshore Estate, Lekki Phase 1.  This property will consist of four 20 unit two bedroom luxury flats and a stellar three bedroom penthouse. The project is named “Gained Heights” after our CEOs hometown “Urualla” which means “Gains of Land”. Urualla is located in Ideato North Local Government area, Imo State, Nigeria. Architectural drafts and approvals have been completed. Construction begins October 2025 with estimated projection completion by fourth quarter 2027.",
       image: "/images/p0.jpg",
@@ -238,6 +240,26 @@ function Page() {
         {
           type: "video",
           src: "/videos/p4bv-2.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-3.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-4.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-5.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-6.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p4bv-7.mp4",
         },
       ],
       afterMedia: [
@@ -274,9 +296,113 @@ function Page() {
           // thumbnail: "/images/p2-1.jpeg",
         },
       ],
+      sections: [
+        {
+          title: "Piling activities",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-3.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-4.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-5.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-6.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-7.mp4",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 2,
+      location: "Nigeria",
+      title: "GAINS MINI ESTATE INDEPENDNCE LAYOUT ENUGU",
+      date: "Enugu Land",
+      tag: "For Sale",
+      sub: false,
+      progress: true,
+      description: `Gains Mini Independence Layout Enugu State. This mini estate is uniquely designed to be the best mini estate in enugu at completion Q3 2026. Its a 7 unit of 5 bedroom all ensuite 5 bedroom duplexes on 2 floors. It comes with a 30 x 60 square meters playground for the convenience of the occupants. It also have the following ammenities CCTV Cameras, Swimming pool, Gym, 24/7 security, Clean water supply, Cleaners, Gardeners, Paved internal roads`,
+      image: "/images/p5-6.jpeg",
+      beforeMedia: [
+        { type: "image", src: "/images/p5b-1.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p5bv-1.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p5bv-2.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p5bv-3.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p5bv-4.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p5bv-5.mp4",
+        },
+      ],
+      afterMedia: [
+        { type: "image", src: "/images/p5-1.jpeg" },
+        { type: "image", src: "/images/p5-2.jpeg" },
+        { type: "image", src: "/images/p5-3.jpeg" },
+        { type: "image", src: "/images/p5-4.jpeg" },
+        { type: "image", src: "/images/p5-5.jpeg" },
+        { type: "image", src: "/images/p5-6.jpeg" },
+        { type: "image", src: "/images/p5-7.jpeg" },
+        { type: "image", src: "/images/p5-8.jpeg" },
+        { type: "image", src: "/images/p5-9.jpeg" },
+        { type: "image", src: "/images/p5-10.jpeg" },
+        { type: "image", src: "/images/p5-11.jpeg" },
+        { type: "image", src: "/images/p5-12.jpeg" },
+      ],
+      sections: [
+        {
+          title:
+            "Recreating the parameters with string reinforcement to ensure adequate security",
+          media: [
+            { type: "image", src: "/images/p5b-1.jpeg" },
+            {
+              type: "video",
+              src: "/videos/p5bv-1.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p5bv-2.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p5bv-3.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p5bv-4.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p5bv-5.mp4",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: 3,
       location: "Nigeria",
       title: "2 BEDROOM SHOTLET IN LEKKI 1",
       booking: true,
@@ -319,7 +445,7 @@ function Page() {
       ],
     },
     {
-      id: 3,
+      id: 4,
       location: "United States",
       title: "FIX & FLIP OF A FIRE DAMAGED CONDO",
       date: "2023",
@@ -393,7 +519,7 @@ function Page() {
       ],
     },
     {
-      id: 4,
+      id: 5,
       location: "Nigeria",
       title: "3 in 1 FULL DETACHED HOUSES",
       date: "ORCHID LAGOS 2021",
@@ -434,7 +560,7 @@ function Page() {
       ],
     },
     {
-      id: 5,
+      id: 6,
       location: "Nigeria",
       title: "ENUGU LAND DEVELOPMENT",
       date: "INDEPENDENCE LAYOUT 2023",
@@ -588,7 +714,9 @@ function Page() {
             afterMedia={project.afterMedia}
             tag={project.tag}
             sub={project.sub}
+            progress={project.progress}
             booking={project.booking}
+            sections={project.sections}
           />
         ))}
       </motion.main>
@@ -608,14 +736,21 @@ function ProjectSection({
   afterMedia,
   tag,
   sub,
+  progress,
   booking,
+  sections,
 }) {
   const [selectedTitle, setSelectedTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isFormModalOpen, setIsFormModalOpen] = useState(false);
+  const [isProgressReportOpen, setIsProgressReportOpen] = useState(false);
   const handleViewDetails = (e) => {
     setIsFormModalOpen(true);
     setSelectedTitle(e);
+  };
+  const handleProgressReport = (e) => {
+    setIsProgressReportOpen(true);
+    // setSelectedTitle(e);
   };
   const itemVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -769,6 +904,27 @@ function ProjectSection({
           <div className="text-sm text-gray-500 mb-4">{date}</div>
           <p className="text-sm leading-relaxed text-gray-700">{description}</p>
 
+          <div>
+            <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
+              PROGRESS REPORT
+            </div>
+            {progress && (
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => handleProgressReport(title)}
+                className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
+              >
+                <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
+                  Progress Report
+                </button>
+                <div className="rounded-full bg-white p-2 group">
+                  <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
+                </div>
+              </motion.div>
+            )}
+          </div>
+
           <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
             Portfolio
           </div>
@@ -780,7 +936,7 @@ function ProjectSection({
               className="my-4 w-fit items-center px-2 bg-[#3A9188] rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-teal-700"
             >
               <button className="rounded-full p-3  bg-[#3A9188] group group-hover:bg-teal-700 text-white">
-                View more images
+                View More Images
               </button>
               <div className="rounded-full bg-white p-2 group">
                 <IoMdArrowRoundForward className="h-4 w-4 text-[#3A9188]" />
@@ -821,6 +977,7 @@ function ProjectSection({
               </motion.a>
             )}
           </div>
+
           {/* <div className=" items-center px-2 bg-white rounded-full inline-flex transform transition-transform duration-300 ease-in-out hover:scale-90 group hover:bg-gray-300">
             <button className="rounded-full p-2 font-semibold group group-hover:bg-gray-300 text-black">
               Contact us
@@ -850,6 +1007,15 @@ function ProjectSection({
         isOpen={isFormModalOpen}
         title={selectedTitle}
         onClose={() => setIsFormModalOpen(false)}
+      />
+
+      <ProgressReportModal
+        isOpen={isProgressReportOpen}
+        onClose={() => setIsProgressReportOpen(false)}
+        title={title}
+        location={location}
+        date={date}
+        sections={sections}
       />
     </>
   );
