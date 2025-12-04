@@ -327,12 +327,22 @@ function Page() {
     {
       id: 2,
       location: "Nigeria",
-      title: "GAINS MINI ESTATE INDEPENDNCE LAYOUT ENUGU",
+      title: "GAINS MINI",
       date: "Enugu Land",
       tag: "For Sale",
       sub: false,
       progress: true,
-      description: `Gains Mini Independence Layout Enugu State. This mini estate is uniquely designed to be the best mini estate in enugu at completion Q3 2026. Its a 7 unit of 5 bedroom all ensuite 5 bedroom duplexes on 2 floors. It comes with a 30 x 60 square meters playground for the convenience of the occupants. It also have the following ammenities CCTV Cameras, Swimming pool, Gym, 24/7 security, Clean water supply, Cleaners, Gardeners, Paved internal roads`,
+      description: `Gains Mini Independence Layout Enugu State. This mini estate is uniquely designed to be the best mini estate in enugu at completion Q3 2026. Its a 7 unit of 5 bedroom all ensuite 5 bedroom duplexes on 2 floors. It comes with a 30 x 60 square meters playground for the convenience of the occupants. It also have the following ammenities:`,
+      aminities: [
+        "CCTV Cameras",
+        "Swimming pool",
+        "Gym",
+        "24/7 security",
+        "Clean water supply",
+        "Cleaners",
+        "Gardeners",
+        "Paved internal roads",
+      ],
       image: "/images/p5-0.jpeg",
       beforeMedia: [
         { type: "image", src: "/images/p5b-1.jpeg" },
@@ -375,7 +385,7 @@ function Page() {
       sections: [
         {
           title:
-            "Recreating the parameters with string reinforcement to ensure adequate security",
+            "Preliminary recreating of the parameters with strong reinforcement to ensure adequate security",
           media: [
             { type: "image", src: "/images/p5b-1.jpeg" },
             {
@@ -718,6 +728,7 @@ function Page() {
             progress={project.progress}
             booking={project.booking}
             sections={project.sections}
+            additionalAminities={project.aminities}
           />
         ))}
       </motion.main>
@@ -740,6 +751,7 @@ function ProjectSection({
   progress,
   booking,
   sections,
+  additionalAminities,
 }) {
   const [selectedTitle, setSelectedTitle] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -904,7 +916,16 @@ function ProjectSection({
           </div>
           <div className="text-sm text-gray-500 mb-4">{date}</div>
           <p className="text-sm leading-relaxed text-gray-700">{description}</p>
-
+          {additionalAminities && (
+            <div className="mt-2">
+              <h3 className="text-sm font-semibold mb-2">Amenities:</h3>
+              <ul className="list-disc list-inside text-sm text-gray-700">
+                {additionalAminities.map((amenity, index) => (
+                  <li key={index}>{amenity}</li>
+                ))}
+              </ul>
+            </div>
+          )}
           <div>
             <div className="mt-6 text-xs uppercase tracking-wider text-gray-400">
               PROGRESS REPORT
