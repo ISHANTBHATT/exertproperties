@@ -372,6 +372,8 @@ function Page() {
       image: "/images/p5-0.jpeg",
       beforeMedia: [
         { type: "image", src: "/images/p5b-1.jpeg" },
+        { type: "image", src: "/images/p3b-1.jpeg" },
+        { type: "image", src: "/images/p3b-2.jpeg" },
         {
           type: "video",
           src: "/videos/p5bv-1.mp4",
@@ -392,6 +394,55 @@ function Page() {
           type: "video",
           src: "/videos/p5bv-5.mp4",
         },
+
+        {
+          type: "video",
+          src: "/videos/p3bv-1.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-2.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-3.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-4.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-5.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-6.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-7.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-8.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-9.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-10.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-11.mp4",
+        },
+        {
+          type: "video",
+          src: "/videos/p3bv-12.mp4",
+        },
       ],
       afterMedia: [
         { type: "image", src: "/images/p5-0.jpeg" },
@@ -407,6 +458,11 @@ function Page() {
         { type: "image", src: "/images/p5-10.jpeg" },
         { type: "image", src: "/images/p5-11.jpeg" },
         { type: "image", src: "/images/p5-12.jpeg" },
+        {
+          type: "video",
+          src: "/videos/p3av-2.mp4",
+          // thumbnail: "/images/p3b-1.jpeg",
+        },
       ],
       sections: [
         {
@@ -433,6 +489,61 @@ function Page() {
             {
               type: "video",
               src: "/videos/p5bv-5.mp4",
+            },
+          ],
+        },
+        {
+          title: "Access Road Creation",
+          media: [
+            { type: "image", src: "/images/p3b-1.jpeg" },
+            { type: "image", src: "/images/p3b-2.jpeg" },
+            {
+              type: "video",
+              src: "/videos/p3bv-1.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-2.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-3.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-4.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-5.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-6.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-7.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-8.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-9.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-10.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-11.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p3bv-12.mp4",
             },
           ],
         },
@@ -596,94 +707,82 @@ function Page() {
         { type: "image", src: "/images/p1-16.jpeg" },
       ],
     },
-    {
-      id: 6,
-      location: "Nigeria",
-      title: "ENUGU LAND DEVELOPMENT",
-      date: "INDEPENDENCE LAYOUT 2023",
-      tag: "For Sale",
-      sub: true,
-      description:
-        "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
-      image: "/images/p3b-1.jpeg",
-      beforeMedia: [
-        { type: "image", src: "/images/p3b-1.jpeg" },
-        { type: "image", src: "/images/p3b-2.jpeg" },
-        {
-          type: "video",
-          src: "/videos/p3bv-1.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-2.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-3.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-4.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-5.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-6.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-7.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-8.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-9.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-10.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-11.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3bv-12.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-      ],
-      afterMedia: [
-        // { type: "image", src: "/images/p3av-1.jpg" },
-        {
-          type: "video",
-          src: "/videos/p3av-1.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-        {
-          type: "video",
-          src: "/videos/p3av-2.mp4",
-          // thumbnail: "/images/p3b-1.jpeg",
-        },
-      ],
-    },
+    // {
+    //   id: 6,
+    //   location: "Nigeria",
+    //   title: "ENUGU LAND DEVELOPMENT",
+    //   date: "INDEPENDENCE LAYOUT 2023",
+    //   tag: "For Sale",
+    //   sub: true,
+    //   description:
+    //     "In December 2023 we acquired a land size of 282 square meters on Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Enugu State Nigeria for construction of our inaugural premium flats. We improved on the land by providing rain gutters and construction of 800m tarred road for easy access. We have placed this land for sale after realizing the size is too big for our planned use. We are now scouting for a smaller sized land in the same area for our proposed luxury flat.",
+    //   image: "/images/p3b-1.jpeg",
+    //   beforeMedia: [
+    //     { type: "image", src: "/images/p3b-1.jpeg" },
+    //     { type: "image", src: "/images/p3b-2.jpeg" },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-1.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-2.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-3.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-4.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-5.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-6.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-7.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-8.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-9.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-10.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-11.mp4",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3bv-12.mp4",
+    //     },
+    //   ],
+    //   afterMedia: [
+    //     // { type: "image", src: "/images/p3av-1.jpg" },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3av-1.mp4",
+    //       // thumbnail: "/images/p3b-1.jpeg",
+    //     },
+    //     {
+    //       type: "video",
+    //       src: "/videos/p3av-2.mp4",
+    //       // thumbnail: "/images/p3b-1.jpeg",
+    //     },
+    //   ],
+    // },
   ];
   return (
     <main className="min-h-screen bg-[#f9f6f2] py-28">
