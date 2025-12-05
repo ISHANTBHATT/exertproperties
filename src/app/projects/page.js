@@ -322,6 +322,32 @@ function Page() {
             },
           ],
         },
+        {
+          title:
+            "Pile Load Test and Pile Intergrity Test Completed successfully.",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-8.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-9.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-10.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-11.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-12.mp4",
+            },
+          ],
+        },
       ],
     },
     {
