@@ -458,6 +458,7 @@ function Page() {
         { type: "image", src: "/images/p5-10.jpeg" },
         { type: "image", src: "/images/p5-11.jpeg" },
         { type: "image", src: "/images/p5-12.jpeg" },
+        { type: "image", src: "/images/p3a-1.jpeg" },
         {
           type: "video",
           src: "/videos/p3av-2.mp4",
@@ -495,6 +496,7 @@ function Page() {
         {
           title: "Access Road Creation",
           media: [
+            { type: "image", src: "/images/p3a-1.jpeg" },
             { type: "image", src: "/images/p3b-1.jpeg" },
             { type: "image", src: "/images/p3b-2.jpeg" },
             {
