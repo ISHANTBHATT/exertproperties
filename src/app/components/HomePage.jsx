@@ -57,12 +57,12 @@ function HomePage() {
       id: 5,
       location:
         "Ukuta Close off Valley Crescent off Nza Street Independence Layout Enugu, Nigeria",
-      title: "ENUGU LAND DEVELOPMENT",
+      title: "GAINS MINI",
       date: "INDEPENDENCE LAYOUT 2023",
       status: "For Sale",
       description:
-        "Enugu State Nigeria for construction of our inaugural premium flats. We have placed this land for sale after realizing the size is too big for our planned use.",
-      image: "/images/p3b-1.jpeg",
+        "Gains Mini Independence Layout Enugu State. This mini estate is uniquely designed to be the best mini estate in enugu at completion Q3 2026. Its a 7 unit of 5 bedroom all ensuite 5 bedroom duplexes on 2 floors. It comes with a 30 x 60 square meters playground for the convenience of the occupants.",
+      image: "/images/p5-0.jpeg",
     },
   ];
   const statsRef = useRef(null);
