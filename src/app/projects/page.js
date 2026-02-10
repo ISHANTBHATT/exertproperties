@@ -348,6 +348,139 @@ function Page() {
             },
           ],
         },
+        {
+          title: "Blinding after pilling for ground slab reinforcement work",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-13.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-14.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-15.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-16.mp4",
+            },
+          ],
+        },
+        {
+          title: "Ground slab reinforcement application",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-17.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-18.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-19.mp4",
+            },
+          ],
+        },
+        {
+          title: "Ground slab Casting",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-20.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-21.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-22.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-23.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-24.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-25.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-26.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-27.mp4",
+            },
+          ],
+        },
+        {
+          title: "Ground columns formwork and casting",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-28.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-29.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-30.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-31.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-32.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-33.mp4",
+            },
+          ],
+        },
+        {
+          title: "First floor formwork",
+          media: [
+            {
+              type: "video",
+              src: "/videos/p4bv-34.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-35.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-36.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-37.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-38.mp4",
+            },
+            {
+              type: "video",
+              src: "/videos/p4bv-39.mp4",
+            },
+          ],
+        },
       ],
     },
     {
